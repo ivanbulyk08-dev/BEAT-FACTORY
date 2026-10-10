@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 529a60f252a2c6644b65adec3ad85e79, type: 3}
+  m_Name: 12_rovan
+  m_EditorClassIdentifier: Assembly-CSharp::BeatFactory.ArtistData
+  id: rovan
+  displayName: "R\xD8VAN"
+  shortName: "R\xD8"
+  color: {r: 1, g: 0.54, b: 0.85, a: 1}
+  avatar: {fileID: 21300000, guid: 0ba0d3d6d59133148816ab108305294c, type: 3}
+  role: MELODIC RAP
+  musicStyle: MELODIC RAP
+  personality: Auto-tune is his instrument. Every hook sounds like a hit.
+  genre: 4
+  beatStyle: Ambient guitars, bouncy 808s
+  popularity: 3
+  monthlyListeners: 900000
+  visual:
+    skin: {r: 0.7764706, g: 0.5568628, b: 0.39215687, a: 1}
+    hair: {r: 0.09019608, g: 0.06666667, b: 0.05882353, a: 1}
+    hairTip: {r: 1, g: 0.5411765, b: 0.84705883, a: 1}
+    hairStyle: DreadsHalfUp
+    facialHair: none
+    accessories: thin chain, studs
+    tattoos: none
+    outfit: "Puffer \xB7 Wide \xB7 Minimal"
+    clothing: {r: 0.56078434, g: 0.72156864, b: 1, a: 1}
+    accent: {r: 1, g: 1, b: 1, a: 1}
+    palette:
+    - {r: 1, g: 0.54, b: 0.85, a: 1}
+    - {r: 1, g: 1, b: 1, a: 1}
+    - {r: 0.56078434, g: 0.72156864, b: 1, a: 1}
+    stageHeads:
+    - {fileID: 21300000, guid: 16ee10f45431c4e4097eb3e0ee368273, type: 3}
+    - {fileID: 21300000, guid: 89eae91d10a380f4ab6671d0037eef41, type: 3}
+    - {fileID: 21300000, guid: 2bab8ed71fb50fe438daed95e8a34ed3, type: 3}
+    - {fileID: 21300000, guid: 32eff6a2841c68240bf1791d479a7259, type: 3}
+    - {fileID: 21300000, guid: f2ec7c2ca810a0a4088ae5b39cbb1f65, type: 3}
+    stageTorso: {fileID: 21300000, guid: 4a51cb8e208cfa044891a416b53dca6b, type: 3}
+    stageArm: {fileID: 21300000, guid: 33f28b55429c29747bddb9e4f3545d7c, type: 3}
+    stageLeg: {fileID: 21300000, guid: 8b87d1bbb95760947bc62b16865f9753, type: 3}
+    signs:
+    - "R\xD8VAN"
+    - WE LOVE YOU
+    - "R\xD8VAN 4 LIFE"
+    - FADED HEARTS
+    - '#1 FAN'
+  cost: 3000000
+  requiredStudioLevel: 2
+  incomeMultiplier: 1.04

@@ -1,0 +1,211 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d862a88c45833e84bb3c823f86105f1e, type: 3}
+  m_Name: AudioConfig
+  m_EditorClassIdentifier: Assembly-CSharp::BeatFactory.AudioConfig
+  sounds:
+  - id: 0
+    category: 1
+    variants:
+    - {fileID: 8300000, guid: cda3673db5e2c2246a0a8f3f9bbc4069, type: 3}
+    - {fileID: 8300000, guid: 3ea64a8d0eb924b478a305a5fc7f909b, type: 3}
+    - {fileID: 8300000, guid: 025d191a22cb0444ea358c22a5607eba, type: 3}
+    clip: {fileID: 0}
+    volume: 0.45
+    pitchVariation: 0.03
+    minInterval: 0.04
+    duckMusic: 0
+  - id: 1
+    category: 2
+    variants:
+    - {fileID: 8300000, guid: dccbfd5486cc156429093934afbd6c97, type: 3}
+    - {fileID: 8300000, guid: 727775272ca620f47a2ea1c86c4cf7d5, type: 3}
+    - {fileID: 8300000, guid: edb9bc9d781ce5645a6e1a3564adbe5e, type: 3}
+    - {fileID: 8300000, guid: 39ceebf1f8e34094aa68d5305401c130, type: 3}
+    - {fileID: 8300000, guid: aa39e614f97e0664aac11f070c118d20, type: 3}
+    - {fileID: 8300000, guid: 4d91314fc74069348b7e7be10a61703c, type: 3}
+    clip: {fileID: 0}
+    volume: 0.62
+    pitchVariation: 0.015
+    minInterval: 0.06
+    duckMusic: 0
+  - id: 2
+    category: 2
+    variants:
+    - {fileID: 8300000, guid: 862a3d00a71f6574aa1a40594dc24f5e, type: 3}
+    - {fileID: 8300000, guid: 94e3eb4c2ad3c684a9f0dfde7976bd20, type: 3}
+    clip: {fileID: 0}
+    volume: 0.62
+    pitchVariation: 0.01
+    minInterval: 0.06
+    duckMusic: 0
+  - id: 3
+    category: 2
+    variants:
+    - {fileID: 8300000, guid: 0e15c445f06b6fd49bc7b2c42b266d3b, type: 3}
+    - {fileID: 8300000, guid: dd19f4a4188ce4040b516cc87717d3e0, type: 3}
+    - {fileID: 8300000, guid: 3804a4abdb6837c4aafcbd7f7f46eed7, type: 3}
+    clip: {fileID: 0}
+    volume: 0.55
+    pitchVariation: 0.01
+    minInterval: 0.08
+    duckMusic: 0
+  - id: 4
+    category: 2
+    variants:
+    - {fileID: 8300000, guid: 49305c0cf1796c645a5040a137e27f9f, type: 3}
+    - {fileID: 8300000, guid: 87ff22960a0de804fa5c9b2c02587263, type: 3}
+    clip: {fileID: 0}
+    volume: 0.6
+    pitchVariation: 0.01
+    minInterval: 0.15
+    duckMusic: 0
+  - id: 5
+    category: 0
+    variants:
+    - {fileID: 8300000, guid: 6380f566a9b39154fb0d246462a35925, type: 3}
+    clip: {fileID: 0}
+    volume: 0.62
+    pitchVariation: 0
+    minInterval: 0.3
+    duckMusic: 0.3
+  - id: 6
+    category: 0
+    variants:
+    - {fileID: 8300000, guid: e95094fc6dbf1b8459541de5d7a61dba, type: 3}
+    clip: {fileID: 0}
+    volume: 0.72
+    pitchVariation: 0
+    minInterval: 0.3
+    duckMusic: 0.35
+  - id: 7
+    category: 0
+    variants:
+    - {fileID: 8300000, guid: 38cdefaaaf3c6a645b94a7e5ea9c3fe3, type: 3}
+    - {fileID: 8300000, guid: 45e482dda1532224faf7ab025ff60ae8, type: 3}
+    clip: {fileID: 0}
+    volume: 0.8
+    pitchVariation: 0
+    minInterval: 0.5
+    duckMusic: 0.6
+  - id: 8
+    category: 0
+    variants:
+    - {fileID: 8300000, guid: 105c42ebfcd63194d97d4eee31ede752, type: 3}
+    clip: {fileID: 0}
+    volume: 0.85
+    pitchVariation: 0
+    minInterval: 1
+    duckMusic: 0.7
+  - id: 9
+    category: 0
+    variants:
+    - {fileID: 8300000, guid: 07e48afd15a4e014e8e2dfa9ac4d2828, type: 3}
+    - {fileID: 8300000, guid: 6085767403cfa3e4f87a2405fc65c8aa, type: 3}
+    clip: {fileID: 0}
+    volume: 0.55
+    pitchVariation: 0.01
+    minInterval: 0.12
+    duckMusic: 0
+  - id: 10
+    category: 0
+    variants:
+    - {fileID: 8300000, guid: 37a3a8b51026e57468d34cff1e305565, type: 3}
+    clip: {fileID: 0}
+    volume: 0.55
+    pitchVariation: 0.01
+    minInterval: 0.3
+    duckMusic: 0
+  - id: 11
+    category: 0
+    variants:
+    - {fileID: 8300000, guid: a069ffcbcb22cdd44bb0664c61123b3b, type: 3}
+    clip: {fileID: 0}
+    volume: 0.6
+    pitchVariation: 0
+    minInterval: 0.3
+    duckMusic: 0.3
+  - id: 14
+    category: 2
+    variants:
+    - {fileID: 8300000, guid: 49305c0cf1796c645a5040a137e27f9f, type: 3}
+    - {fileID: 8300000, guid: 87ff22960a0de804fa5c9b2c02587263, type: 3}
+    clip: {fileID: 0}
+    volume: 0.6
+    pitchVariation: 0.01
+    minInterval: 0.15
+    duckMusic: 0
+  - id: 15
+    category: 2
+    variants:
+    - {fileID: 8300000, guid: 0be07066f4436e347b3e0315608dd0bc, type: 3}
+    - {fileID: 8300000, guid: 567db70f1c8ff454ba663261770270da, type: 3}
+    clip: {fileID: 0}
+    volume: 0.6
+    pitchVariation: 0
+    minInterval: 0.15
+    duckMusic: 0
+  - id: 16
+    category: 2
+    variants:
+    - {fileID: 8300000, guid: 7931af105c70b7f43accf235441e9540, type: 3}
+    - {fileID: 8300000, guid: b877b4f7171e4584984d125ce17041ce, type: 3}
+    clip: {fileID: 0}
+    volume: 0.6
+    pitchVariation: 0.01
+    minInterval: 0.15
+    duckMusic: 0
+  - id: 12
+    category: 1
+    variants:
+    - {fileID: 8300000, guid: 958d27263fa78c1488b72f539472c5d6, type: 3}
+    clip: {fileID: 0}
+    volume: 0.55
+    pitchVariation: 0.01
+    minInterval: 0.08
+    duckMusic: 0
+  - id: 13
+    category: 1
+    variants:
+    - {fileID: 8300000, guid: d97ead845754e344d895eb5bb867f8f5, type: 3}
+    - {fileID: 8300000, guid: 22da41282daf38043a4dac14f489e6e5, type: 3}
+    clip: {fileID: 0}
+    volume: 0.4
+    pitchVariation: 0.03
+    minInterval: 0.05
+    duckMusic: 0
+  - id: 17
+    category: 0
+    variants:
+    - {fileID: 8300000, guid: 07e48afd15a4e014e8e2dfa9ac4d2828, type: 3}
+    - {fileID: 8300000, guid: 6085767403cfa3e4f87a2405fc65c8aa, type: 3}
+    clip: {fileID: 0}
+    volume: 0.5
+    pitchVariation: 0.01
+    minInterval: 0.12
+    duckMusic: 0
+  - id: 18
+    category: 0
+    variants:
+    - {fileID: 8300000, guid: 15dfb40690aec71438580344692c12b8, type: 3}
+    clip: {fileID: 0}
+    volume: 0.7
+    pitchVariation: 0
+    minInterval: 0.5
+    duckMusic: 0.5
+  music: {fileID: 8300000, guid: 45c9c2546f83f1346aceeaa74ae27f5b, type: 3}
+  musicVolume: 0.35
+  musicFadeSeconds: 1.5
+  masterVolume: 1
+  sfxVolume: 0.9
+  uiVolume: 0.7
+  productionVolume: 0.85

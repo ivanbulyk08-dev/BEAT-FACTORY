@@ -1,0 +1,912 @@
+fileFormatVersion: 2
+guid: 676fb7bf5cf55f04c9afde490dbffef1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4947347129446874830
+    second: crowd_atlas_0
+  - first:
+      213: 8447144326590348930
+    second: crowd_atlas_1
+  - first:
+      213: 3464641499593100972
+    second: crowd_atlas_2
+  - first:
+      213: 2946796202346864862
+    second: crowd_atlas_3
+  - first:
+      213: -224062828252909067
+    second: crowd_atlas_4
+  - first:
+      213: 7890827901547752262
+    second: crowd_atlas_5
+  - first:
+      213: 4592794135525219135
+    second: crowd_atlas_6
+  - first:
+      213: -1991350666593015423
+    second: crowd_atlas_7
+  - first:
+      213: 8457349792467308323
+    second: crowd_atlas_8
+  - first:
+      213: 4587058822242687785
+    second: crowd_atlas_9
+  - first:
+      213: 8847010966050060338
+    second: crowd_atlas_10
+  - first:
+      213: -6346337284819695812
+    second: crowd_atlas_11
+  - first:
+      213: 4252746444420740992
+    second: crowd_atlas_12
+  - first:
+      213: 6083181727454489586
+    second: crowd_atlas_13
+  - first:
+      213: 224150869380914344
+    second: crowd_atlas_14
+  - first:
+      213: 126158067006622084
+    second: crowd_atlas_15
+  - first:
+      213: 2143440205815290605
+    second: crowd_atlas_16
+  - first:
+      213: -8511888020324655120
+    second: crowd_atlas_17
+  - first:
+      213: -5974099694938812107
+    second: crowd_atlas_18
+  - first:
+      213: 3989026136294545389
+    second: crowd_atlas_19
+  - first:
+      213: -5188851249472610721
+    second: crowd_atlas_20
+  - first:
+      213: 1270673253769242465
+    second: crowd_atlas_21
+  - first:
+      213: -4582415094048891935
+    second: crowd_atlas_22
+  - first:
+      213: 2851343637557644742
+    second: crowd_atlas_23
+  - first:
+      213: 3943076141004830187
+    second: crowd_atlas_24
+  - first:
+      213: -2054741662178745210
+    second: crowd_atlas_25
+  - first:
+      213: -918559100015867268
+    second: crowd_atlas_26
+  - first:
+      213: 4552830582070287832
+    second: crowd_atlas_27
+  - first:
+      213: -4138497685724126912
+    second: crowd_atlas_28
+  - first:
+      213: 8055363288215029099
+    second: crowd_atlas_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: crowd_atlas_0
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 129
+        width: 16
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eceba37800288a440800000000000000
+      internalID: 4947347129446874830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crowd_atlas_1
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 154
+        width: 16
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28ebfd892094a3570800000000000000
+      internalID: 8447144326590348930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crowd_atlas_2
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 147
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caec2516611e41030800000000000000
+      internalID: 3464641499593100972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crowd_atlas_3
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 129
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed0ea52888f15e820800000000000000
+      internalID: 2946796202346864862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crowd_atlas_4
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 141
+        width: 62
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f1bd9a7b08f3ecf0800000000000000
+      internalID: -224062828252909067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crowd_atlas_5
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 128
+        width: 42
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64bae774b2ad18d60800000000000000
+      internalID: 7890827901547752262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crowd_atlas_6
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 128
+        width: 50
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3b5a7ebee1ecbf30800000000000000
+      internalID: 4592794135525219135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crowd_atlas_7
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 129
+        width: 59
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1896c7e8e1d4d54e0800000000000000
+      internalID: -1991350666593015423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crowd_atlas_8
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 136
+        width: 56
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32fcc39c3da8e5570800000000000000
+      internalID: 8457349792467308323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crowd_atlas_9
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 131
+        width: 66
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92bd89f02b188af30800000000000000
+      internalID: 4587058822242687785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crowd_atlas_10
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 85
+        width: 34
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2383663a995e6ca70800000000000000
+      internalID: 8847010966050060338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crowd_atlas_11
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 76
+        width: 42
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3741812dd74de7a0800000000000000
+      internalID: -6346337284819695812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crowd_atlas_12
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 65
+        width: 36
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 087f083fb5ac40b30800000000000000
+      internalID: 4252746444420740992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crowd_atlas_13
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 87
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fb62111d8dcb6450800000000000000
+      internalID: 6083181727454489586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crowd_atlas_14
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 64
+        width: 36
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ac5b8137085c1300800000000000000
+      internalID: 224150869380914344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crowd_atlas_15
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 63
+        width: 34
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 489ca71f71430c100800000000000000
+      internalID: 126158067006622084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crowd_atlas_16
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 91
+        width: 34
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dea19e0c2870fbd10800000000000000
+      internalID: 2143440205815290605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crowd_atlas_17
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 87
+        width: 34
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ff55a481f2bfd980800000000000000
+      internalID: -8511888020324655120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crowd_atlas_18
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 77
+        width: 36
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5311766cafbb71da0800000000000000
+      internalID: -5974099694938812107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crowd_atlas_19
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 87
+        width: 34
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de7d59dd22edb5730800000000000000
+      internalID: 3989026136294545389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crowd_atlas_20
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 63
+        width: 40
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5ed7d2c74f7df7b0800000000000000
+      internalID: -5188851249472610721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crowd_atlas_21
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 63
+        width: 37
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 167618c879652a110800000000000000
+      internalID: 1270673253769242465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crowd_atlas_22
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 78
+        width: 34
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ebd3d920cdf760c0800000000000000
+      internalID: -4582415094048891935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crowd_atlas_23
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 79
+        width: 36
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cd81396ee1029720800000000000000
+      internalID: 2851343637557644742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crowd_atlas_24
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 0
+        width: 52
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be539e2ebde98b630800000000000000
+      internalID: 3943076141004830187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crowd_atlas_25
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 0
+        width: 52
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 684e3a048571c73e0800000000000000
+      internalID: -2054741662178745210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crowd_atlas_26
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 0
+        width: 52
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7a0a528d5f9043f0800000000000000
+      internalID: -918559100015867268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crowd_atlas_27
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 0
+        width: 36
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dd95deda47ee2f30800000000000000
+      internalID: 4552830582070287832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crowd_atlas_28
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 0
+        width: 60
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04123a2184a1196c0800000000000000
+      internalID: -4138497685724126912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crowd_atlas_29
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 0
+        width: 52
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6587c24b366acf60800000000000000
+      internalID: 8055363288215029099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      crowd_atlas_0: 4947347129446874830
+      crowd_atlas_1: 8447144326590348930
+      crowd_atlas_10: 8847010966050060338
+      crowd_atlas_11: -6346337284819695812
+      crowd_atlas_12: 4252746444420740992
+      crowd_atlas_13: 6083181727454489586
+      crowd_atlas_14: 224150869380914344
+      crowd_atlas_15: 126158067006622084
+      crowd_atlas_16: 2143440205815290605
+      crowd_atlas_17: -8511888020324655120
+      crowd_atlas_18: -5974099694938812107
+      crowd_atlas_19: 3989026136294545389
+      crowd_atlas_2: 3464641499593100972
+      crowd_atlas_20: -5188851249472610721
+      crowd_atlas_21: 1270673253769242465
+      crowd_atlas_22: -4582415094048891935
+      crowd_atlas_23: 2851343637557644742
+      crowd_atlas_24: 3943076141004830187
+      crowd_atlas_25: -2054741662178745210
+      crowd_atlas_26: -918559100015867268
+      crowd_atlas_27: 4552830582070287832
+      crowd_atlas_28: -4138497685724126912
+      crowd_atlas_29: 8055363288215029099
+      crowd_atlas_3: 2946796202346864862
+      crowd_atlas_4: -224062828252909067
+      crowd_atlas_5: 7890827901547752262
+      crowd_atlas_6: 4592794135525219135
+      crowd_atlas_7: -1991350666593015423
+      crowd_atlas_8: 8457349792467308323
+      crowd_atlas_9: 4587058822242687785
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

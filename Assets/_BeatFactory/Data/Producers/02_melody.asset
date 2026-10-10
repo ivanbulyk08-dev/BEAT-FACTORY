@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efe2843c258a4c34ea7bdc14f1bb06ab, type: 3}
+  m_Name: 02_melody
+  m_EditorClassIdentifier: Assembly-CSharp::BeatFactory.ProducerData
+  id: melody
+  displayName: Melody Maker
+  shortName: MM
+  color: {r: 0.3019608, g: 1, b: 0.65882355, a: 1}
+  icon: {fileID: 21300000, guid: 79f5a7d526cf3fe478ebe31c30c0da74, type: 3}
+  hireCost: 15000
+  upgradeBaseCost: 9000
+  costGrowth: 0
+  baseIncome: 360
+  cycleSeconds: 6
+  maxLevel: 0
+  requiredStudio: 0

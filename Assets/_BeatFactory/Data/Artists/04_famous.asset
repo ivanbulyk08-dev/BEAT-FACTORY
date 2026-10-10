@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 529a60f252a2c6644b65adec3ad85e79, type: 3}
+  m_Name: 04_famous
+  m_EditorClassIdentifier: Assembly-CSharp::BeatFactory.ArtistData
+  id: famous
+  displayName: PRISM ODDITY
+  shortName: PR
+  color: {r: 0.24, g: 0.88, b: 1, a: 1}
+  avatar: {fileID: 21300000, guid: ae3e2d7f51a2a60498a648c64a583e0d, type: 3}
+  role: EXPERIMENTAL
+  musicStyle: EXPERIMENTAL
+  personality: Builds songs out of glitches and broken synths. Nobody sounds like this.
+  genre: 6
+  beatStyle: Hyperpop glitches, detuned synths
+  popularity: 4
+  monthlyListeners: 7900000
+  visual:
+    skin: {r: 0.7764706, g: 0.5568628, b: 0.39215687, a: 1}
+    hair: {r: 0.23921569, g: 0.88235295, b: 1, a: 1}
+    hairTip: {r: 0.3019608, g: 1, b: 0.65882355, a: 1}
+    hairStyle: Bob
+    facialHair: none
+    accessories: glasses, hoops, septum
+    tattoos: face star
+    outfit: "Bomber \xB7 Denim \xB7 Chunky"
+    clothing: {r: 0.16470589, g: 0.16470589, b: 0.2, a: 1}
+    accent: {r: 0.3019608, g: 1, b: 0.65882355, a: 1}
+    palette:
+    - {r: 0.24, g: 0.88, b: 1, a: 1}
+    - {r: 0.3019608, g: 1, b: 0.65882355, a: 1}
+    - {r: 0.16470589, g: 0.16470589, b: 0.2, a: 1}
+    stageHeads:
+    - {fileID: 21300000, guid: 2abbfb522b9be684db060f0c93e12962, type: 3}
+    - {fileID: 21300000, guid: 4ce117ea30919ed4ea69a526cabc79f2, type: 3}
+    - {fileID: 21300000, guid: 018b5a0df35ce7f42a1c0506b25d946a, type: 3}
+    - {fileID: 21300000, guid: 1cf9d379749bd96499f69e31b321be24, type: 3}
+    - {fileID: 21300000, guid: e2201731f4ac0b842b075a61874698b2, type: 3}
+    stageTorso: {fileID: 21300000, guid: b85135594015aea48babd794efabe8ef, type: 3}
+    stageArm: {fileID: 21300000, guid: ef286839f05a7594fab817e719e46ce9, type: 3}
+    stageLeg: {fileID: 21300000, guid: 5f367ff3d27d9bd429105a744c52e1f6, type: 3}
+    signs:
+    - PRISM ODDITY
+    - WE LOVE YOU
+    - PRISM ODDITY 4 LIFE
+    - PRISM
+    - '#1 FAN'
+  cost: 60000000
+  requiredStudioLevel: 4
+  incomeMultiplier: 1.04

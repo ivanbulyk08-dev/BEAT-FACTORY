@@ -1,0 +1,860 @@
+# Beat Factory — English (source language)
+# key = value   ·   {name} = placeholder   ·   \n = new line   ·   plural forms: key.one / key.other (+ .few / .many for ru)
+
+# ---------------------------------------------------------------- numbers & time
+num.money = ${0}
+time.d = {0}d
+time.h = {0}h
+time.m = {0}m
+time.s = {0}s
+time.join = {0} {1}
+
+# ---------------------------------------------------------------- common
+ui.close = CLOSE
+ui.cancel = CANCEL
+ui.confirm = CONFIRM
+ui.confirm_title = ARE YOU SURE?
+ui.collect = COLLECT
+ui.claim = CLAIM
+ui.claimed = CLAIMED
+ui.complete = COMPLETE
+ui.locked = LOCKED
+ui.max = MAX
+ui.ok = OK
+ui.loading = loading…
+ui.free = FREE
+
+# ---------------------------------------------------------------- navigation
+nav.home = HOME
+nav.producers = PRODUCERS
+nav.music = MUSIC
+nav.career = CAREER
+nav.prestige = PRESTIGE
+nav.settings = SETTINGS
+
+# ---------------------------------------------------------------- HUD
+hud.money = MONEY
+hud.fame = FAME
+hud.beats_made.one = BEAT MADE
+hud.beats_made.other = BEATS MADE
+home.make_beat = MAKE BEAT
+
+# ---------------------------------------------------------------- offline earnings
+offline.title = WELCOME BACK!
+offline.away = You were away for {time}
+offline.made = Your producers made
+offline.capped = Producers work up to {time} while you're away
+offline.beats.one = {n} beat made while you were away
+offline.beats.other = {n} beats made while you were away
+offline.ad_not_finished = Ad not finished — you can still COLLECT
+
+# ---------------------------------------------------------------- ads
+ads.x2_with_ad = x2 WITH AD
+ads.skip_no_reward = SKIP (no reward)
+ads.test_title = TEST {type}
+ads.test_placement = Placement: {placement}\nTest ad — no real ad is shown
+ads.reward_earned = Reward earned!
+
+# ---------------------------------------------------------------- producers screen
+producers.buy_max = MAX
+
+# ---------------------------------------------------------------- music screen
+music.header_streaming = STREAMING  —  GOOD+ beats earn streams
+music.header_genres = GENRES  —  multiply ALL income
+music.header_studios = STUDIOS  —  boost income & speed
+music.streams_label = STREAMS
+music.cash_out = CASH OUT
+
+# ---------------------------------------------------------------- career screen
+career.tab_artists = ARTISTS
+career.tab_albums = ALBUMS
+
+# ---------------------------------------------------------------- prestige
+prestige.fame_points = FAME POINTS
+prestige.restart_button = RESTART LABEL
+prestige.info = <color=#FF8A3D><b>RESETS</b></color>  money, producers, genres, studio, artists, streams\n<color=#4DFFA8><b>KEEPS</b></color>  Fame, restarts, total stats and settings
+
+# ---------------------------------------------------------------- settings
+settings.language = LANGUAGE
+settings.language_test = TEST MODE: NEXT LANGUAGE
+settings.music = Music
+settings.sound = Sound effects
+settings.notifications = Notifications
+settings.volume_master = Master
+settings.volume_music = Music
+settings.volume_sfx = SFX
+settings.concert_music = Concert Music
+settings.volume_concert = Concert
+settings.concert_effects = Concert Effects
+settings.quality_low = LOW
+settings.quality_medium = MEDIUM
+settings.quality_high = HIGH
+settings.quality_auto = AUTO ({quality})
+settings.stats = STATS
+settings.stat_beats = Beats made
+settings.stat_hits = HIT / VIRAL beats
+settings.stat_money = Money earned (all time)
+settings.stat_streams = Streams (all time)
+settings.stat_restarts = Label restarts
+settings.replay_tutorial = REPLAY TUTORIAL
+settings.reset_save = RESET SAVE
+settings.reset_title = RESET ALL PROGRESS?
+settings.reset_message = Money, producers, genres, studios, artists, streams, <b>Fame</b> and settings will be deleted.\n\n<b>This cannot be undone.</b>
+settings.reset_confirm = DELETE
+settings.version = Beat Factory v{version}
+
+# ---------------------------------------------------------------- tutorial
+tutorial.lets_go = LET'S GO
+tutorial.skip = SKIP
+tutorial.got_it = GOT IT
+tutorial.step0_title = Welcome to Beat Factory!
+tutorial.step0 = Turn your basement studio into a music empire.
+tutorial.step1_title = Create your first beats.
+tutorial.step1 = Tap MAKE BEAT to earn money.
+tutorial.step2_title = Hire a producer.
+tutorial.step2 = Producers make beats for you — even while you're away!
+tutorial.step3_title = Upgrade your producer.
+tutorial.step3 = Higher levels earn more per beat.
+tutorial.step4_title = Unlock new genres.
+tutorial.step4 = Open MUSIC — {genre} boosts ALL income {mult}!
+tutorial.step5_title = Build your music empire!
+tutorial.step5 = Upgrade your studio, sign artists, go viral.
+
+# ---------------------------------------------------------------- beat quality
+quality.normal = NORMAL
+quality.good = GOOD
+quality.great = GREAT
+quality.hit = HIT
+quality.viral = VIRAL
+
+# ---------------------------------------------------------------- boosts
+boost.money.name = 2X MONEY
+boost.money.chip = 2X $
+boost.money.desc = All income {mult}
+boost.speed.name = 2X SPEED
+boost.speed.chip = 2X SPD
+boost.speed.desc = Producers work {mult} faster
+boost.producer.name = PRODUCER BOOST
+boost.producer.chip = 3X PROD
+boost.producer.desc = Producers earn {mult}
+boost.viral.name = VIRAL BOOST
+boost.viral.chip = 5X VIRAL
+boost.viral.desc = HIT & VIRAL chance {mult}
+
+# ---------------------------------------------------------------- artist genres
+artist_genre.rage = RAGE
+artist_genre.trap = TRAP
+artist_genre.underground = UNDERGROUND
+artist_genre.drill = DRILL
+artist_genre.melodic = MELODIC RAP
+artist_genre.rnb = R&B
+artist_genre.experimental = EXPERIMENTAL
+artist_genre.hiphop = HIP-HOP
+artist.monthly_listeners.one = {n} monthly listener
+artist.monthly_listeners.other = {n} monthly listeners
+
+# ---------------------------------------------------------------- shared phrases
+common.unlocks_at = Unlocks at {studio}
+common.better_studio = a better studio
+common.needs = Needs {what}
+common.level_short = LV {level}
+common.level = LEVEL {level}
+common.per_sec = {money}/sec
+common.per_s = {money}/s
+common.income = Income {mult}
+common.speed = Speed {mult}
+common.streams_mult = Streams {mult}
+common.income_forever = Income {mult} forever
+count.streams.one = {n} stream
+count.streams.other = {n} streams
+count.fans.one = {n} fan
+count.fans.other = {n} fans
+count.beats.one = {n} beat
+count.beats.other = {n} beats
+count.artists.one = {n} artist
+count.artists.other = {n} artists
+count.concerts.one = {n} concert
+count.concerts.other = {n} concerts
+count.shows.one = {n} show
+count.shows.other = {n} shows
+count.albums.one = {n} album
+count.albums.other = {n} albums
+count.producers.one = {n} producer
+count.producers.other = {n} producers
+count.tours.one = {n} tour
+count.tours.other = {n} tours
+count.seats.one = {n} seat
+count.seats.other = {n} seats
+
+# ---------------------------------------------------------------- producers
+producer.hire = HIRE
+producer.upgrade = UPGRADE
+producer.hire_first = Hire {name} first
+producer.per_sec_not_hired = {money}/sec  ·  not hired
+home.per_beat = {money} per beat
+
+genre.unlock = UNLOCK {genre}
+studio.top_room = TOP ROOM REACHED
+studio.goal_ready = READY: {studio}
+studio.goal_next = NEXT: {studio}
+studio.upgrade_button = UPGRADE STUDIO
+home.beat_created = BEAT CREATED
+
+# ---------------------------------------------------------------- boosts popup
+boosts.button = BOOSTS
+boosts.title = BOOSTS
+boosts.free_ready = <color=#4DFFA8><b>FREE BOOST READY!</b></color>  Pick one below.
+boosts.next_free = Next free boost in {time}
+boosts.extend = EXTEND
+boosts.activate = ACTIVATE
+boosts.instant_viral = INSTANT VIRAL BEAT  ► AD
+goals.button = GOALS
+ads.watch_ad = WATCH AD
+ads.plus_ad = +AD
+ads.still_loading = <color=#FF8A3D><b>Ad is still loading</b></color> — try again in a few seconds.
+
+shop.active = ACTIVE
+shop.unlocked = UNLOCKED
+shop.unlock = UNLOCK
+shop.current = CURRENT
+shop.owned = OWNED
+shop.upgrade = UPGRADE
+music.streams_info = Worth {money}   ·   1 stream = {rate}   ·   Platforms {mult}
+music.live = LIVE
+music.release = RELEASE
+
+# ---------------------------------------------------------------- artists
+artist.income_chip = {mult} INCOME
+artist.on_tour = ON TOUR
+artist.concerts_button = CONCERTS
+artist.contract = CONTRACT
+artist.popularity_value = {value} popularity
+artist.tour_shows = {done}/{total} SHOWS
+artists.summary = {signed} / {total} signed   ·   Artist bonus {mult} income
+artists.summary_empty = Sign artists — every artist multiplies ALL income
+artists.unlocks_at = Unlocks at\n{studio}
+
+# ---------------------------------------------------------------- albums
+album.released_note = Released — poster in your studio
+album.reputation_income = Reputation {mult} income
+album.reward_line = Reward: {money}  +  Reputation {mult}
+album.release = RELEASE
+album.in_progress = IN PROGRESS
+album.previous_first = Release the previous album first
+album.req_beats = Beats made
+album.req_producers = Producers hired
+album.req_studio = Studio
+album.req_artists = Artists signed
+album.summary = {released} / {total} released   ·   Reputation {mult} income
+album.out_now = {kind} OUT NOW
+album.feat = feat. {artist}
+album.reveal_reputation = REPUTATION  {mult}  ALL INCOME
+album.reveal_poster = POSTER ADDED TO YOUR STUDIO
+album_genre.underground = UNDERGROUND RAP
+album_genre.trap = TRAP
+album_genre.rage = RAGE
+album_genre.drill = DRILL
+album_genre.rnb = R&B
+album_genre.electronic = ELECTRONIC
+
+# ---------------------------------------------------------------- studio upgrade
+studio.popup_header = YOUR STUDIO
+studio.unlocks_header = UNLOCKS
+studio.maxed = YOU OWN THE\nMEGA MUSIC COMPLEX
+studio.next_level = NEXT  ·  LEVEL {level}
+studio.move_in = MOVE IN
+studio.saving_up = SAVING UP
+studio.unlock_producer = New producer: {name}
+studio.unlock_artists.one = {n} new artist: {name}
+studio.unlock_artists.other = {n} new artists: {name}
+studio.unlock_genre = New genre: {name}
+studio.unlock_album = Album: {name}
+studio.unlock_offline = Offline earnings up to {time}
+studio.unlock_viral = HIT & VIRAL chance {mult}
+
+# ---------------------------------------------------------------- artist contract
+contract.term_cost = CONTRACT
+contract.term_genre = GENRE
+contract.term_beat = BEAT STYLE
+contract.term_boost = INCOME BOOST
+contract.term_requires = REQUIRES
+contract.quote = “{text}”
+contract.all_income = {mult} all income
+contract.sign = SIGN CONTRACT
+contract.signed = SIGNED
+
+# ---------------------------------------------------------------- album presentation & style
+album.hang_it = HANG IT IN THE STUDIO
+style.title = STYLE
+style.subtitle = Your look. Your story.
+style.cat_hair = HAIR
+style.cat_clothes = CLOTHES
+style.cat_accessories = ACCESSORIES
+style.cat_tattoos = TATTOOS
+style.cat_sneakers = SNEAKERS
+
+style.tag_top = TOP
+style.tag_pants = PANTS
+style.hint_take_off = Tap again to take it off
+style.hint_premium = Premium items unlock with better studios
+style.item.Hair_0 = Half-Up Dreads
+style.item.Hair_1 = Tied Dreads
+style.item.Hair_2 = Box Braids
+style.item.Hair_3 = Curly Fade
+style.item.Hair_4 = Long & Dyed
+style.item.Hair_5 = Messy Short
+style.item.Hair_6 = Lilac Bob
+style.item.Top_0 = Worn Hoodie
+style.item.Top_1 = Purple Hoodie
+style.item.Top_2 = Graphic Tee
+style.item.Top_3 = Satin Bomber
+style.item.Top_4 = Tracksuit
+style.item.Top_5 = Luxury Puffer
+style.item.Pants_0 = Rinse Denim
+style.item.Pants_1 = Joggers
+style.item.Pants_2 = Cargos
+style.item.Pants_3 = Wide Trousers
+style.item.Sneakers_0 = Retro Low
+style.item.Sneakers_1 = Court High
+style.item.Sneakers_2 = Minimal Lux
+style.item.Sneakers_3 = Chunky Future
+style.item.Headphones_1 = Studio Headphones
+style.item.Headwear_1 = Backwards Cap
+style.item.Headwear_2 = Knit Beanie
+style.item.Glasses_1 = Round Frames
+style.item.Glasses_2 = Shades
+style.item.Chain_1 = Thin Chain
+style.item.Chain_2 = Cuban Link
+style.item.Watch_1 = Smartwatch
+style.item.Watch_2 = Gold Watch
+style.item.Rings_1 = Rings
+style.item.Earrings_1 = Studs
+style.item.TattooHand_1 = Hand Note
+style.item.TattooArm_1 = Arm Sleeve
+style.item.TattooNeck_1 = Neck Rose
+style.item.TattooFace_1 = Face Dots
+
+prestige.bonus = {value} income forever
+prestige.first_run = First run
+prestige.restarts = Restarts: {count}
+prestige.pending = Restart now for {fame} Fame
+prestige.detail = Income bonus {from}  →  {to}
+prestige.locked = Earn {money} in this run to unlock
+prestige.confirm_title = RESTART LABEL?
+prestige.confirm_message = You will gain {fame} Fame (income {mult} forever).\n\nMoney, producers, genres, studio, artists and streams will be reset.
+prestige.confirm_button = RESTART
+
+# ---------------------------------------------------------------- celebrations / notifications
+notify.mission_complete = MISSION COMPLETE
+notify.claim_in_goals_reward = Claim in GOALS: {reward}
+notify.claim_in_goals = Claim in GOALS
+notify.weekly_done = WEEKLY CHALLENGE DONE
+notify.daily_done = DAILY CHALLENGE DONE
+notify.perfect_chemistry = PERFECT CHEMISTRY
+notify.chemistry_level = CHEMISTRY {level}
+notify.chemistry_max = Max bonuses unlocked for this duo
+notify.chemistry_better = Bonuses improved
+notify.achievement = ACHIEVEMENT!
+notify.trending = TRENDING!
+notify.trending_fans.one = +{n} fan on social media
+notify.trending_fans.other = +{n} fans on social media
+notify.tour_started = TOUR STARTED!
+notify.tour_back.one = {n} show · back in {time}
+notify.tour_back.other = {n} shows · back in {time}
+notify.boost = BOOST!
+notify.label_restarted = LABEL RESTARTED!
+notify.fame_gained = {fame} FAME
+notify.now_streaming = NOW STREAMING!
+notify.on_platform = ON {platform}
+notify.artist_signed = ARTIST SIGNED!
+notify.studio_upgrade = STUDIO UPGRADE!
+notify.viral_beat = {quality} BEAT!
+notify.quality_beat = {quality}!
+notify.new_genre = NEW GENRE!
+
+studio.new_unlocked = NEW STUDIO UNLOCKED
+ads.rewarded_ad = REWARDED AD
+ads.interstitial_ad = INTERSTITIAL AD
+
+# ---------------------------------------------------------------- push notifications
+push.busy_title = Your studio is busy!
+push.busy_body.one = Your producers created {n} new beat!
+push.busy_body.other = Your producers created {n} new beats!
+push.full_title = Your producers need you
+push.full_body = {money} is waiting — collect it before they stop!
+
+style.button = STYLE
+
+# ---------------------------------------------------------------- concerts: crowd
+crowd.sign_love = WE LOVE YOU
+crowd.sign_4life = {name} 4 LIFE
+crowd.sign_fan = #1 FAN
+
+# ---------------------------------------------------------------- concerts: venues, tours, careers
+venue.club.name = UNDERGROUND CLUB
+venue.club.desc = Dark room, small stage, smoke and the real ones.
+venue.smallvenue.name = SMALL VENUE
+venue.smallvenue.desc = Bigger stage, pro lights and LED screens.
+venue.concerthall.name = CONCERT HALL
+venue.concerthall.desc = A real hall. Balconies. A real lighting rig.
+venue.arena.name = ARENA
+venue.arena.desc = Giant stage, lasers, smoke — a career milestone.
+venue.stadium.name = STADIUM
+venue.stadium.desc = Fireworks. Massive screens. The end game.
+tour.mini.name = MINI TOUR
+tour.mini.audience = For rising artists
+tour.regional.name = REGIONAL TOUR
+tour.regional.audience = For established artists
+tour.national.name = NATIONAL TOUR
+tour.national.audience = For major artists
+tour.world.name = WORLD TOUR
+tour.world.audience = For superstars
+tour.mega.name = MEGA TOUR
+tour.mega.audience = The biggest tour ever
+tour.title = {name} TOUR
+tour.title_world = {name} WORLD TOUR
+tour.title_mega = {name} MEGA TOUR
+career.stage0 = UNKNOWN ARTIST
+career.stage1 = UNDERGROUND ARTIST
+career.stage2 = RISING ARTIST
+career.stage3 = ESTABLISHED ARTIST
+career.stage4 = ARENA ARTIST
+career.stage5 = SUPERSTAR
+career.stage6 = GLOBAL ICON
+achievement.first_show.title = FIRST SHOW
+achievement.first_show.desc = Perform your first concert.
+achievement.sold_out.title = SOLD OUT
+achievement.sold_out.desc = Sell out a venue.
+achievement.arena_ready.title = ARENA READY
+achievement.arena_ready.desc = Perform your first arena show.
+achievement.stadium.title = STADIUM KING
+achievement.stadium.desc = Perform your first stadium show.
+achievement.superstar.title = SUPERSTAR
+achievement.superstar.desc = Reach 90% popularity with an artist.
+achievement.world_tour.title = WORLD TOUR
+achievement.world_tour.desc = Complete a world tour.
+achievement.music_empire.title = MUSIC EMPIRE
+achievement.music_empire.desc = Generate $1B from concerts and tours.
+
+# ---------------------------------------------------------------- concerts: show & results
+concert.live = LIVE
+concert.attendance = ATTENDANCE
+concert.attendance_pct = {value} ATTENDANCE
+concert.performing = {artist} IS PERFORMING...
+concert.sold_out = SOLD OUT
+concert.attendance_great = GREAT ATTENDANCE
+concert.attendance_good = GOOD ATTENDANCE
+concert.attendance_low = LOW ATTENDANCE
+concert.venue_sold_out = {venue} SOLD OUT
+concert.complete = CONCERT COMPLETE
+concert.sold_energy = {sold} SOLD  ·  CROWD ENERGY {energy}
+concert.row_revenue = REVENUE
+concert.row_fans = FANS
+concert.row_popularity = POPULARITY
+concert.row_xp = CONCERT XP
+concert.revenue_detail = Tickets {tickets} ({count} × {price})  +  merch & streams {extra}
+concert.total = Total {value}
+concert.studio_limit_reached = Studio limit reached — upgrade the studio
+concert.popularity_now = Now {value}  ·  studio limit {cap}
+concert.level_max = Concert Level {level} (max)
+concert.level_progress = Concert Level {level}  ·  {xp} / {need} XP
+concert.level_name = Concert Level {level}
+concert.level_up = LEVEL UP!  CONCERT LV {level}
+concert.new_status = NEW STATUS: {status}
+concert.lock_popularity = Reach {value} popularity to unlock
+concert.lock_popularity_short = Reach {value} popularity
+concert.lock_studio_cap = Upgrade the studio to grow past {value}
+concert.lock_fans.one = Reach {n} fan to unlock
+concert.lock_fans.other = Reach {n} fans to unlock
+concert.lock_fans_short.one = Reach {n} fan
+concert.lock_fans_short.other = Reach {n} fans
+concert.block_not_signed = Sign the artist first
+concert.block_on_tour = On tour
+concert.block_resting = Resting {time}
+concert.event.soldout.title = SOLD OUT
+concert.event.soldout.text = Every ticket was sold!  +20% revenue
+concert.event.viralmoment.title = VIRAL MOMENT
+concert.event.viralmoment.text = The crowd filmed it and it went viral!  +15% fans  +3% popularity  +30% revenue
+concert.event.crowdgoescrazy.title = CROWD GOES CRAZY
+concert.event.crowdgoescrazy.text = Fans started jumping during the drop!  +5% fans  +1% popularity
+concert.event.encore.title = ENCORE!
+concert.event.encore.text = They wouldn't let them leave the stage!  +10% revenue  +20% XP
+concert.event.lowenergy.title = LOW ENERGY
+concert.event.lowenergy.text = Attendance was lower than expected.  -10% revenue
+concert.vibe.rage = MOSH PIT ENERGY
+concert.vibe.trap = 808s SHAKING THE FLOOR
+concert.vibe.underground = RAW AND REAL
+concert.vibe.drill = COLD AND HEAVY
+concert.vibe.melodic = EVERYONE IS SINGING
+concert.vibe.rnb = SMOOTH ATMOSPHERE
+concert.vibe.experimental = A SOUND FROM THE FUTURE
+concert.vibe.hiphop = HANDS IN THE AIR
+tour.lock_venue = Needs {venue}  ·  {reason}
+tour.lock_level = Reach Concert Level {level}
+tour.welcome_back = WELCOME BACK
+tour.complete = TOUR COMPLETE
+tour.tour = TOUR
+tour.finished = FINISHED THE {title}
+tour.shows_completed = {done} / {total} SHOWS COMPLETED
+tour.fans_in_cities = {fans} in {cities}
+tour.album_bonus = ALBUM TOUR BONUS
+count.cities.one = {n} city
+count.cities.other = {n} cities
+
+music.flavor.dark_moody = dark · moody · deep
+music.flavor.dark_aggressive = dark · aggressive · distorted
+music.flavor.bright = bright · melodic · atmospheric
+music.flavor.minimal = minimal · bass-heavy · experimental
+
+# ---------------------------------------------------------------- artist career screen
+career.section_chemistry = CHEMISTRY
+career.section_chemistry_sub = Working together builds chemistry — small bonuses, no limits
+career.section_book = BOOK A CONCERT
+career.section_book_sub = Bigger venues unlock with popularity and fans
+career.section_tours = TOURS
+career.section_tours_sub = Tours keep playing while you're away
+career.section_history = CONCERT HISTORY
+career.section_achievements = ACHIEVEMENTS
+career.career_lv = CAREER LV {level}
+career.concert_lv = CONCERT LV {level}
+career.status_not_signed = NOT SIGNED — sign the contract to book shows
+career.status_tour_finished = TOUR FINISHED — COLLECT THE REWARDS
+career.status_on_tour = ON TOUR  ·  {done} / {total} SHOWS  ·  {time} LEFT
+career.status_resting = RESTING  ·  NEXT SHOW IN {time}
+career.status_ready = READY TO PERFORM
+career.tile_popularity = POPULARITY
+career.tile_fans = FANS
+career.tile_level = CONCERT LEVEL
+career.tile_performance = PERFORMANCE
+career.tile_ticket = AVG TICKET
+career.tile_concerts = CONCERTS
+career.studio_limit = Studio limit {value}
+career.studio_limit_upgrade = Studio limit {value} — upgrade the studio
+career.fans_last_show = {value} from the last show
+career.fans_grow = Grow fans with music & shows
+career.max_level = MAX LEVEL
+career.xp = {xp} / {need} XP
+career.performance_sub = Talent · experience · studio sound
+career.ticket_at = at {venue}
+career.sold_out_count = {count} sold out
+career.expected_revenue = EXPECTED REVENUE
+career.book = BOOK
+career.resting = RESTING
+career.venue_line = {capacity} CAPACITY   ·   {ticket} TICKET
+career.expected_fans = Expected {fans} fans
+career.new_album = NEW ALBUM:  {title}
+career.album_tour_bonus = ALBUM TOUR BONUS   +25% revenue   +40% fans
+career.album_bonus = ALBUM BONUS
+career.tour_progress = {done} / {total} shows
+career.tour_finished = finished
+career.time_left = {time} left
+career.last_show = last show: {city}
+career.now_city = now: {city}
+career.start_tour = START TOUR
+career.history_title = {artist} — CONCERT HISTORY
+career.h_concerts = TOTAL CONCERTS
+career.h_fans = TOTAL FANS
+career.h_revenue = TOTAL REVENUE
+career.h_venue = LARGEST VENUE
+career.h_attendance = BEST ATTENDANCE
+career.h_best = BEST CONCERT
+career.no_concerts = No concerts yet — book the first show above!
+
+# ---------------------------------------------------------------- chemistry
+chemistry.partner_label = STUDIO PARTNER
+chemistry.change = CHANGE
+chemistry.prefers = Prefers: {names}
+chemistry.hire_first = Hire a producer to start working together
+chemistry.growth = growth {mult}
+chemistry.level_line = {level} CHEMISTRY  ·  {value}
+chemistry.no_bonus = No bonus yet — make beats, albums and shows together
+chemistry.when_signed = (when signed)
+chemistry.bonus_line = {show} show  ·  {fans} fans  ·  {streams} streams
+chemistry.bonus_viral = {viral} viral
+chemistry.level.low = LOW
+chemistry.level.normal = NORMAL
+chemistry.level.good = GOOD
+chemistry.level.great = GREAT
+chemistry.level.perfect = PERFECT
+chemistry.match.strong = STRONG MATCH
+chemistry.match.good = GOOD MATCH
+chemistry.match.average = AVERAGE MATCH
+chemistry.match.clash = STYLE CLASH
+
+# ---------------------------------------------------------------- missions
+mission.category.production = PRODUCTION
+mission.category.artists = ARTISTS
+mission.category.releases = RELEASES
+mission.category.concerts = CONCERTS
+mission.category.studio = STUDIO
+mission.category.career = CAREER
+reward.fans = {value} FANS
+reward.fame = {value} FAME
+mission.prod_beats_10.title = FIRST TRACKS
+mission.prod_beats_10.desc = Make 10 beats
+mission.prod_beats_50.title = WARMING UP
+mission.prod_beats_50.desc = Make 50 beats
+mission.prod_beats_100.title = BEAT MACHINE
+mission.prod_beats_100.desc = Make 100 beats
+mission.prod_beat_money_10k.title = PAID IN BEATS
+mission.prod_beat_money_10k.desc = Earn $10,000 from beats
+mission.prod_upgrades_5.title = LEVEL UP THE TEAM
+mission.prod_upgrades_5.desc = Upgrade producers 5 times
+mission.prod_viral_1.title = GONE VIRAL
+mission.prod_viral_1.desc = Produce a VIRAL beat
+mission.prod_beats_1k.title = THOUSAND HITS
+mission.prod_beats_1k.desc = Make 1,000 beats
+mission.prod_beat_money_1m.title = MILLION-DOLLAR LOOPS
+mission.prod_beat_money_1m.desc = Earn $1M from beats
+mission.prod_upgrades_100.title = DREAM TEAM
+mission.prod_upgrades_100.desc = Upgrade producers 100 times
+mission.prod_viral_25.title = VIRAL MACHINE
+mission.prod_viral_25.desc = Produce 25 VIRAL beats
+mission.prod_beats_10k.title = FACTORY MODE
+mission.prod_beats_10k.desc = Make 10,000 beats
+mission.art_sign_1.title = THE FIRST SIGNING
+mission.art_sign_1.desc = Sign your first artist
+mission.art_sign_3.title = BUILDING A ROSTER
+mission.art_sign_3.desc = Sign 3 artists
+mission.art_genres_3.title = GENRE HOPPER
+mission.art_genres_3.desc = Have artists from 3 different genres
+mission.art_pop_100.title = THE BUZZ
+mission.art_pop_100.desc = Reach 100% total popularity across your artists
+mission.art_fans_100k.title = 100K CLUB
+mission.art_fans_100k.desc = Help an artist reach 100K fans
+mission.art_success_3.title = HIT FACTORY
+mission.art_success_3.desc = Have 3 established artists (40%+ popularity)
+mission.art_fans_1m.title = MILLION FANS
+mission.art_fans_1m.desc = Help an artist reach 1M fans
+mission.art_level_max.title = STAGE LEGEND
+mission.art_level_max.desc = Max out an artist's concert level
+mission.rel_album_1.title = DEBUT ALBUM
+mission.rel_album_1.desc = Release your first album
+mission.rel_streams_1m.title = 1M STREAMS
+mission.rel_streams_1m.desc = Reach 1M total streams
+mission.rel_album_5.title = DISCOGRAPHY
+mission.rel_album_5.desc = Release 5 albums
+mission.rel_streams_10m.title = 10M STREAMS
+mission.rel_streams_10m.desc = Reach 10M total streams
+mission.rel_streams_1b.title = BILLION STREAMS
+mission.rel_streams_1b.desc = Reach 1B total streams
+mission.con_first.title = FIRST SHOW
+mission.con_first.desc = Host your first concert
+mission.con_soldout_club.title = PACKED CLUB
+mission.con_soldout_club.desc = Sell out an Underground Club
+mission.con_attendees_10k.title = 10K CROWD
+mission.con_attendees_10k.desc = Reach 10,000 total concert attendees
+mission.con_soldout_hall.title = HALL SOLD OUT
+mission.con_soldout_hall.desc = Sell out a Concert Hall
+mission.con_tour.title = ON THE ROAD
+mission.con_tour.desc = Complete a tour
+mission.con_fans_100k.title = WON ON STAGE
+mission.con_fans_100k.desc = Gain 100,000 fans from concerts
+mission.con_arena.title = ARENA NIGHT
+mission.con_arena.desc = Host an Arena concert
+mission.stu_bedroom.title = MOVING UP
+mission.stu_bedroom.desc = Unlock the Bedroom Studio
+mission.stu_pro.title = GOING PRO
+mission.stu_pro.desc = Unlock the Professional Studio
+mission.stu_modern.title = MODERN SOUND
+mission.stu_modern.desc = Unlock the Modern Studio
+mission.stu_luxury.title = LUXURY LIFE
+mission.stu_luxury.desc = Unlock the Luxury Studio
+mission.stu_max.title = THE EMPIRE
+mission.stu_max.desc = Reach the Mega Music Complex
+mission.car_1m.title = FIRST MILLION
+mission.car_1m.desc = Earn $1M
+mission.car_1b.title = BILLIONAIRE PRODUCER
+mission.car_1b.desc = Earn $1B
+mission.car_artists_5.title = LABEL BOSS
+mission.car_artists_5.desc = Have 5 established artists (40%+ popularity)
+mission.car_1t.title = TRILLION-DOLLAR SOUND
+mission.car_1t.desc = Earn $1T
+mission.car_stadium.title = TOP PRODUCER
+mission.car_stadium.desc = Put one of your artists on a stadium stage
+
+# ---------------------------------------------------------------- challenges
+challenge.d_beats.one = Make {value} beat
+challenge.d_beats.other = Make {value} beats
+challenge.d_money.other = Earn {value}
+challenge.d_upgrades.one = Upgrade producers {value} time
+challenge.d_upgrades.other = Upgrade producers {value} times
+challenge.d_fans.one = Gain {value} fan
+challenge.d_fans.other = Gain {value} fans
+challenge.d_concert.one = Complete {value} concert
+challenge.d_concert.other = Complete {value} concerts
+challenge.d_ad.one = Watch {value} ad for a boost
+challenge.d_ad.other = Watch {value} ads for boosts
+challenge.d_hit.one = Make {value} HIT beat
+challenge.d_hit.other = Make {value} HIT beats
+challenge.d_streams.one = Generate {value} stream
+challenge.d_streams.other = Generate {value} streams
+challenge.w_money.other = Earn {value}
+challenge.w_beats.one = Make {value} beat
+challenge.w_beats.other = Make {value} beats
+challenge.w_streams.one = Reach {value} new stream
+challenge.w_streams.other = Reach {value} new streams
+challenge.w_concerts.one = Complete {value} concert
+challenge.w_concerts.other = Complete {value} concerts
+challenge.w_sign.one = Sign {value} artist
+challenge.w_sign.other = Sign {value} artists
+challenge.w_album.one = Release {value} album
+challenge.w_album.other = Release {value} albums
+challenge.w_viral.one = Make {value} VIRAL beat
+challenge.w_viral.other = Make {value} VIRAL beats
+
+# ---------------------------------------------------------------- goals screen
+goals.title = GOALS
+goals.subtitle = Missions & challenges — rewards for playing your way
+goals.tab_missions = MISSIONS
+goals.tab_daily = DAILY
+goals.tab_weekly = WEEKLY
+goals.career_progress = CAREER PROGRESS
+goals.completed_count = {done} / {total} COMPLETED
+goals.history = CAREER HISTORY
+goals.history_count = {count} completed
+goals.daily_title = DAILY CHALLENGES
+goals.weekly_title = WEEKLY CHALLENGES
+goals.note = A bonus, never a chore — skipping a day costs nothing.
+goals.new_in = NEW IN {time}
+goals.empty = No challenges right now — check back later.
+
+# ---------------------------------------------------------------- game data (genres, producers, studios, artists, albums)
+genre.lofi.name = Lo-Fi
+genre.hiphop.name = Hip-Hop
+genre.trap.name = Trap
+genre.rage.name = Rage
+genre.hyperpop.name = Hyperpop
+genre.electronic.name = Electronic
+genre.experimental.name = Experimental
+genre.future.name = Future
+producer.beginner.name = Beginner Producer
+producer.melody.name = Melody Maker
+producer.drum.name = Drum Producer
+producer.sample.name = Sample Producer
+producer.sound.name = Sound Designer
+producer.hitmaker.name = Hitmaker
+producer.superstar.name = Superstar Producer
+studio.bedroom.name = Basement
+studio.bedroom.tagline = Pipes, cables and a cheap monitor. Everyone starts somewhere.
+studio.bedroom.unlock0 = Your first studio
+studio.small.name = Bedroom Studio
+studio.small.tagline = A real desk, real monitors, LED vibes.
+studio.small.unlock0 = Better monitors & MIDI keyboard
+studio.small.unlock1 = LED lighting
+studio.professional.name = Small Pro Studio
+studio.professional.tagline = Acoustic treatment. You're taking this seriously now.
+studio.professional.unlock0 = Acoustic treatment
+studio.professional.unlock1 = Studio rack gear
+studio.complex.name = Professional Studio
+studio.complex.tagline = Mixing console, vocal booth, multiple screens.
+studio.complex.unlock0 = Vocal booth
+studio.complex.unlock1 = Mixing console
+studio.company.name = Modern Studio
+studio.company.tagline = The billion-dollar room. Neon, glass and gold records.
+studio.company.unlock0 = Modern equipment
+studio.company.unlock1 = Gold records wall
+studio.label.name = Luxury Studio
+studio.label.tagline = Leather, marble, chandeliers. Producers fight to work here.
+studio.label.unlock0 = Luxury lounge
+studio.label.unlock1 = Curved ultra-wide screen
+studio.empire.name = Major Studio
+studio.empire.tagline = Multiple rooms, multiple sessions, all day.
+studio.empire.unlock0 = Second production room
+studio.empire.unlock1 = Live room
+studio.elite.name = Elite Studio
+studio.elite.tagline = LED wall, artist lounge, light beams. Spectacular.
+studio.elite.unlock0 = LED video wall
+studio.elite.unlock1 = Artist lounge
+studio.record_label.name = Record Label Studio
+studio.record_label.tagline = Your own label HQ above the city.
+studio.record_label.unlock0 = Executive floor
+studio.record_label.unlock1 = Skyline view
+studio.mega_complex.name = Mega Music Complex
+studio.mega_complex.tagline = Stage, arena lights and a hundred speakers. The final boss.
+studio.mega_complex.unlock0 = Arena stage
+studio.mega_complex.unlock1 = Ultimate prestige room
+artist.korv.bio = Raps in the stairwell of his building. Doesn't do interviews.
+artist.korv.beat_style = Dusty loops, hard kicks, no hi-hats
+artist.unknown_rapper.bio = Writes at 4 AM in a parked car. Few words, every one of them sharp.
+artist.unknown_rapper.beat_style = Raw samples, heavy kicks
+artist.lil_vexi.bio = Sixteen, chaotic, already has forty unreleased songs.
+artist.lil_vexi.beat_style = Distorted leads, fast 808 rolls
+artist.underground.bio = Turns heartbreak into hooks. Hums melodies into voice memos all day.
+artist.underground.beat_style = Airy pads, melodic 808s
+artist.rising.bio = Cold delivery, sliding 808s, zero small talk. Records in one take.
+artist.rising.beat_style = Sliding 808 basslines, sparse percussion
+artist.zyven.bio = Quiet in person, menacing on the mic.
+artist.zyven.beat_style = Dark bells, sliding 808s
+artist.baby_ruin.bio = Sings about heartbreak over every beat you send him.
+artist.baby_ruin.beat_style = Guitar loops, soft pads, bouncy 808
+artist.famous.bio = Builds songs out of glitches and broken synths. Nobody sounds like this.
+artist.famous.beat_style = Hyperpop glitches, detuned synths
+artist.k4iro.bio = Builds songs from field recordings and broken keyboards.
+artist.k4iro.beat_style = Glitchy drums, pitched vocal chops
+artist.superstar.bio = Charts, campaigns, sold-out shows. Expensive — and worth it.
+artist.superstar.beat_style = Big pop-rap drums, gospel chords
+artist.nox.bio = Wears all black. Every show turns into a mosh pit.
+artist.nox.beat_style = Blown-out 808s, siren synths
+artist.young_vonn.bio = Grew up on his uncle's mixtapes. Flow like a metronome.
+artist.young_vonn.beat_style = Rolling hats, big 808, triplet bounce
+artist.vexxo.bio = Screams half his ad-libs. Fans copy his haircut.
+artist.vexxo.beat_style = Hyper synths at 160 BPM
+artist.solei.bio = Late-night voice notes turned into a career.
+artist.solei.beat_style = Warm Rhodes, slow swing, live bass
+artist.rovan.bio = Auto-tune is his instrument. Every hook sounds like a hit.
+artist.rovan.beat_style = Ambient guitars, bouncy 808s
+artist.kash_v.bio = Talks money, saves money, buys studio gear.
+artist.kash_v.beat_style = Hard trap with orchestral hits
+artist.lil_raze.bio = Jumps off every speaker stack he can find.
+artist.lil_raze.beat_style = Distorted bass, video-game synths
+artist.drayo_k.bio = Short verses, cold stare, sold-out shows in four cities.
+artist.drayo_k.beat_style = Gritty drill slides, off-beat snares
+artist.xavo.bio = Masked stage outfits, unmasked lyrics.
+artist.xavo.beat_style = Industrial rage, metallic hits
+artist.kayvon_blu.bio = Sings like he's on the phone at 3 AM.
+artist.kayvon_blu.beat_style = Plucked synths, airy pads
+artist.zayro.bio = Lyricist first. Shouts out the producer in every song.
+artist.zayro.beat_style = Soul samples, punchy drums
+artist.vanta.bio = Strobes on, lights off. Nobody has seen his face clearly.
+artist.vanta.beat_style = Wall-of-noise synths, double-time hats
+artist.riven.bio = Soft voice, enormous fanbase.
+artist.riven.beat_style = Lo-fi guitars, gentle 808s
+artist.okko.bio = Runs his own label at twenty-two.
+artist.okko.beat_style = Dark piano drill, heavy slides
+artist.hexxa.bio = Half her songs are ninety seconds long. All of them chart.
+artist.hexxa.beat_style = Hyperpop bleeps, pitched-up vocals
+artist.vante.bio = A falsetto that made three producers cry.
+artist.vante.beat_style = Silky chords, slow trap drums
+artist.xeno.bio = Arena rage. Pyro on every drop.
+artist.xeno.beat_style = Stadium rage, detuned leads
+artist.lil_kavo.bio = Started on a free upload page, now on billboards.
+artist.lil_kavo.beat_style = Bouncy trap, playful flutes
+artist.ravenxo.bio = Gothic rage icon: black nails, silver rings, world tour.
+artist.ravenxo.beat_style = Dark rage with church organ samples
+artist.kaivn.bio = Every feature is an event.
+artist.kaivn.beat_style = Ethereal pads, slow-motion 808s
+artist.zora.bio = Voice of the decade, according to everyone.
+artist.zora.beat_style = Neo-soul keys, live bass
+artist.oblvn.bio = Nobody knows what comes next. That's the point.
+artist.oblvn.beat_style = Granular textures, broken rhythms
+album.basement_tapes.kind = FIRST TAPE
+album.basement_tapes.tagline = Recorded between the pipes and the cables.
+album.night_shift.kind = EP
+album.night_shift.tagline = Dark 808s made after midnight.
+album.neon_riot.kind = MIXTAPE
+album.neon_riot.tagline = Distorted synths, zero rules.
+album.cold_block.kind = DEBUT ALBUM
+album.cold_block.tagline = Minimal, cold, relentless.
+album.velvet_hours.kind = ALBUM
+album.velvet_hours.tagline = Warm keys and late-night vocals.
+album.signal_noise.kind = DELUXE ALBUM
+album.signal_noise.tagline = The future, on repeat.
+
+album.released_badge = RELEASED
+
+# ---------------------------------------------------------------- privacy & ads (09.10)
+settings.privacy_policy = Privacy policy
+settings.privacy_options = Privacy settings
+boosts.instant_viral_wait = INSTANT VIRAL BEAT  ·  {time}
+ads.no_internet = <color=#FF8A3D><b>No internet connection</b></color> — ads need the internet. Your progress is safe.

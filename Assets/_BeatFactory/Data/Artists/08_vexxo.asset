@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 529a60f252a2c6644b65adec3ad85e79, type: 3}
+  m_Name: 08_vexxo
+  m_EditorClassIdentifier: Assembly-CSharp::BeatFactory.ArtistData
+  id: vexxo
+  displayName: VEXXO
+  shortName: VE
+  color: {r: 1, g: 0.17, b: 0.24, a: 1}
+  avatar: {fileID: 21300000, guid: 3fc4bc6001fa4644cb56954f926d8789, type: 3}
+  role: RAGE
+  musicStyle: RAGE
+  personality: Screams half his ad-libs. Fans copy his haircut.
+  genre: 0
+  beatStyle: Hyper synths at 160 BPM
+  popularity: 3
+  monthlyListeners: 140000
+  visual:
+    skin: {r: 0.8784314, g: 0.7058824, b: 0.54901963, a: 1}
+    hair: {r: 0.078431375, g: 0.078431375, b: 0.09411765, a: 1}
+    hairTip: {r: 1, g: 0.16470589, b: 0.23921569, a: 1}
+    hairStyle: LongStraight
+    facialHair: none
+    accessories: shades, hoops
+    tattoos: face dots
+    outfit: "Puffer \xB7 Jogger \xB7 LowRetro"
+    clothing: {r: 0.078431375, g: 0.078431375, b: 0.09411765, a: 1}
+    accent: {r: 1, g: 0.16470589, b: 0.23921569, a: 1}
+    palette:
+    - {r: 1, g: 0.17, b: 0.24, a: 1}
+    - {r: 1, g: 0.16470589, b: 0.23921569, a: 1}
+    - {r: 0.078431375, g: 0.078431375, b: 0.09411765, a: 1}
+    stageHeads:
+    - {fileID: 21300000, guid: 118f26b57f739a44094d8d6be0255555, type: 3}
+    - {fileID: 21300000, guid: 6b2bf284a0aecd644816bcc057372f83, type: 3}
+    - {fileID: 21300000, guid: 46eaeb9d1850b5f4f9d2438a88f267c5, type: 3}
+    - {fileID: 21300000, guid: 80080c2a21f25304dbfd86345a5aa60c, type: 3}
+    - {fileID: 21300000, guid: 243810674fa1adf49b60433b806c8e90, type: 3}
+    stageTorso: {fileID: 21300000, guid: f6bcde2cdcc56c346b73ceef098977fe, type: 3}
+    stageArm: {fileID: 21300000, guid: 690887ac70354a64bb89b23d62e1c780, type: 3}
+    stageLeg: {fileID: 21300000, guid: 3e27011964bf36742bd682f7cadd8be8, type: 3}
+    signs:
+    - VEXXO
+    - WE LOVE YOU
+    - VEXXO 4 LIFE
+    - RED NOISE
+    - '#1 FAN'
+  cost: 1200000
+  requiredStudioLevel: 1
+  incomeMultiplier: 1.03

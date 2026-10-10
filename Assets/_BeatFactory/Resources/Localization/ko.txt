@@ -1,0 +1,824 @@
+# Beat Factory — 한국어
+# 한국어는 복수형 구분이 없습니다: .other만 사용
+
+# ---------------------------------------------------------------- numbers & time
+num.money = ${0}
+time.d = {0}일
+time.h = {0}시간
+time.m = {0}분
+time.s = {0}초
+time.join = {0} {1}
+
+# ---------------------------------------------------------------- common
+ui.close = 닫기
+ui.cancel = 취소
+ui.confirm = 확인
+ui.confirm_title = 정말 진행할까요?
+ui.collect = 받기
+ui.claim = 받기
+ui.claimed = 받음
+ui.complete = 완료
+ui.locked = 잠김
+ui.max = 최대
+ui.ok = 확인
+ui.loading = 불러오는 중…
+ui.free = 무료
+
+# ---------------------------------------------------------------- navigation
+nav.home = 홈
+nav.producers = 프로듀서
+nav.music = 음악
+nav.career = 커리어
+nav.prestige = 프레스티지
+nav.settings = 설정
+
+# ---------------------------------------------------------------- HUD
+hud.money = 돈
+hud.fame = 명성
+hud.beats_made.other = 비트
+home.make_beat = 비트 만들기
+
+# ---------------------------------------------------------------- offline earnings
+offline.title = 다시 오신 걸 환영해요!
+offline.away = 자리를 비운 시간: {time}
+offline.made = 프로듀서들이 번 돈
+offline.capped = 자리를 비운 동안 프로듀서는 최대 {time} 일해요
+offline.beats.other = 자리를 비운 동안 비트 {n}개를 만들었어요
+offline.ad_not_finished = 광고를 끝까지 보지 않았어요 — 그냥 받기도 가능해요
+
+# ---------------------------------------------------------------- ads
+ads.x2_with_ad = 광고 보고 x2
+ads.skip_no_reward = 건너뛰기 (보상 없음)
+ads.test_title = 테스트: {type}
+ads.test_placement = 광고 위치: {placement}\n테스트 광고 — 실제 광고는 표시되지 않아요
+ads.reward_earned = 보상 획득!
+
+# ---------------------------------------------------------------- producers screen
+producers.buy_max = 최대
+
+# ---------------------------------------------------------------- music screen
+music.header_streaming = 스트리밍  —  GOOD 이상 비트가 스트리밍 수익을 내요
+music.header_genres = 장르  —  모든 수입 증가
+music.header_studios = 스튜디오  —  수입과 속도 증가
+music.streams_label = 스트리밍
+music.cash_out = 정산하기
+
+# ---------------------------------------------------------------- career screen
+career.tab_artists = 아티스트
+career.tab_albums = 앨범
+
+# ---------------------------------------------------------------- prestige
+prestige.fame_points = 명성 포인트
+prestige.restart_button = 레이블 재시작
+prestige.info = <color=#FF8A3D><b>초기화</b></color>  돈, 프로듀서, 장르, 스튜디오, 아티스트, 스트리밍\n<color=#4DFFA8><b>유지</b></color>  명성, 재시작 횟수, 누적 통계, 설정
+
+# ---------------------------------------------------------------- settings
+settings.language = 언어
+settings.language_test = 테스트: 다음 언어
+settings.music = 음악
+settings.sound = 효과음
+settings.notifications = 알림
+settings.volume_master = 전체
+settings.volume_music = 음악
+settings.volume_sfx = 효과음
+settings.concert_music = 콘서트 음악
+settings.volume_concert = 콘서트
+settings.concert_effects = 콘서트 효과
+settings.quality_low = 낮음
+settings.quality_medium = 중간
+settings.quality_high = 높음
+settings.quality_auto = 자동 ({quality})
+settings.stats = 통계
+settings.stat_beats = 만든 비트
+settings.stat_hits = HIT / VIRAL 비트
+settings.stat_money = 누적 수입
+settings.stat_streams = 누적 스트리밍
+settings.stat_restarts = 레이블 재시작
+settings.replay_tutorial = 튜토리얼 다시 보기
+settings.reset_save = 저장 데이터 초기화
+settings.reset_title = 모든 진행 상황을 초기화할까요?
+settings.reset_message = 돈, 프로듀서, 장르, 스튜디오, 아티스트, 스트리밍, <b>명성</b>, 설정이 모두 삭제됩니다.\n\n<b>되돌릴 수 없어요.</b>
+settings.reset_confirm = 삭제
+settings.version = Beat Factory v{version}
+
+# ---------------------------------------------------------------- tutorial
+tutorial.lets_go = 시작하기
+tutorial.skip = 건너뛰기
+tutorial.got_it = 알겠어요
+tutorial.step0_title = Beat Factory에 오신 걸 환영해요!
+tutorial.step0 = 지하실 작업실을 음악 제국으로 키워 보세요.
+tutorial.step1_title = 첫 비트를 만들어 보세요.
+tutorial.step1 = 비트 만들기를 눌러 돈을 버세요.
+tutorial.step2_title = 프로듀서를 고용하세요.
+tutorial.step2 = 프로듀서는 게임을 꺼 둔 동안에도 비트를 만들어 줘요!
+tutorial.step3_title = 프로듀서를 업그레이드하세요.
+tutorial.step3 = 레벨이 높을수록 비트당 수입이 늘어나요.
+tutorial.step4_title = 새 장르를 해금하세요.
+tutorial.step4 = 음악 탭을 여세요 — {genre} 장르는 모든 수입 {mult}!
+tutorial.step5_title = 음악 제국을 세우세요!
+tutorial.step5 = 스튜디오를 업그레이드하고, 아티스트와 계약하고, 바이럴을 노리세요.
+
+# ---------------------------------------------------------------- beat quality
+quality.normal = 일반
+quality.good = 좋음
+quality.great = 훌륭함
+quality.hit = 히트
+quality.viral = 바이럴
+
+# ---------------------------------------------------------------- boosts
+boost.money.name = 수입 2배
+boost.money.chip = 2X $
+boost.money.desc = 모든 수입 {mult}
+boost.speed.name = 속도 2배
+boost.speed.chip = 2X 속도
+boost.speed.desc = 프로듀서 작업 속도 {mult}
+boost.producer.name = 프로듀서 부스트
+boost.producer.chip = 3X 프로듀서
+boost.producer.desc = 프로듀서 수입 {mult}
+boost.viral.name = 바이럴 부스트
+boost.viral.chip = 5X 바이럴
+boost.viral.desc = 히트·바이럴 확률 {mult}
+
+# ---------------------------------------------------------------- artist genres
+artist_genre.rage = 레이지
+artist_genre.trap = 트랩
+artist_genre.underground = 언더그라운드
+artist_genre.drill = 드릴
+artist_genre.melodic = 멜로딕 랩
+artist_genre.rnb = R&B
+artist_genre.experimental = 익스페리멘탈
+artist_genre.hiphop = 힙합
+artist.monthly_listeners.other = 월간 청취자 {n}명
+
+# ---------------------------------------------------------------- shared phrases
+common.unlocks_at = 해금 조건: {studio}
+common.better_studio = 더 좋은 스튜디오
+common.needs = 필요: {what}
+common.level_short = Lv.{level}
+common.level = 레벨 {level}
+common.per_sec = 초당 {money}
+common.per_s = 초당 {money}
+common.income = 수입 {mult}
+common.speed = 속도 {mult}
+common.streams_mult = 스트리밍 {mult}
+common.income_forever = 수입 영구 {mult}
+count.streams.other = 스트리밍 {n}회
+count.fans.other = 팬 {n}명
+count.beats.other = 비트 {n}개
+count.artists.other = 아티스트 {n}명
+count.concerts.other = 콘서트 {n}회
+count.shows.other = 공연 {n}회
+count.albums.other = 앨범 {n}장
+count.producers.other = 프로듀서 {n}명
+count.tours.other = 투어 {n}회
+count.seats.other = 좌석 {n}석
+count.cities.other = {n}개 도시
+
+# ---------------------------------------------------------------- producers
+producer.hire = 고용
+producer.upgrade = 업그레이드
+producer.hire_first = 먼저 고용하세요: {name}
+producer.per_sec_not_hired = 초당 {money}  ·  미고용
+home.per_beat = 비트당 {money}
+
+genre.unlock = {genre} 해금
+studio.top_room = 최고 스튜디오 달성
+studio.goal_ready = 준비 완료: {studio}
+studio.goal_next = 다음: {studio}
+studio.upgrade_button = 스튜디오 업그레이드
+home.beat_created = 비트 완성
+
+# ---------------------------------------------------------------- boosts popup
+boosts.button = 부스트
+boosts.title = 부스트
+boosts.free_ready = <color=#4DFFA8><b>무료 부스트 준비 완료!</b></color>  아래에서 하나를 고르세요.
+boosts.next_free = 다음 무료 부스트까지 {time}
+boosts.extend = 연장
+boosts.activate = 활성화
+boosts.instant_viral = 즉시 바이럴 비트  ► 광고
+goals.button = 목표
+ads.watch_ad = 광고 보기
+ads.plus_ad = +광고
+ads.still_loading = <color=#FF8A3D><b>광고를 아직 불러오는 중이에요</b></color> — 잠시 후 다시 시도해 주세요.
+
+shop.active = 적용 중
+shop.unlocked = 해금됨
+shop.unlock = 해금
+shop.current = 현재
+shop.owned = 보유
+shop.upgrade = 업그레이드
+music.streams_info = 가치 {money}   ·   스트리밍 1회 = {rate}   ·   플랫폼 {mult}
+music.live = 서비스 중
+music.release = 발매
+
+# ---------------------------------------------------------------- artists
+artist.income_chip = 수입 {mult}
+artist.on_tour = 투어 중
+artist.concerts_button = 콘서트
+artist.contract = 계약
+artist.popularity_value = 인기도 {value}
+artist.tour_shows = 공연 {done}/{total}
+artists.summary = 계약 {signed} / {total}   ·   아티스트 보너스: 수입 {mult}
+artists.summary_empty = 아티스트와 계약하세요 — 아티스트마다 모든 수입이 늘어나요
+artists.unlocks_at = 해금 조건:\n{studio}
+
+# ---------------------------------------------------------------- albums
+album.released_note = 발매 완료 — 스튜디오에 포스터가 걸렸어요
+album.reputation_income = 평판: 수입 {mult}
+album.reward_line = 보상: {money}  +  평판 {mult}
+album.release = 발매
+album.in_progress = 작업 중
+album.previous_first = 이전 앨범을 먼저 발매하세요
+album.req_beats = 만든 비트
+album.req_producers = 고용한 프로듀서
+album.req_studio = 스튜디오
+album.req_artists = 계약한 아티스트
+album.summary = 발매 {released} / {total}   ·   평판: 수입 {mult}
+album.out_now = {kind} 발매!
+album.feat = 피처링 {artist}
+album.reveal_reputation = 평판  모든 수입 {mult}
+album.reveal_poster = 스튜디오에 포스터가 추가됐어요
+album.released_badge = 발매됨
+album_genre.underground = 언더그라운드 랩
+album_genre.trap = 트랩
+album_genre.rage = 레이지
+album_genre.drill = 드릴
+album_genre.rnb = R&B
+album_genre.electronic = 일렉트로닉
+
+# ---------------------------------------------------------------- studio upgrade
+studio.popup_header = 내 스튜디오
+studio.unlocks_header = 해금 내용
+studio.maxed = 메가 뮤직 콤플렉스를\n소유했어요
+studio.next_level = 다음  ·  레벨 {level}
+studio.move_in = 이사하기
+studio.saving_up = 모으는 중
+studio.unlock_producer = 새 프로듀서: {name}
+studio.unlock_artists.other = 새 아티스트 {n}명: {name}
+studio.unlock_genre = 새 장르: {name}
+studio.unlock_album = 앨범: {name}
+studio.unlock_offline = 오프라인 수입 최대 {time}
+studio.unlock_viral = 히트·바이럴 확률 {mult}
+studio.new_unlocked = 새 스튜디오 해금
+
+# ---------------------------------------------------------------- artist contract
+contract.term_cost = 계약금
+contract.term_genre = 장르
+contract.term_beat = 비트 스타일
+contract.term_boost = 수입 보너스
+contract.term_requires = 조건
+contract.quote = “{text}”
+contract.all_income = 모든 수입 {mult}
+contract.sign = 계약하기
+contract.signed = 계약 완료
+
+# ---------------------------------------------------------------- album presentation & style
+album.hang_it = 스튜디오에 걸기
+style.button = 스타일
+style.title = 스타일
+style.subtitle = 나만의 룩, 나만의 이야기.
+style.cat_hair = 헤어
+style.cat_clothes = 의상
+style.cat_accessories = 액세서리
+style.cat_tattoos = 타투
+style.cat_sneakers = 스니커즈
+style.tag_top = 상의
+style.tag_pants = 하의
+style.hint_take_off = 한 번 더 누르면 벗을 수 있어요
+style.hint_premium = 프리미엄 아이템은 더 좋은 스튜디오에서 해금돼요
+style.item.Hair_0 = 반묶음 드레드
+style.item.Hair_1 = 묶은 드레드
+style.item.Hair_2 = 박스 브레이드
+style.item.Hair_3 = 컬리 페이드
+style.item.Hair_4 = 긴 염색 머리
+style.item.Hair_5 = 부스스한 숏컷
+style.item.Hair_6 = 라일락 단발
+style.item.Top_0 = 낡은 후드티
+style.item.Top_1 = 보라색 후드티
+style.item.Top_2 = 그래픽 티셔츠
+style.item.Top_3 = 새틴 봄버
+style.item.Top_4 = 트레이닝복
+style.item.Top_5 = 럭셔리 패딩
+style.item.Pants_0 = 생지 데님
+style.item.Pants_1 = 조거 팬츠
+style.item.Pants_2 = 카고 팬츠
+style.item.Pants_3 = 와이드 팬츠
+style.item.Sneakers_0 = 레트로 로우
+style.item.Sneakers_1 = 코트 하이
+style.item.Sneakers_2 = 미니멀 럭스
+style.item.Sneakers_3 = 청키 퓨처
+style.item.Headphones_1 = 스튜디오 헤드폰
+style.item.Headwear_1 = 뒤로 쓴 캡
+style.item.Headwear_2 = 니트 비니
+style.item.Glasses_1 = 동그란 안경
+style.item.Glasses_2 = 선글라스
+style.item.Chain_1 = 얇은 체인
+style.item.Chain_2 = 쿠반 링크
+style.item.Watch_1 = 스마트워치
+style.item.Watch_2 = 금시계
+style.item.Rings_1 = 반지
+style.item.Earrings_1 = 귀걸이
+style.item.TattooHand_1 = 손 음표 타투
+style.item.TattooArm_1 = 팔 토시 타투
+style.item.TattooNeck_1 = 목 장미 타투
+style.item.TattooFace_1 = 얼굴 점 타투
+
+# ---------------------------------------------------------------- prestige screen
+prestige.bonus = 수입 영구 {value}
+prestige.first_run = 첫 플레이
+prestige.restarts = 재시작: {count}회
+prestige.pending = 지금 재시작하면 명성 {fame}
+prestige.detail = 수입 보너스 {from}  →  {to}
+prestige.locked = 이번 플레이에서 {money}를 벌면 해금돼요
+prestige.confirm_title = 레이블을 재시작할까요?
+prestige.confirm_message = 명성 {fame}를 얻어요 (수입 영구 {mult}).\n\n돈, 프로듀서, 장르, 스튜디오, 아티스트, 스트리밍이 초기화됩니다.
+prestige.confirm_button = 재시작
+
+# ---------------------------------------------------------------- celebrations / notifications
+notify.mission_complete = 미션 완료
+notify.claim_in_goals_reward = 목표에서 받으세요: {reward}
+notify.claim_in_goals = 목표에서 받으세요
+notify.weekly_done = 주간 챌린지 완료
+notify.daily_done = 일일 챌린지 완료
+notify.perfect_chemistry = 완벽한 케미
+notify.chemistry_level = 케미: {level}
+notify.chemistry_max = 이 듀오의 최대 보너스가 해금됐어요
+notify.chemistry_better = 보너스가 올랐어요
+notify.achievement = 업적 달성!
+notify.trending = 트렌딩!
+notify.trending_fans.other = SNS에서 팬 +{n}명
+notify.tour_started = 투어 시작!
+notify.tour_back.other = 공연 {n}회 · {time} 후 복귀
+notify.boost = 부스트!
+notify.label_restarted = 레이블 재시작!
+notify.fame_gained = 명성 {fame}
+notify.now_streaming = 스트리밍 시작!
+notify.on_platform = {platform} 공개
+notify.artist_signed = 아티스트 계약!
+notify.studio_upgrade = 스튜디오 업그레이드!
+notify.viral_beat = {quality} 비트!
+notify.quality_beat = {quality}!
+notify.new_genre = 새 장르!
+ads.rewarded_ad = 보상형 광고
+ads.interstitial_ad = 전면 광고
+
+# ---------------------------------------------------------------- push notifications
+push.busy_title = 스튜디오가 바쁘게 돌아가고 있어요!
+push.busy_body.other = 프로듀서들이 새 비트를 {n}개 만들었어요!
+push.full_title = 프로듀서들이 기다리고 있어요
+push.full_body = {money}가 기다리고 있어요 — 멈추기 전에 받아 가세요!
+
+# ---------------------------------------------------------------- concerts: crowd
+crowd.sign_love = 사랑해요
+crowd.sign_4life = 평생 {name}
+crowd.sign_fan = 1호 팬
+
+# ---------------------------------------------------------------- concerts: venues, tours, careers
+venue.club.name = 언더그라운드 클럽
+venue.club.desc = 어두운 공간, 작은 무대, 자욱한 연기, 진짜 팬들만.
+venue.smallvenue.name = 소규모 공연장
+venue.smallvenue.desc = 더 큰 무대, 프로 조명, LED 스크린.
+venue.concerthall.name = 콘서트홀
+venue.concerthall.desc = 진짜 공연장. 발코니석. 제대로 된 조명 장비.
+venue.arena.name = 아레나
+venue.arena.desc = 거대한 무대, 레이저, 연기 — 커리어의 이정표.
+venue.stadium.name = 스타디움
+venue.stadium.desc = 불꽃놀이. 초대형 스크린. 엔드 게임.
+tour.mini.name = 미니 투어
+tour.mini.audience = 떠오르는 아티스트용
+tour.regional.name = 지역 투어
+tour.regional.audience = 자리 잡은 아티스트용
+tour.national.name = 전국 투어
+tour.national.audience = 메이저 아티스트용
+tour.world.name = 월드 투어
+tour.world.audience = 슈퍼스타용
+tour.mega.name = 메가 투어
+tour.mega.audience = 역사상 가장 큰 투어
+tour.title = {name} 투어
+tour.title_world = {name} 월드 투어
+tour.title_mega = {name} 메가 투어
+career.stage0 = 무명 아티스트
+career.stage1 = 언더그라운드 아티스트
+career.stage2 = 라이징 아티스트
+career.stage3 = 인정받는 아티스트
+career.stage4 = 아레나 아티스트
+career.stage5 = 슈퍼스타
+career.stage6 = 글로벌 아이콘
+achievement.first_show.title = 첫 무대
+achievement.first_show.desc = 첫 콘서트를 여세요.
+achievement.sold_out.title = 매진
+achievement.sold_out.desc = 공연장 티켓을 매진시키세요.
+achievement.arena_ready.title = 아레나 입성
+achievement.arena_ready.desc = 첫 아레나 공연을 하세요.
+achievement.stadium.title = 스타디움의 왕
+achievement.stadium.desc = 첫 스타디움 공연을 하세요.
+achievement.superstar.title = 슈퍼스타
+achievement.superstar.desc = 아티스트 인기도 90%를 달성하세요.
+achievement.world_tour.title = 월드 투어
+achievement.world_tour.desc = 월드 투어를 완료하세요.
+achievement.music_empire.title = 음악 제국
+achievement.music_empire.desc = 콘서트와 투어로 $1B를 버세요.
+
+# ---------------------------------------------------------------- concerts: show & results
+concert.live = LIVE
+concert.attendance = 관객 수
+concert.attendance_pct = 객석 점유율 {value}
+concert.performing = {artist} 공연 중...
+concert.sold_out = 매진
+concert.attendance_great = 관객 대만원
+concert.attendance_good = 관객 양호
+concert.attendance_low = 관객 저조
+concert.venue_sold_out = {venue} 매진
+concert.complete = 콘서트 종료
+concert.sold_energy = 판매율 {sold}  ·  관객 열기 {energy}
+concert.row_revenue = 수익
+concert.row_fans = 팬
+concert.row_popularity = 인기도
+concert.row_xp = 콘서트 경험치
+concert.revenue_detail = 티켓 {tickets} ({count} × {price})  +  굿즈·스트리밍 {extra}
+concert.total = 총 {value}
+concert.studio_limit_reached = 스튜디오 한도 도달 — 스튜디오를 업그레이드하세요
+concert.popularity_now = 현재 {value}  ·  스튜디오 한도 {cap}
+concert.level_max = 콘서트 레벨 {level} (최대)
+concert.level_progress = 콘서트 레벨 {level}  ·  {xp} / {need} XP
+concert.level_name = 콘서트 레벨 {level}
+concert.level_up = 레벨 업!  콘서트 Lv.{level}
+concert.new_status = 새 등급: {status}
+concert.lock_popularity = 인기도 {value} 달성 시 해금
+concert.lock_popularity_short = 인기도 {value} 필요
+concert.lock_studio_cap = {value} 이상 성장하려면 스튜디오를 업그레이드하세요
+concert.lock_fans.other = 팬 {n}명 달성 시 해금
+concert.lock_fans_short.other = 팬 {n}명 필요
+concert.block_not_signed = 먼저 아티스트와 계약하세요
+concert.block_on_tour = 투어 중
+concert.block_resting = 휴식 중 {time}
+concert.event.soldout.title = 매진
+concert.event.soldout.text = 티켓이 모두 팔렸어요!  수익 +20%
+concert.event.viralmoment.title = 바이럴 모먼트
+concert.event.viralmoment.text = 관객이 찍은 영상이 바이럴됐어요!  팬 +15%  인기도 +3%  수익 +30%
+concert.event.crowdgoescrazy.title = 관객 열광
+concert.event.crowdgoescrazy.text = 드롭에 맞춰 팬들이 뛰기 시작했어요!  팬 +5%  인기도 +1%
+concert.event.encore.title = 앙코르!
+concert.event.encore.text = 관객들이 무대에서 내려가지 못하게 했어요!  수익 +10%  경험치 +20%
+concert.event.lowenergy.title = 분위기 저조
+concert.event.lowenergy.text = 예상보다 관객이 적었어요.  수익 -10%
+concert.vibe.rage = 모시핏 에너지
+concert.vibe.trap = 808이 바닥을 울린다
+concert.vibe.underground = 날것 그대로
+concert.vibe.drill = 차갑고 묵직하게
+concert.vibe.melodic = 모두가 따라 부른다
+concert.vibe.rnb = 부드러운 분위기
+concert.vibe.experimental = 미래에서 온 사운드
+concert.vibe.hiphop = 손 머리 위로
+tour.lock_venue = 필요: {venue}  ·  {reason}
+tour.lock_level = 콘서트 레벨 {level} 필요
+tour.welcome_back = 다시 오신 걸 환영해요
+tour.complete = 투어 완료
+tour.tour = 투어
+tour.finished = {title} 완료
+tour.shows_completed = 공연 {done} / {total}회 완료
+tour.fans_in_cities = {cities}에서 {fans}
+tour.album_bonus = 앨범 투어 보너스
+
+music.flavor.dark_moody = 어둡게 · 무디하게 · 깊게
+music.flavor.dark_aggressive = 어둡게 · 공격적으로 · 디스토션
+music.flavor.bright = 밝게 · 멜로딕 · 몽환적으로
+music.flavor.minimal = 미니멀 · 묵직한 베이스 · 실험적
+
+# ---------------------------------------------------------------- artist career screen
+career.section_chemistry = 케미
+career.section_chemistry_sub = 함께 작업할수록 케미가 쌓여요 — 작은 보너스, 제한 없음
+career.section_book = 콘서트 예약
+career.section_book_sub = 인기도와 팬이 늘수록 더 큰 공연장이 열려요
+career.section_tours = 투어
+career.section_tours_sub = 게임을 꺼 둔 동안에도 투어는 계속돼요
+career.section_history = 콘서트 기록
+career.section_achievements = 업적
+career.career_lv = 커리어 Lv.{level}
+career.concert_lv = 콘서트 Lv.{level}
+career.status_not_signed = 미계약 — 계약해야 공연을 잡을 수 있어요
+career.status_tour_finished = 투어 종료 — 보상을 받으세요
+career.status_on_tour = 투어 중  ·  공연 {done} / {total}  ·  {time} 남음
+career.status_resting = 휴식 중  ·  다음 공연까지 {time}
+career.status_ready = 공연 준비 완료
+career.tile_popularity = 인기도
+career.tile_fans = 팬
+career.tile_level = 콘서트 레벨
+career.tile_performance = 퍼포먼스
+career.tile_ticket = 평균 티켓가
+career.tile_concerts = 콘서트
+career.studio_limit = 스튜디오 한도 {value}
+career.studio_limit_upgrade = 스튜디오 한도 {value} — 스튜디오를 업그레이드하세요
+career.fans_last_show = 지난 공연에서 {value}
+career.fans_grow = 음악과 공연으로 팬을 늘리세요
+career.max_level = 최대 레벨
+career.xp = {xp} / {need} XP
+career.performance_sub = 재능 · 경험 · 스튜디오 사운드
+career.ticket_at = 공연장: {venue}
+career.sold_out_count = 매진 {count}회
+career.expected_revenue = 예상 수익
+career.book = 예약
+career.resting = 휴식 중
+career.venue_line = 수용 인원 {capacity}   ·   티켓 {ticket}
+career.expected_fans = 예상 관객 {fans}명
+career.new_album = 새 앨범:  {title}
+career.album_tour_bonus = 앨범 투어 보너스   수익 +25%   팬 +40%
+career.album_bonus = 앨범 보너스
+career.tour_progress = 공연 {done} / {total}
+career.tour_finished = 종료
+career.time_left = {time} 남음
+career.last_show = 마지막 공연: {city}
+career.now_city = 현재: {city}
+career.start_tour = 투어 시작
+career.history_title = {artist} — 콘서트 기록
+career.h_concerts = 총 콘서트
+career.h_fans = 총 팬
+career.h_revenue = 총 수익
+career.h_venue = 최대 공연장
+career.h_attendance = 최고 점유율
+career.h_best = 최고 공연
+career.no_concerts = 아직 콘서트가 없어요 — 위에서 첫 공연을 예약하세요!
+
+# ---------------------------------------------------------------- chemistry
+chemistry.partner_label = 전담 프로듀서
+chemistry.change = 변경
+chemistry.prefers = 선호: {names}
+chemistry.hire_first = 프로듀서를 고용해 함께 작업을 시작하세요
+chemistry.growth = 성장 {mult}
+chemistry.level_line = 케미 {level}  ·  {value}
+chemistry.no_bonus = 아직 보너스가 없어요 — 함께 비트, 앨범, 공연을 만들어 보세요
+chemistry.when_signed = (계약 후 적용)
+chemistry.bonus_line = 공연 {show}  ·  팬 {fans}  ·  스트리밍 {streams}
+chemistry.bonus_viral = 바이럴 {viral}
+chemistry.level.low = 낮음
+chemistry.level.normal = 보통
+chemistry.level.good = 좋음
+chemistry.level.great = 훌륭함
+chemistry.level.perfect = 완벽
+chemistry.match.strong = 찰떡궁합
+chemistry.match.good = 좋은 궁합
+chemistry.match.average = 보통 궁합
+chemistry.match.clash = 스타일 충돌
+
+# ---------------------------------------------------------------- missions
+mission.category.production = 프로덕션
+mission.category.artists = 아티스트
+mission.category.releases = 발매
+mission.category.concerts = 콘서트
+mission.category.studio = 스튜디오
+mission.category.career = 커리어
+reward.fans = 팬 {value}
+reward.fame = 명성 {value}
+mission.prod_beats_10.title = 첫 트랙들
+mission.prod_beats_10.desc = 비트 10개 만들기
+mission.prod_beats_50.title = 몸풀기
+mission.prod_beats_50.desc = 비트 50개 만들기
+mission.prod_beats_100.title = 비트 머신
+mission.prod_beats_100.desc = 비트 100개 만들기
+mission.prod_beat_money_10k.title = 비트로 버는 돈
+mission.prod_beat_money_10k.desc = 비트로 $10,000 벌기
+mission.prod_upgrades_5.title = 팀 레벨 업
+mission.prod_upgrades_5.desc = 프로듀서 5회 업그레이드하기
+mission.prod_viral_1.title = 바이럴 성공
+mission.prod_viral_1.desc = 바이럴 비트 만들기
+mission.prod_beats_1k.title = 천 개의 비트
+mission.prod_beats_1k.desc = 비트 1,000개 만들기
+mission.prod_beat_money_1m.title = 백만 달러 루프
+mission.prod_beat_money_1m.desc = 비트로 $1M 벌기
+mission.prod_upgrades_100.title = 드림팀
+mission.prod_upgrades_100.desc = 프로듀서 100회 업그레이드하기
+mission.prod_viral_25.title = 바이럴 머신
+mission.prod_viral_25.desc = 바이럴 비트 25개 만들기
+mission.prod_beats_10k.title = 공장 가동
+mission.prod_beats_10k.desc = 비트 10,000개 만들기
+mission.art_sign_1.title = 첫 계약
+mission.art_sign_1.desc = 첫 아티스트와 계약하기
+mission.art_sign_3.title = 라인업 구성
+mission.art_sign_3.desc = 아티스트 3명과 계약하기
+mission.art_genres_3.title = 장르 넘나들기
+mission.art_genres_3.desc = 서로 다른 3개 장르의 아티스트 보유하기
+mission.art_pop_100.title = 입소문
+mission.art_pop_100.desc = 아티스트 인기도 합계 100% 달성하기
+mission.art_fans_100k.title = 10만 클럽
+mission.art_fans_100k.desc = 아티스트 한 명의 팬 100K 달성하기
+mission.art_success_3.title = 히트 팩토리
+mission.art_success_3.desc = 인정받는 아티스트 3명 보유하기 (인기도 40% 이상)
+mission.art_fans_1m.title = 백만 팬
+mission.art_fans_1m.desc = 아티스트 한 명의 팬 1M 달성하기
+mission.art_level_max.title = 무대의 전설
+mission.art_level_max.desc = 아티스트 콘서트 레벨 최대로 올리기
+mission.rel_album_1.title = 데뷔 앨범
+mission.rel_album_1.desc = 첫 앨범 발매하기
+mission.rel_streams_1m.title = 스트리밍 1M
+mission.rel_streams_1m.desc = 누적 스트리밍 1M 달성하기
+mission.rel_album_5.title = 디스코그래피
+mission.rel_album_5.desc = 앨범 5장 발매하기
+mission.rel_streams_10m.title = 스트리밍 10M
+mission.rel_streams_10m.desc = 누적 스트리밍 10M 달성하기
+mission.rel_streams_1b.title = 스트리밍 10억
+mission.rel_streams_1b.desc = 누적 스트리밍 1B 달성하기
+mission.con_first.title = 첫 무대
+mission.con_first.desc = 첫 콘서트 열기
+mission.con_soldout_club.title = 꽉 찬 클럽
+mission.con_soldout_club.desc = 언더그라운드 클럽 매진시키기
+mission.con_attendees_10k.title = 관객 1만 명
+mission.con_attendees_10k.desc = 누적 콘서트 관객 10,000명 달성하기
+mission.con_soldout_hall.title = 콘서트홀 매진
+mission.con_soldout_hall.desc = 콘서트홀 매진시키기
+mission.con_tour.title = 투어 출발
+mission.con_tour.desc = 투어 완료하기
+mission.con_fans_100k.title = 무대 위의 정복자
+mission.con_fans_100k.desc = 콘서트로 팬 100,000명 얻기
+mission.con_arena.title = 아레나의 밤
+mission.con_arena.desc = 아레나 콘서트 열기
+mission.stu_bedroom.title = 한 단계 위로
+mission.stu_bedroom.desc = 침실 스튜디오 해금하기
+mission.stu_pro.title = 프로의 길
+mission.stu_pro.desc = 프로 스튜디오 해금하기
+mission.stu_modern.title = 모던 사운드
+mission.stu_modern.desc = 모던 스튜디오 해금하기
+mission.stu_luxury.title = 럭셔리 라이프
+mission.stu_luxury.desc = 럭셔리 스튜디오 해금하기
+mission.stu_max.title = 제국
+mission.stu_max.desc = 메가 뮤직 콤플렉스 달성하기
+mission.car_1m.title = 첫 백만 달러
+mission.car_1m.desc = $1M 벌기
+mission.car_1b.title = 억만장자 프로듀서
+mission.car_1b.desc = $1B 벌기
+mission.car_artists_5.title = 레이블 보스
+mission.car_artists_5.desc = 인정받는 아티스트 5명 보유하기 (인기도 40% 이상)
+mission.car_1t.title = 1조 달러 사운드
+mission.car_1t.desc = $1T 벌기
+mission.car_stadium.title = 톱 프로듀서
+mission.car_stadium.desc = 소속 아티스트를 스타디움 무대에 세우기
+
+# ---------------------------------------------------------------- challenges
+challenge.d_beats.other = 비트 {value}개 만들기
+challenge.d_money.other = {value} 벌기
+challenge.d_upgrades.other = 프로듀서 {value}회 업그레이드하기
+challenge.d_fans.other = 팬 {value}명 얻기
+challenge.d_concert.other = 콘서트 {value}회 완료하기
+challenge.d_ad.other = 부스트 광고 {value}회 보기
+challenge.d_hit.other = 히트 비트 {value}개 만들기
+challenge.d_streams.other = 스트리밍 {value}회 달성하기
+challenge.w_money.other = {value} 벌기
+challenge.w_beats.other = 비트 {value}개 만들기
+challenge.w_streams.other = 새 스트리밍 {value}회 달성하기
+challenge.w_concerts.other = 콘서트 {value}회 완료하기
+challenge.w_sign.other = 아티스트 {value}명과 계약하기
+challenge.w_album.other = 앨범 {value}장 발매하기
+challenge.w_viral.other = 바이럴 비트 {value}개 만들기
+
+# ---------------------------------------------------------------- goals screen
+goals.title = 목표
+goals.subtitle = 미션과 챌린지 — 내 방식대로 즐기면 보상이 와요
+goals.tab_missions = 미션
+goals.tab_daily = 일일
+goals.tab_weekly = 주간
+goals.career_progress = 커리어 진행도
+goals.completed_count = {done} / {total} 완료
+goals.history = 커리어 기록
+goals.history_count = {count}개 완료
+goals.daily_title = 일일 챌린지
+goals.weekly_title = 주간 챌린지
+goals.note = 부담 없는 보너스예요 — 하루 쉬어도 손해는 없어요.
+goals.new_in = {time} 후 새로고침
+goals.empty = 지금은 챌린지가 없어요 — 나중에 다시 확인하세요.
+
+# ---------------------------------------------------------------- game data
+genre.lofi.name = 로파이
+genre.hiphop.name = 힙합
+genre.trap.name = 트랩
+genre.rage.name = 레이지
+genre.hyperpop.name = 하이퍼팝
+genre.electronic.name = 일렉트로닉
+genre.experimental.name = 익스페리멘탈
+genre.future.name = 퓨처
+producer.beginner.name = 초보 프로듀서
+producer.melody.name = 멜로디 메이커
+producer.drum.name = 드럼 프로듀서
+producer.sample.name = 샘플 프로듀서
+producer.sound.name = 사운드 디자이너
+producer.hitmaker.name = 히트메이커
+producer.superstar.name = 슈퍼스타 프로듀서
+studio.bedroom.name = 지하실
+studio.bedroom.tagline = 배관, 케이블, 싸구려 모니터. 누구나 어딘가에서 시작하죠.
+studio.bedroom.unlock0 = 나의 첫 스튜디오
+studio.small.name = 침실 스튜디오
+studio.small.tagline = 제대로 된 책상, 제대로 된 모니터, LED 감성.
+studio.small.unlock0 = 더 좋은 모니터와 MIDI 키보드
+studio.small.unlock1 = LED 조명
+studio.professional.name = 소형 프로 스튜디오
+studio.professional.tagline = 흡음 처리까지. 이제 진지하게 하는 거예요.
+studio.professional.unlock0 = 흡음 처리
+studio.professional.unlock1 = 스튜디오 랙 장비
+studio.complex.name = 프로 스튜디오
+studio.complex.tagline = 믹싱 콘솔, 보컬 부스, 여러 대의 화면.
+studio.complex.unlock0 = 보컬 부스
+studio.complex.unlock1 = 믹싱 콘솔
+studio.company.name = 모던 스튜디오
+studio.company.tagline = 10억 달러짜리 방. 네온, 유리, 골드 레코드.
+studio.company.unlock0 = 최신 장비
+studio.company.unlock1 = 골드 레코드 벽
+studio.label.name = 럭셔리 스튜디오
+studio.label.tagline = 가죽, 대리석, 샹들리에. 프로듀서들이 서로 일하고 싶어 해요.
+studio.label.unlock0 = 럭셔리 라운지
+studio.label.unlock1 = 커브드 울트라와이드 모니터
+studio.empire.name = 메이저 스튜디오
+studio.empire.tagline = 여러 개의 룸, 여러 세션, 하루 종일.
+studio.empire.unlock0 = 두 번째 작업실
+studio.empire.unlock1 = 라이브 룸
+studio.elite.name = 엘리트 스튜디오
+studio.elite.tagline = LED 월, 아티스트 라운지, 빛줄기. 압도적이에요.
+studio.elite.unlock0 = LED 비디오 월
+studio.elite.unlock1 = 아티스트 라운지
+studio.record_label.name = 레코드 레이블 스튜디오
+studio.record_label.tagline = 도시 위에 우뚝 선 나만의 레이블 본사.
+studio.record_label.unlock0 = 임원 층
+studio.record_label.unlock1 = 스카이라인 뷰
+studio.mega_complex.name = 메가 뮤직 콤플렉스
+studio.mega_complex.tagline = 무대, 아레나 조명, 스피커 백 대. 최종 보스.
+studio.mega_complex.unlock0 = 아레나 무대
+studio.mega_complex.unlock1 = 최고급 프레스티지 룸
+artist.korv.bio = 아파트 계단에서 랩을 해요. 인터뷰는 하지 않아요.
+artist.korv.beat_style = 먼지 낀 루프, 단단한 킥, 하이햇 없음
+artist.unknown_rapper.bio = 새벽 4시, 주차된 차 안에서 가사를 써요. 말은 적지만 한 마디 한 마디가 날카로워요.
+artist.unknown_rapper.beat_style = 거친 샘플, 묵직한 킥
+artist.lil_vexi.bio = 열여섯 살, 혼돈 그 자체, 미발표곡만 벌써 마흔 곡.
+artist.lil_vexi.beat_style = 디스토션 리드, 빠른 808 롤
+artist.underground.bio = 이별을 훅으로 바꿔요. 하루 종일 음성 메모에 멜로디를 흥얼거려요.
+artist.underground.beat_style = 몽환적인 패드, 멜로딕 808
+artist.rising.bio = 차가운 톤, 미끄러지는 808, 잡담은 사절. 원테이크로 녹음해요.
+artist.rising.beat_style = 슬라이드 808 베이스, 절제된 퍼커션
+artist.zyven.bio = 평소엔 조용하지만 마이크 앞에선 위협적이에요.
+artist.zyven.beat_style = 어두운 벨, 슬라이드 808
+artist.baby_ruin.bio = 보내 주는 비트마다 이별 노래를 불러요.
+artist.baby_ruin.beat_style = 기타 루프, 부드러운 패드, 통통 튀는 808
+artist.famous.bio = 글리치와 고장 난 신스로 곡을 만들어요. 이런 사운드는 누구도 못 내요.
+artist.famous.beat_style = 하이퍼팝 글리치, 디튠 신스
+artist.k4iro.bio = 필드 레코딩과 고장 난 키보드로 곡을 만들어요.
+artist.k4iro.beat_style = 글리치 드럼, 피치 올린 보컬 찹
+artist.superstar.bio = 차트, 광고, 매진 공연. 비싸지만 그만한 가치가 있어요.
+artist.superstar.beat_style = 웅장한 팝랩 드럼, 가스펠 코드
+artist.nox.bio = 늘 검은 옷만 입어요. 공연마다 모시핏이 열려요.
+artist.nox.beat_style = 찢어지는 808, 사이렌 신스
+artist.young_vonn.bio = 삼촌의 믹스테이프를 들으며 자랐어요. 메트로놈 같은 플로우.
+artist.young_vonn.beat_style = 구르는 하이햇, 큰 808, 셋잇단 그루브
+artist.vexxo.bio = 애드리브의 절반은 비명이에요. 팬들이 그의 헤어스타일을 따라 해요.
+artist.vexxo.beat_style = 160 BPM 하이퍼 신스
+artist.solei.bio = 늦은 밤의 음성 메모가 커리어가 됐어요.
+artist.solei.beat_style = 따뜻한 로즈 피아노, 느린 스윙, 라이브 베이스
+artist.rovan.bio = 오토튠이 곧 그의 악기. 훅마다 히트곡처럼 들려요.
+artist.rovan.beat_style = 앰비언트 기타, 통통 튀는 808
+artist.kash_v.bio = 돈 얘기를 하고, 돈을 모으고, 스튜디오 장비를 사요.
+artist.kash_v.beat_style = 오케스트라 히트가 들어간 하드 트랩
+artist.lil_raze.bio = 보이는 스피커 더미마다 뛰어내려요.
+artist.lil_raze.beat_style = 디스토션 베이스, 게임 사운드 신스
+artist.drayo_k.bio = 짧은 벌스, 차가운 눈빛, 네 도시 연속 매진.
+artist.drayo_k.beat_style = 거친 드릴 슬라이드, 엇박 스네어
+artist.xavo.bio = 무대에선 마스크를 쓰지만, 가사에는 가면이 없어요.
+artist.xavo.beat_style = 인더스트리얼 레이지, 금속성 타격음
+artist.kayvon_blu.bio = 새벽 3시에 통화하듯 노래해요.
+artist.kayvon_blu.beat_style = 플럭 신스, 몽환적인 패드
+artist.zayro.bio = 무엇보다 리리시스트. 곡마다 프로듀서 이름을 외쳐요.
+artist.zayro.beat_style = 소울 샘플, 펀치감 있는 드럼
+artist.vanta.bio = 스트로브는 켜고, 조명은 끄고. 그의 얼굴을 제대로 본 사람이 없어요.
+artist.vanta.beat_style = 노이즈 신스의 벽, 두 배 속도 하이햇
+artist.riven.bio = 부드러운 목소리, 엄청난 팬덤.
+artist.riven.beat_style = 로파이 기타, 부드러운 808
+artist.okko.bio = 스물두 살에 자기 레이블을 운영해요.
+artist.okko.beat_style = 어두운 피아노 드릴, 묵직한 슬라이드
+artist.hexxa.bio = 곡의 절반이 90초짜리. 전부 차트에 올라요.
+artist.hexxa.beat_style = 하이퍼팝 비프음, 피치 올린 보컬
+artist.vante.bio = 프로듀서 세 명을 울린 팔세토.
+artist.vante.beat_style = 실크 같은 코드, 느린 트랩 드럼
+artist.xeno.bio = 아레나 레이지. 드롭마다 불꽃이 터져요.
+artist.xeno.beat_style = 스타디움 레이지, 디튠 리드
+artist.lil_kavo.bio = 무료 업로드 사이트에서 시작해 이제는 빌보드 광고판에.
+artist.lil_kavo.beat_style = 통통 튀는 트랩, 장난스러운 플루트
+artist.ravenxo.bio = 고딕 레이지 아이콘: 검은 손톱, 은반지, 월드 투어.
+artist.ravenxo.beat_style = 교회 오르간 샘플을 쓴 어두운 레이지
+artist.kaivn.bio = 그의 피처링 하나하나가 이벤트예요.
+artist.kaivn.beat_style = 신비로운 패드, 슬로모션 808
+artist.zora.bio = 모두가 인정하는 이 시대의 목소리.
+artist.zora.beat_style = 네오소울 건반, 라이브 베이스
+artist.oblvn.bio = 다음에 뭐가 나올지 아무도 몰라요. 그게 핵심이에요.
+artist.oblvn.beat_style = 그래뉼러 텍스처, 부서진 리듬
+album.basement_tapes.kind = 첫 테이프
+album.basement_tapes.tagline = 배관과 케이블 사이에서 녹음했어요.
+album.night_shift.kind = EP
+album.night_shift.tagline = 자정 이후에 만든 어두운 808.
+album.neon_riot.kind = 믹스테이프
+album.neon_riot.tagline = 디스토션 신스, 규칙은 없다.
+album.cold_block.kind = 데뷔 앨범
+album.cold_block.tagline = 미니멀하고, 차갑고, 거침없이.
+album.velvet_hours.kind = 정규 앨범
+album.velvet_hours.tagline = 따뜻한 건반과 늦은 밤의 보컬.
+album.signal_noise.kind = 디럭스 앨범
+album.signal_noise.tagline = 미래를 무한 반복.
+
+# ---------------------------------------------------------------- privacy & ads (09.10)
+settings.privacy_policy = 개인정보 처리방침
+settings.privacy_options = 개인정보 설정
+boosts.instant_viral_wait = 즉시 바이럴 비트  ·  {time}
+ads.no_internet = <color=#FF8A3D><b>인터넷에 연결되어 있지 않아요</b></color> — 광고를 보려면 인터넷이 필요해요. 진행 상황은 안전해요.

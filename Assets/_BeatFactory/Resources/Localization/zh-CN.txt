@@ -1,0 +1,824 @@
+# Beat Factory — 简体中文
+# 中文没有复数变化：只使用 .other
+
+# ---------------------------------------------------------------- numbers & time
+num.money = ${0}
+time.d = {0}天
+time.h = {0}小时
+time.m = {0}分
+time.s = {0}秒
+time.join = {0}{1}
+
+# ---------------------------------------------------------------- common
+ui.close = 关闭
+ui.cancel = 取消
+ui.confirm = 确认
+ui.confirm_title = 确定吗？
+ui.collect = 领取
+ui.claim = 领取
+ui.claimed = 已领取
+ui.complete = 已完成
+ui.locked = 未解锁
+ui.max = 最大
+ui.ok = 好的
+ui.loading = 加载中…
+ui.free = 免费
+
+# ---------------------------------------------------------------- navigation
+nav.home = 主页
+nav.producers = 制作人
+nav.music = 音乐
+nav.career = 生涯
+nav.prestige = 声望
+nav.settings = 设置
+
+# ---------------------------------------------------------------- HUD
+hud.money = 金钱
+hud.fame = 名望
+hud.beats_made.other = 节拍
+home.make_beat = 制作节拍
+
+# ---------------------------------------------------------------- offline earnings
+offline.title = 欢迎回来！
+offline.away = 你离开了 {time}
+offline.made = 你的制作人赚到了
+offline.capped = 你不在时，制作人最多工作 {time}
+offline.beats.other = 你不在时制作了 {n} 个节拍
+offline.ad_not_finished = 广告未看完——你仍然可以领取
+
+# ---------------------------------------------------------------- ads
+ads.x2_with_ad = 看广告 x2
+ads.skip_no_reward = 跳过（无奖励）
+ads.test_title = 测试：{type}
+ads.test_placement = 广告位：{placement}\n测试广告——不会播放真实广告
+ads.reward_earned = 奖励已获得！
+
+# ---------------------------------------------------------------- producers screen
+producers.buy_max = 最大
+
+# ---------------------------------------------------------------- music screen
+music.header_streaming = 流媒体  —  GOOD 及以上的节拍会带来播放量
+music.header_genres = 曲风  —  提升全部收入
+music.header_studios = 录音室  —  提升收入与速度
+music.streams_label = 播放量
+music.cash_out = 变现
+
+# ---------------------------------------------------------------- career screen
+career.tab_artists = 艺人
+career.tab_albums = 专辑
+
+# ---------------------------------------------------------------- prestige
+prestige.fame_points = 名望点数
+prestige.restart_button = 重启厂牌
+prestige.info = <color=#FF8A3D><b>重置</b></color>  金钱、制作人、曲风、录音室、艺人、播放量\n<color=#4DFFA8><b>保留</b></color>  名望、重启次数、总统计和设置
+
+# ---------------------------------------------------------------- settings
+settings.language = 语言
+settings.language_test = 测试：下一种语言
+settings.music = 音乐
+settings.sound = 音效
+settings.notifications = 通知
+settings.volume_master = 总音量
+settings.volume_music = 音乐
+settings.volume_sfx = 音效
+settings.concert_music = 演唱会音乐
+settings.volume_concert = 演唱会
+settings.concert_effects = 演唱会特效
+settings.quality_low = 低
+settings.quality_medium = 中
+settings.quality_high = 高
+settings.quality_auto = 自动（{quality}）
+settings.stats = 统计
+settings.stat_beats = 已制作节拍
+settings.stat_hits = HIT / VIRAL 节拍
+settings.stat_money = 累计收入
+settings.stat_streams = 累计播放量
+settings.stat_restarts = 厂牌重启次数
+settings.replay_tutorial = 重新查看教程
+settings.reset_save = 重置存档
+settings.reset_title = 要重置全部进度吗？
+settings.reset_message = 金钱、制作人、曲风、录音室、艺人、播放量、<b>名望</b>和设置都将被删除。\n\n<b>此操作无法撤销。</b>
+settings.reset_confirm = 删除
+settings.version = Beat Factory v{version}
+
+# ---------------------------------------------------------------- tutorial
+tutorial.lets_go = 开始吧
+tutorial.skip = 跳过
+tutorial.got_it = 知道了
+tutorial.step0_title = 欢迎来到 Beat Factory！
+tutorial.step0 = 把地下室录音室打造成音乐帝国。
+tutorial.step1_title = 制作你的第一批节拍。
+tutorial.step1 = 点击“制作节拍”赚钱。
+tutorial.step2_title = 雇用一名制作人。
+tutorial.step2 = 制作人会帮你制作节拍——你不在线时也一样！
+tutorial.step3_title = 升级你的制作人。
+tutorial.step3 = 等级越高，每个节拍赚得越多。
+tutorial.step4_title = 解锁新曲风。
+tutorial.step4 = 打开“音乐”——{genre}让全部收入 {mult}！
+tutorial.step5_title = 打造你的音乐帝国！
+tutorial.step5 = 升级录音室，签约艺人，一夜爆红。
+
+# ---------------------------------------------------------------- beat quality
+quality.normal = 普通
+quality.good = 优秀
+quality.great = 出色
+quality.hit = 热门
+quality.viral = 爆款
+
+# ---------------------------------------------------------------- boosts
+boost.money.name = 双倍金钱
+boost.money.chip = 2X $
+boost.money.desc = 全部收入 {mult}
+boost.speed.name = 双倍速度
+boost.speed.chip = 2X 速度
+boost.speed.desc = 制作人工作速度 {mult}
+boost.producer.name = 制作人加成
+boost.producer.chip = 3X 制作
+boost.producer.desc = 制作人收入 {mult}
+boost.viral.name = 爆款加成
+boost.viral.chip = 5X 爆款
+boost.viral.desc = 热门与爆款几率 {mult}
+
+# ---------------------------------------------------------------- artist genres
+artist_genre.rage = RAGE
+artist_genre.trap = 陷阱说唱
+artist_genre.underground = 地下说唱
+artist_genre.drill = DRILL
+artist_genre.melodic = 旋律说唱
+artist_genre.rnb = R&B
+artist_genre.experimental = 实验
+artist_genre.hiphop = 嘻哈
+artist.monthly_listeners.other = 月听众 {n}
+
+# ---------------------------------------------------------------- shared phrases
+common.unlocks_at = 解锁条件：{studio}
+common.better_studio = 更好的录音室
+common.needs = 需要：{what}
+common.level_short = {level} 级
+common.level = 等级 {level}
+common.per_sec = {money}/秒
+common.per_s = {money}/秒
+common.income = 收入 {mult}
+common.speed = 速度 {mult}
+common.streams_mult = 播放量 {mult}
+common.income_forever = 收入永久 {mult}
+count.streams.other = {n} 次播放
+count.fans.other = {n} 名粉丝
+count.beats.other = {n} 个节拍
+count.artists.other = {n} 位艺人
+count.concerts.other = {n} 场演唱会
+count.shows.other = {n} 场演出
+count.albums.other = {n} 张专辑
+count.producers.other = {n} 位制作人
+count.tours.other = {n} 次巡演
+count.seats.other = {n} 个座位
+count.cities.other = {n} 座城市
+
+# ---------------------------------------------------------------- producers
+producer.hire = 雇用
+producer.upgrade = 升级
+producer.hire_first = 请先雇用：{name}
+producer.per_sec_not_hired = {money}/秒  ·  未雇用
+home.per_beat = 每个节拍 {money}
+
+genre.unlock = 解锁{genre}
+studio.top_room = 已达到顶级录音室
+studio.goal_ready = 可升级：{studio}
+studio.goal_next = 下一个：{studio}
+studio.upgrade_button = 升级录音室
+home.beat_created = 节拍完成
+
+# ---------------------------------------------------------------- boosts popup
+boosts.button = 加成
+boosts.title = 加成
+boosts.free_ready = <color=#4DFFA8><b>免费加成已就绪！</b></color>  在下方选择一个。
+boosts.next_free = 下次免费加成：{time}
+boosts.extend = 延长
+boosts.activate = 激活
+boosts.instant_viral = 立即获得爆款节拍  ► 广告
+goals.button = 目标
+ads.watch_ad = 观看广告
+ads.plus_ad = +广告
+ads.still_loading = <color=#FF8A3D><b>广告仍在加载</b></color>——请几秒后再试。
+
+shop.active = 生效中
+shop.unlocked = 已解锁
+shop.unlock = 解锁
+shop.current = 当前
+shop.owned = 已拥有
+shop.upgrade = 升级
+music.streams_info = 价值 {money}   ·   每次播放 = {rate}   ·   平台 {mult}
+music.live = 已上线
+music.release = 发布
+
+# ---------------------------------------------------------------- artists
+artist.income_chip = 收入 {mult}
+artist.on_tour = 巡演中
+artist.concerts_button = 演唱会
+artist.contract = 签约
+artist.popularity_value = 人气 {value}
+artist.tour_shows = 演出 {done}/{total}
+artists.summary = 已签约 {signed} / {total}   ·   艺人加成：收入 {mult}
+artists.summary_empty = 签约艺人——每位艺人都能提升全部收入
+artists.unlocks_at = 解锁条件：\n{studio}
+
+# ---------------------------------------------------------------- albums
+album.released_note = 已发行——海报挂在你的录音室
+album.reputation_income = 口碑：收入 {mult}
+album.reward_line = 奖励：{money}  +  口碑 {mult}
+album.release = 发行
+album.in_progress = 制作中
+album.previous_first = 请先发行上一张专辑
+album.req_beats = 已制作节拍
+album.req_producers = 已雇用制作人
+album.req_studio = 录音室
+album.req_artists = 已签约艺人
+album.summary = 已发行 {released} / {total}   ·   口碑：收入 {mult}
+album.out_now = {kind}现已发行
+album.feat = 合作：{artist}
+album.reveal_reputation = 口碑  全部收入 {mult}
+album.reveal_poster = 海报已挂进你的录音室
+album.released_badge = 已发行
+album_genre.underground = 地下说唱
+album_genre.trap = 陷阱说唱
+album_genre.rage = RAGE
+album_genre.drill = DRILL
+album_genre.rnb = R&B
+album_genre.electronic = 电子
+
+# ---------------------------------------------------------------- studio upgrade
+studio.popup_header = 你的录音室
+studio.unlocks_header = 解锁内容
+studio.maxed = 你已拥有\n超级音乐综合体
+studio.next_level = 下一级  ·  等级 {level}
+studio.move_in = 入驻
+studio.saving_up = 攒钱中
+studio.unlock_producer = 新制作人：{name}
+studio.unlock_artists.other = {n} 位新艺人：{name}
+studio.unlock_genre = 新曲风：{name}
+studio.unlock_album = 专辑：{name}
+studio.unlock_offline = 离线收益最长 {time}
+studio.unlock_viral = 热门与爆款几率 {mult}
+studio.new_unlocked = 新录音室已解锁
+
+# ---------------------------------------------------------------- artist contract
+contract.term_cost = 签约费
+contract.term_genre = 曲风
+contract.term_beat = 节拍风格
+contract.term_boost = 收入加成
+contract.term_requires = 需要
+contract.quote = “{text}”
+contract.all_income = 全部收入 {mult}
+contract.sign = 签订合约
+contract.signed = 已签约
+
+# ---------------------------------------------------------------- album presentation & style
+album.hang_it = 挂进录音室
+style.button = 造型
+style.title = 造型
+style.subtitle = 你的造型，你的故事。
+style.cat_hair = 发型
+style.cat_clothes = 服装
+style.cat_accessories = 配饰
+style.cat_tattoos = 纹身
+style.cat_sneakers = 球鞋
+style.tag_top = 上装
+style.tag_pants = 下装
+style.hint_take_off = 再点一次即可取下
+style.hint_premium = 更好的录音室可解锁高级单品
+style.item.Hair_0 = 半扎脏辫
+style.item.Hair_1 = 扎起的脏辫
+style.item.Hair_2 = 盒子辫
+style.item.Hair_3 = 卷发渐变
+style.item.Hair_4 = 染色长发
+style.item.Hair_5 = 凌乱短发
+style.item.Hair_6 = 淡紫波波头
+style.item.Top_0 = 旧连帽衫
+style.item.Top_1 = 紫色连帽衫
+style.item.Top_2 = 印花T恤
+style.item.Top_3 = 缎面飞行夹克
+style.item.Top_4 = 运动套装
+style.item.Top_5 = 奢华羽绒服
+style.item.Pants_0 = 深色牛仔裤
+style.item.Pants_1 = 慢跑裤
+style.item.Pants_2 = 工装裤
+style.item.Pants_3 = 阔腿裤
+style.item.Sneakers_0 = 复古低帮
+style.item.Sneakers_1 = 高帮篮球鞋
+style.item.Sneakers_2 = 极简奢华
+style.item.Sneakers_3 = 未来感老爹鞋
+style.item.Headphones_1 = 录音室耳机
+style.item.Headwear_1 = 反戴棒球帽
+style.item.Headwear_2 = 针织帽
+style.item.Glasses_1 = 圆框眼镜
+style.item.Glasses_2 = 墨镜
+style.item.Chain_1 = 细项链
+style.item.Chain_2 = 古巴链
+style.item.Watch_1 = 智能手表
+style.item.Watch_2 = 金表
+style.item.Rings_1 = 戒指
+style.item.Earrings_1 = 耳钉
+style.item.TattooHand_1 = 手部音符
+style.item.TattooArm_1 = 花臂
+style.item.TattooNeck_1 = 颈部玫瑰
+style.item.TattooFace_1 = 脸部点纹
+
+# ---------------------------------------------------------------- prestige screen
+prestige.bonus = 收入永久 {value}
+prestige.first_run = 首次游玩
+prestige.restarts = 重启次数：{count}
+prestige.pending = 现在重启可获得 {fame} 名望
+prestige.detail = 收入加成 {from}  →  {to}
+prestige.locked = 本轮赚到 {money} 即可解锁
+prestige.confirm_title = 要重启厂牌吗？
+prestige.confirm_message = 你将获得 {fame} 名望（收入永久 {mult}）。\n\n金钱、制作人、曲风、录音室、艺人和播放量将被重置。
+prestige.confirm_button = 重启
+
+# ---------------------------------------------------------------- celebrations / notifications
+notify.mission_complete = 任务完成
+notify.claim_in_goals_reward = 前往“目标”领取：{reward}
+notify.claim_in_goals = 前往“目标”领取
+notify.weekly_done = 每周挑战完成
+notify.daily_done = 每日挑战完成
+notify.perfect_chemistry = 完美默契
+notify.chemistry_level = 默契：{level}
+notify.chemistry_max = 这对组合已解锁最高加成
+notify.chemistry_better = 加成提升了
+notify.achievement = 成就达成！
+notify.trending = 上热搜了！
+notify.trending_fans.other = 社交媒体新增 {n} 名粉丝
+notify.tour_started = 巡演开始！
+notify.tour_back.other = {n} 场演出 · {time}后归来
+notify.boost = 加成！
+notify.label_restarted = 厂牌已重启！
+notify.fame_gained = 名望 {fame}
+notify.now_streaming = 已登陆流媒体！
+notify.on_platform = 登陆 {platform}
+notify.artist_signed = 艺人签约成功！
+notify.studio_upgrade = 录音室升级！
+notify.viral_beat = {quality}节拍！
+notify.quality_beat = {quality}！
+notify.new_genre = 新曲风！
+ads.rewarded_ad = 激励广告
+ads.interstitial_ad = 插页广告
+
+# ---------------------------------------------------------------- push notifications
+push.busy_title = 你的录音室正忙个不停！
+push.busy_body.other = 你的制作人做出了 {n} 个新节拍！
+push.full_title = 你的制作人需要你
+push.full_body = {money} 正等你领取——赶在他们停工前收下吧！
+
+# ---------------------------------------------------------------- concerts: crowd
+crowd.sign_love = 我们爱你
+crowd.sign_4life = {name} 永远支持
+crowd.sign_fan = 头号粉丝
+
+# ---------------------------------------------------------------- concerts: venues, tours, careers
+venue.club.name = 地下俱乐部
+venue.club.desc = 昏暗的场地，小舞台，烟雾缭绕，只有真正的乐迷。
+venue.smallvenue.name = 小型场馆
+venue.smallvenue.desc = 更大的舞台，专业灯光和 LED 屏幕。
+venue.concerthall.name = 音乐厅
+venue.concerthall.desc = 真正的音乐厅。有包厢，有真正的灯光系统。
+venue.arena.name = 体育馆
+venue.arena.desc = 巨型舞台、激光、烟雾——职业生涯的里程碑。
+venue.stadium.name = 体育场
+venue.stadium.desc = 烟花、巨幕、终极舞台。
+tour.mini.name = 小型巡演
+tour.mini.audience = 适合新晋艺人
+tour.regional.name = 地区巡演
+tour.regional.audience = 适合成名艺人
+tour.national.name = 全国巡演
+tour.national.audience = 适合大牌艺人
+tour.world.name = 世界巡演
+tour.world.audience = 适合超级巨星
+tour.mega.name = 超级巡演
+tour.mega.audience = 史上最大规模的巡演
+tour.title = {name} 巡演
+tour.title_world = {name} 世界巡演
+tour.title_mega = {name} 超级巡演
+career.stage0 = 无名艺人
+career.stage1 = 地下艺人
+career.stage2 = 新晋艺人
+career.stage3 = 成名艺人
+career.stage4 = 体育馆级艺人
+career.stage5 = 超级巨星
+career.stage6 = 全球偶像
+achievement.first_show.title = 首场演出
+achievement.first_show.desc = 举办你的第一场演唱会。
+achievement.sold_out.title = 门票售罄
+achievement.sold_out.desc = 让一个场馆门票售罄。
+achievement.arena_ready.title = 进军体育馆
+achievement.arena_ready.desc = 举办第一场体育馆演唱会。
+achievement.stadium.title = 体育场之王
+achievement.stadium.desc = 举办第一场体育场演唱会。
+achievement.superstar.title = 超级巨星
+achievement.superstar.desc = 让一位艺人的人气达到 90%。
+achievement.world_tour.title = 世界巡演
+achievement.world_tour.desc = 完成一次世界巡演。
+achievement.music_empire.title = 音乐帝国
+achievement.music_empire.desc = 通过演唱会和巡演赚到 $1B。
+
+# ---------------------------------------------------------------- concerts: show & results
+concert.live = 直播
+concert.attendance = 上座率
+concert.attendance_pct = 上座率 {value}
+concert.performing = {artist} 正在演出...
+concert.sold_out = 门票售罄
+concert.attendance_great = 上座率极高
+concert.attendance_good = 上座率不错
+concert.attendance_low = 上座率偏低
+concert.venue_sold_out = {venue} 门票售罄
+concert.complete = 演唱会结束
+concert.sold_energy = 售出 {sold}  ·  现场热度 {energy}
+concert.row_revenue = 收入
+concert.row_fans = 粉丝
+concert.row_popularity = 人气
+concert.row_xp = 演出经验
+concert.revenue_detail = 门票 {tickets}（{count} × {price}）  +  周边与播放 {extra}
+concert.total = 总计 {value}
+concert.studio_limit_reached = 已达录音室上限——请升级录音室
+concert.popularity_now = 当前 {value}  ·  录音室上限 {cap}
+concert.level_max = 演出等级 {level}（满级）
+concert.level_progress = 演出等级 {level}  ·  {xp} / {need} 经验
+concert.level_name = 演出等级 {level}
+concert.level_up = 升级了！演出等级 {level}
+concert.new_status = 新身份：{status}
+concert.lock_popularity = 人气达到 {value} 后解锁
+concert.lock_popularity_short = 人气达到 {value}
+concert.lock_studio_cap = 升级录音室才能突破 {value}
+concert.lock_fans.other = 粉丝达到 {n} 后解锁
+concert.lock_fans_short.other = 粉丝达到 {n}
+concert.block_not_signed = 请先签约这位艺人
+concert.block_on_tour = 巡演中
+concert.block_resting = 休息中 {time}
+concert.event.soldout.title = 门票售罄
+concert.event.soldout.text = 所有门票都卖光了！  收入 +20%
+concert.event.viralmoment.title = 爆红时刻
+concert.event.viralmoment.text = 观众拍下视频，瞬间爆红！  粉丝 +15%  人气 +3%  收入 +30%
+concert.event.crowdgoescrazy.title = 全场沸腾
+concert.event.crowdgoescrazy.text = Drop 一响，粉丝全场跳了起来！  粉丝 +5%  人气 +1%
+concert.event.encore.title = 安可！
+concert.event.encore.text = 观众不让他们下台！  收入 +10%  经验 +20%
+concert.event.lowenergy.title = 气氛冷淡
+concert.event.lowenergy.text = 到场人数低于预期。  收入 -10%
+concert.vibe.rage = 疯狂 Pogo 能量
+concert.vibe.trap = 808 震动地板
+concert.vibe.underground = 原汁原味
+concert.vibe.drill = 冰冷而沉重
+concert.vibe.melodic = 全场大合唱
+concert.vibe.rnb = 柔和氛围
+concert.vibe.experimental = 来自未来的声音
+concert.vibe.hiphop = 举起双手
+tour.lock_venue = 需要：{venue}  ·  {reason}
+tour.lock_level = 演出等级达到 {level}
+tour.welcome_back = 欢迎回来
+tour.complete = 巡演结束
+tour.tour = 巡演
+tour.finished = 已完成 {title}
+tour.shows_completed = 已完成 {done} / {total} 场演出
+tour.fans_in_cities = {cities}共 {fans}
+tour.album_bonus = 专辑巡演加成
+
+music.flavor.dark_moody = 阴郁 · 情绪 · 深沉
+music.flavor.dark_aggressive = 阴暗 · 猛烈 · 失真
+music.flavor.bright = 明亮 · 旋律 · 空灵
+music.flavor.minimal = 极简 · 重低音 · 实验
+
+# ---------------------------------------------------------------- artist career screen
+career.section_chemistry = 默契
+career.section_chemistry_sub = 合作越多默契越高——小幅加成，没有限制
+career.section_book = 预订演唱会
+career.section_book_sub = 人气和粉丝越多，可解锁的场馆越大
+career.section_tours = 巡演
+career.section_tours_sub = 你不在线时巡演也会继续
+career.section_history = 演出记录
+career.section_achievements = 成就
+career.career_lv = 生涯等级 {level}
+career.concert_lv = 演出等级 {level}
+career.status_not_signed = 未签约——签约后才能预订演出
+career.status_tour_finished = 巡演结束——领取奖励
+career.status_on_tour = 巡演中  ·  演出 {done} / {total}  ·  剩余 {time}
+career.status_resting = 休息中  ·  {time}后可再次演出
+career.status_ready = 随时可以登台
+career.tile_popularity = 人气
+career.tile_fans = 粉丝
+career.tile_level = 演出等级
+career.tile_performance = 表演
+career.tile_ticket = 平均票价
+career.tile_concerts = 演唱会
+career.studio_limit = 录音室上限 {value}
+career.studio_limit_upgrade = 录音室上限 {value}——请升级录音室
+career.fans_last_show = 上一场演出 {value}
+career.fans_grow = 通过音乐和演出积累粉丝
+career.max_level = 满级
+career.xp = {xp} / {need} 经验
+career.performance_sub = 天赋 · 经验 · 录音室音质
+career.ticket_at = 场馆：{venue}
+career.sold_out_count = 售罄 {count} 场
+career.expected_revenue = 预计收入
+career.book = 预订
+career.resting = 休息中
+career.venue_line = 容量 {capacity}   ·   票价 {ticket}
+career.expected_fans = 预计 {fans} 名粉丝
+career.new_album = 新专辑：{title}
+career.album_tour_bonus = 专辑巡演加成   收入 +25%   粉丝 +40%
+career.album_bonus = 专辑加成
+career.tour_progress = 演出 {done} / {total}
+career.tour_finished = 已结束
+career.time_left = 剩余 {time}
+career.last_show = 最后一站：{city}
+career.now_city = 当前：{city}
+career.start_tour = 开始巡演
+career.history_title = {artist} — 演出记录
+career.h_concerts = 演唱会总数
+career.h_fans = 粉丝总数
+career.h_revenue = 总收入
+career.h_venue = 最大场馆
+career.h_attendance = 最佳上座率
+career.h_best = 最佳演出
+career.no_concerts = 还没有演出——在上方预订第一场吧！
+
+# ---------------------------------------------------------------- chemistry
+chemistry.partner_label = 合作制作人
+chemistry.change = 更换
+chemistry.prefers = 偏好：{names}
+chemistry.hire_first = 雇用一名制作人，开始合作吧
+chemistry.growth = 成长 {mult}
+chemistry.level_line = 默契：{level}  ·  {value}
+chemistry.no_bonus = 暂无加成——一起做节拍、专辑和演出吧
+chemistry.when_signed = （签约后生效）
+chemistry.bonus_line = 演出 {show}  ·  粉丝 {fans}  ·  播放 {streams}
+chemistry.bonus_viral = 爆款 {viral}
+chemistry.level.low = 低
+chemistry.level.normal = 普通
+chemistry.level.good = 良好
+chemistry.level.great = 出色
+chemistry.level.perfect = 完美
+chemistry.match.strong = 风格高度契合
+chemistry.match.good = 风格契合
+chemistry.match.average = 风格一般
+chemistry.match.clash = 风格冲突
+
+# ---------------------------------------------------------------- missions
+mission.category.production = 制作
+mission.category.artists = 艺人
+mission.category.releases = 发行
+mission.category.concerts = 演唱会
+mission.category.studio = 录音室
+mission.category.career = 生涯
+reward.fans = 粉丝 {value}
+reward.fame = 名望 {value}
+mission.prod_beats_10.title = 初出茅庐
+mission.prod_beats_10.desc = 制作 10 个节拍
+mission.prod_beats_50.title = 渐入佳境
+mission.prod_beats_50.desc = 制作 50 个节拍
+mission.prod_beats_100.title = 节拍机器
+mission.prod_beats_100.desc = 制作 100 个节拍
+mission.prod_beat_money_10k.title = 靠节拍赚钱
+mission.prod_beat_money_10k.desc = 通过节拍赚到 $10,000
+mission.prod_upgrades_5.title = 团队升级
+mission.prod_upgrades_5.desc = 升级制作人 5 次
+mission.prod_viral_1.title = 一夜爆红
+mission.prod_viral_1.desc = 制作一个爆款节拍
+mission.prod_beats_1k.title = 千首节拍
+mission.prod_beats_1k.desc = 制作 1,000 个节拍
+mission.prod_beat_money_1m.title = 百万 Loop
+mission.prod_beat_money_1m.desc = 通过节拍赚到 $1M
+mission.prod_upgrades_100.title = 梦之队
+mission.prod_upgrades_100.desc = 升级制作人 100 次
+mission.prod_viral_25.title = 爆款制造机
+mission.prod_viral_25.desc = 制作 25 个爆款节拍
+mission.prod_beats_10k.title = 工厂模式
+mission.prod_beats_10k.desc = 制作 10,000 个节拍
+mission.art_sign_1.title = 首次签约
+mission.art_sign_1.desc = 签下你的第一位艺人
+mission.art_sign_3.title = 组建阵容
+mission.art_sign_3.desc = 签约 3 位艺人
+mission.art_genres_3.title = 跨界玩家
+mission.art_genres_3.desc = 拥有来自 3 种不同曲风的艺人
+mission.art_pop_100.title = 声名鹊起
+mission.art_pop_100.desc = 旗下艺人总人气达到 100%
+mission.art_fans_100k.title = 十万粉丝俱乐部
+mission.art_fans_100k.desc = 帮助一位艺人达到 100K 粉丝
+mission.art_success_3.title = 热门工厂
+mission.art_success_3.desc = 拥有 3 位成名艺人（人气 40% 以上）
+mission.art_fans_1m.title = 百万粉丝
+mission.art_fans_1m.desc = 帮助一位艺人达到 1M 粉丝
+mission.art_level_max.title = 舞台传奇
+mission.art_level_max.desc = 将一位艺人的演出等级升到满级
+mission.rel_album_1.title = 首张专辑
+mission.rel_album_1.desc = 发行你的第一张专辑
+mission.rel_streams_1m.title = 100万播放
+mission.rel_streams_1m.desc = 总播放量达到 1M
+mission.rel_album_5.title = 作品全集
+mission.rel_album_5.desc = 发行 5 张专辑
+mission.rel_streams_10m.title = 1000万播放
+mission.rel_streams_10m.desc = 总播放量达到 10M
+mission.rel_streams_1b.title = 十亿播放
+mission.rel_streams_1b.desc = 总播放量达到 1B
+mission.con_first.title = 首场演出
+mission.con_first.desc = 举办你的第一场演唱会
+mission.con_soldout_club.title = 俱乐部爆满
+mission.con_soldout_club.desc = 让地下俱乐部门票售罄
+mission.con_attendees_10k.title = 万人观众
+mission.con_attendees_10k.desc = 演唱会累计观众达到 10,000 人
+mission.con_soldout_hall.title = 音乐厅满座
+mission.con_soldout_hall.desc = 让音乐厅门票售罄
+mission.con_tour.title = 踏上旅途
+mission.con_tour.desc = 完成一次巡演
+mission.con_fans_100k.title = 舞台征服者
+mission.con_fans_100k.desc = 通过演唱会获得 100,000 名粉丝
+mission.con_arena.title = 体育馆之夜
+mission.con_arena.desc = 在体育馆举办一场演唱会
+mission.stu_bedroom.title = 步步高升
+mission.stu_bedroom.desc = 解锁卧室录音室
+mission.stu_pro.title = 迈向专业
+mission.stu_pro.desc = 解锁专业录音室
+mission.stu_modern.title = 现代之声
+mission.stu_modern.desc = 解锁现代录音室
+mission.stu_luxury.title = 奢华生活
+mission.stu_luxury.desc = 解锁豪华录音室
+mission.stu_max.title = 帝国
+mission.stu_max.desc = 达到超级音乐综合体
+mission.car_1m.title = 第一个百万
+mission.car_1m.desc = 赚到 $1M
+mission.car_1b.title = 亿万制作人
+mission.car_1b.desc = 赚到 $1B
+mission.car_artists_5.title = 厂牌老大
+mission.car_artists_5.desc = 拥有 5 位成名艺人（人气 40% 以上）
+mission.car_1t.title = 万亿之声
+mission.car_1t.desc = 赚到 $1T
+mission.car_stadium.title = 顶级制作人
+mission.car_stadium.desc = 让旗下艺人登上体育场舞台
+
+# ---------------------------------------------------------------- challenges
+challenge.d_beats.other = 制作 {value} 个节拍
+challenge.d_money.other = 赚到 {value}
+challenge.d_upgrades.other = 升级制作人 {value} 次
+challenge.d_fans.other = 获得 {value} 名粉丝
+challenge.d_concert.other = 完成 {value} 场演唱会
+challenge.d_ad.other = 观看 {value} 次广告获取加成
+challenge.d_hit.other = 制作 {value} 个热门节拍
+challenge.d_streams.other = 获得 {value} 次播放
+challenge.w_money.other = 赚到 {value}
+challenge.w_beats.other = 制作 {value} 个节拍
+challenge.w_streams.other = 新增 {value} 次播放
+challenge.w_concerts.other = 完成 {value} 场演唱会
+challenge.w_sign.other = 签约 {value} 位艺人
+challenge.w_album.other = 发行 {value} 张专辑
+challenge.w_viral.other = 制作 {value} 个爆款节拍
+
+# ---------------------------------------------------------------- goals screen
+goals.title = 目标
+goals.subtitle = 任务与挑战——按你的节奏玩，就有奖励
+goals.tab_missions = 任务
+goals.tab_daily = 每日
+goals.tab_weekly = 每周
+goals.career_progress = 生涯进度
+goals.completed_count = 已完成 {done} / {total}
+goals.history = 生涯记录
+goals.history_count = 已完成 {count} 项
+goals.daily_title = 每日挑战
+goals.weekly_title = 每周挑战
+goals.note = 这是额外奖励，不是任务负担——错过一天也没关系。
+goals.new_in = {time}后刷新
+goals.empty = 暂时没有挑战——稍后再来看看吧。
+
+# ---------------------------------------------------------------- game data
+genre.lofi.name = Lo-Fi
+genre.hiphop.name = 嘻哈
+genre.trap.name = 陷阱说唱
+genre.rage.name = Rage
+genre.hyperpop.name = Hyperpop
+genre.electronic.name = 电子
+genre.experimental.name = 实验
+genre.future.name = 未来贝斯
+producer.beginner.name = 新手制作人
+producer.melody.name = 旋律制作人
+producer.drum.name = 鼓组制作人
+producer.sample.name = 采样制作人
+producer.sound.name = 声音设计师
+producer.hitmaker.name = 金曲制作人
+producer.superstar.name = 巨星制作人
+studio.bedroom.name = 地下室
+studio.bedroom.tagline = 管道、电线和一台廉价显示器。谁都是从这里开始的。
+studio.bedroom.unlock0 = 你的第一个录音室
+studio.small.name = 卧室录音室
+studio.small.tagline = 像样的桌子，像样的监听音箱，还有 LED 氛围灯。
+studio.small.unlock0 = 更好的监听音箱和 MIDI 键盘
+studio.small.unlock1 = LED 灯光
+studio.professional.name = 小型专业录音室
+studio.professional.tagline = 做了声学处理。你是认真的了。
+studio.professional.unlock0 = 声学处理
+studio.professional.unlock1 = 机架设备
+studio.complex.name = 专业录音室
+studio.complex.tagline = 调音台、录音棚、多块屏幕。
+studio.complex.unlock0 = 录音棚
+studio.complex.unlock1 = 调音台
+studio.company.name = 现代录音室
+studio.company.tagline = 价值十亿的房间。霓虹、玻璃和金唱片。
+studio.company.unlock0 = 现代设备
+studio.company.unlock1 = 金唱片墙
+studio.label.name = 豪华录音室
+studio.label.tagline = 皮革、大理石、水晶吊灯。制作人都抢着来这里工作。
+studio.label.unlock0 = 豪华休息室
+studio.label.unlock1 = 超宽曲面屏
+studio.empire.name = 大厂录音室
+studio.empire.tagline = 多个房间，多个录音档期，全天无休。
+studio.empire.unlock0 = 第二制作间
+studio.empire.unlock1 = 现场录音室
+studio.elite.name = 精英录音室
+studio.elite.tagline = LED 墙、艺人休息室、光束灯。震撼全场。
+studio.elite.unlock0 = LED 视频墙
+studio.elite.unlock1 = 艺人休息室
+studio.record_label.name = 厂牌录音室
+studio.record_label.tagline = 你自己的厂牌总部，俯瞰整座城市。
+studio.record_label.unlock0 = 高管楼层
+studio.record_label.unlock1 = 城市天际线
+studio.mega_complex.name = 超级音乐综合体
+studio.mega_complex.tagline = 舞台、体育馆级灯光和上百只音箱。终极 Boss。
+studio.mega_complex.unlock0 = 体育馆舞台
+studio.mega_complex.unlock1 = 至尊荣誉室
+artist.korv.bio = 在自家楼梯间里说唱。从不接受采访。
+artist.korv.beat_style = 复古采样 Loop，硬底鼓，不用踩镲
+artist.unknown_rapper.bio = 凌晨四点在停着的车里写词。字不多，句句扎心。
+artist.unknown_rapper.beat_style = 粗粝采样，厚重底鼓
+artist.lil_vexi.bio = 十六岁，混乱不羁，已经有四十首未发表的歌。
+artist.lil_vexi.beat_style = 失真主旋律，快速 808 滚奏
+artist.underground.bio = 把心碎写成副歌。整天对着语音备忘录哼旋律。
+artist.underground.beat_style = 空灵 Pad，旋律 808
+artist.rising.bio = 冷静的唱腔，滑音 808，从不闲聊。一遍就录完。
+artist.rising.beat_style = 滑音 808 贝斯，简洁打击乐
+artist.zyven.bio = 生活中沉默寡言，拿起麦克风却气势逼人。
+artist.zyven.beat_style = 暗黑钟声，滑音 808
+artist.baby_ruin.bio = 你给他的每个节拍，他都拿来唱心碎。
+artist.baby_ruin.beat_style = 吉他 Loop，柔和 Pad，弹跳 808
+artist.famous.bio = 用故障音效和坏掉的合成器做歌。没人听起来像他。
+artist.famous.beat_style = Hyperpop 故障音效，走调合成器
+artist.k4iro.bio = 用环境录音和坏键盘创作歌曲。
+artist.k4iro.beat_style = 故障鼓组，变调人声切片
+artist.superstar.bio = 榜单、代言、门票售罄。很贵——但物有所值。
+artist.superstar.beat_style = 大气流行说唱鼓组，福音和弦
+artist.nox.bio = 一身黑衣。每场演出都会变成 Pogo 现场。
+artist.nox.beat_style = 爆裂 808，警笛合成器
+artist.young_vonn.bio = 听着叔叔的混音带长大。Flow 稳得像节拍器。
+artist.young_vonn.beat_style = 滚动踩镲，厚重 808，三连音律动
+artist.vexxo.bio = 一半的 Ad-lib 都是吼出来的。粉丝都在模仿他的发型。
+artist.vexxo.beat_style = 160 BPM 的狂躁合成器
+artist.solei.bio = 深夜的语音消息变成了一份事业。
+artist.solei.beat_style = 温暖的 Rhodes，慢摇摆，现场贝斯
+artist.rovan.bio = 自动调音就是他的乐器。每段 Hook 都像金曲。
+artist.rovan.beat_style = 氛围吉他，弹跳 808
+artist.kash_v.bio = 张口闭口谈钱，攒下的钱都拿去买录音设备。
+artist.kash_v.beat_style = 硬核陷阱，管弦重击
+artist.lil_raze.bio = 见到音箱堆就要跳下来。
+artist.lil_raze.beat_style = 失真贝斯，电子游戏合成器
+artist.drayo_k.bio = 主歌短，眼神冷，四座城市的演出门票全部售罄。
+artist.drayo_k.beat_style = 粗粝 Drill 滑音，错拍军鼓
+artist.xavo.bio = 舞台上戴着面具，歌词里毫无保留。
+artist.xavo.beat_style = 工业 Rage，金属撞击
+artist.kayvon_blu.bio = 唱起歌来像凌晨三点在打电话。
+artist.kayvon_blu.beat_style = 拨弦合成器，空灵 Pad
+artist.zayro.bio = 首先是作词人。每首歌都要喊出制作人的名字。
+artist.zayro.beat_style = 灵魂乐采样，有力鼓组
+artist.vanta.bio = 频闪全开，灯光全灭。没人真正看清过他的脸。
+artist.vanta.beat_style = 噪音合成器墙，双倍速踩镲
+artist.riven.bio = 嗓音温柔，粉丝无数。
+artist.riven.beat_style = Lo-fi 吉他，柔和 808
+artist.okko.bio = 二十二岁就经营着自己的厂牌。
+artist.okko.beat_style = 暗黑钢琴 Drill，厚重滑音
+artist.hexxa.bio = 她一半的歌只有九十秒，每首都能上榜。
+artist.hexxa.beat_style = Hyperpop 电子音，升调人声
+artist.vante.bio = 他的假声让三位制作人都哭了。
+artist.vante.beat_style = 丝滑和弦，慢速陷阱鼓组
+artist.xeno.bio = 体育馆级 Rage。每个 Drop 都有烟火。
+artist.xeno.beat_style = 体育场 Rage，走调主旋律
+artist.lil_kavo.bio = 从免费上传网站起步，如今登上了广告牌。
+artist.lil_kavo.beat_style = 弹跳陷阱，俏皮长笛
+artist.ravenxo.bio = 哥特 Rage 偶像：黑指甲、银戒指、世界巡演。
+artist.ravenxo.beat_style = 暗黑 Rage，教堂管风琴采样
+artist.kaivn.bio = 他的每一次合作都是大事件。
+artist.kaivn.beat_style = 空灵 Pad，慢动作 808
+artist.zora.bio = 所有人都说，她是这个十年的声音。
+artist.zora.beat_style = 新灵魂乐键盘，现场贝斯
+artist.oblvn.bio = 没人知道下一步是什么。这正是重点。
+artist.oblvn.beat_style = 颗粒质感，破碎节奏
+album.basement_tapes.kind = 首张录音带
+album.basement_tapes.tagline = 在管道和电线之间录制。
+album.night_shift.kind = EP
+album.night_shift.tagline = 午夜之后做出的暗黑 808。
+album.neon_riot.kind = 混音带
+album.neon_riot.tagline = 失真合成器，没有规则。
+album.cold_block.kind = 首张正式专辑
+album.cold_block.tagline = 极简、冰冷、毫不留情。
+album.velvet_hours.kind = 专辑
+album.velvet_hours.tagline = 温暖的键盘与深夜的人声。
+album.signal_noise.kind = 豪华版专辑
+album.signal_noise.tagline = 未来，单曲循环。
+
+# ---------------------------------------------------------------- privacy & ads (09.10)
+settings.privacy_policy = 隐私政策
+settings.privacy_options = 隐私设置
+boosts.instant_viral_wait = 立即获得爆款节拍  ·  {time}
+ads.no_internet = <color=#FF8A3D><b>没有网络连接</b></color>——广告需要联网。你的进度很安全。

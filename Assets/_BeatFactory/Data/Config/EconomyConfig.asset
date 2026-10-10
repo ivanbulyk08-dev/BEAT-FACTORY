@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae7bcc86314d17d448c0c5389d36778b, type: 3}
+  m_Name: EconomyConfig
+  m_EditorClassIdentifier: Assembly-CSharp::BeatFactory.EconomyConfig
+  startingMoney: 0
+  manualBeatBaseReward: 10
+  manualBeatProducerShare: 0.04
+  upgradeCostGrowth: 1.5
+  producerMilestoneEvery: 10
+  producerMilestoneMultiplier: 2
+  maxOfflineHours: 8
+  minOfflineSeconds: 60
+  offlineEfficiency: 0.5
+  incomeBonusPerFamePoint: 0.05
+  prestigeMinRunEarnings: 10000000000
+  fameUnitEarnings: 100000000
+  fameExponent: 0.5

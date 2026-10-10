@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 529a60f252a2c6644b65adec3ad85e79, type: 3}
+  m_Name: 09_solei
+  m_EditorClassIdentifier: Assembly-CSharp::BeatFactory.ArtistData
+  id: solei
+  displayName: SOLEI
+  shortName: SO
+  color: {r: 1, g: 0.7, b: 0.54, a: 1}
+  avatar: {fileID: 21300000, guid: a86d614b9dedcc84989cb09b54e9315c, type: 3}
+  role: R&B
+  musicStyle: R&B
+  personality: Late-night voice notes turned into a career.
+  genre: 5
+  beatStyle: Warm Rhodes, slow swing, live bass
+  popularity: 3
+  monthlyListeners: 210000
+  visual:
+    skin: {r: 0.41960785, g: 0.26666668, b: 0.1882353, a: 1}
+    hair: {r: 0.6901961, g: 0.47058824, b: 0.2509804, a: 1}
+    hairTip: {r: 0.9490196, g: 0.75686276, b: 0.30588236, a: 1}
+    hairStyle: Braids
+    facialHair: none
+    accessories: hoops
+    tattoos: none
+    outfit: "Jacket \xB7 Wide \xB7 Minimal"
+    clothing: {r: 0.94509804, g: 0.89411765, b: 0.827451, a: 1}
+    accent: {r: 1, g: 0.7019608, b: 0.5411765, a: 1}
+    palette:
+    - {r: 1, g: 0.7, b: 0.54, a: 1}
+    - {r: 1, g: 0.7019608, b: 0.5411765, a: 1}
+    - {r: 0.94509804, g: 0.89411765, b: 0.827451, a: 1}
+    stageHeads:
+    - {fileID: 21300000, guid: 6987d953ec0459d41ab50215cd0831a5, type: 3}
+    - {fileID: 21300000, guid: c7ac664616a976648860eb5fc67f4848, type: 3}
+    - {fileID: 21300000, guid: aa911aad5b23d084db25ab7fa72768e6, type: 3}
+    - {fileID: 21300000, guid: c5aa411ae2ed5634f95d5b6d70c0caa4, type: 3}
+    - {fileID: 21300000, guid: 0131397e16ef9b742ad8f79e99038d86, type: 3}
+    stageTorso: {fileID: 21300000, guid: dff4fcd57e1487b47bc9701929354337, type: 3}
+    stageArm: {fileID: 21300000, guid: 1c3412d952d973943ade5ff78e1571dc, type: 3}
+    stageLeg: {fileID: 21300000, guid: f271e45ef201d7b4b9fe2af4d54a00e8, type: 3}
+    signs:
+    - SOLEI
+    - WE LOVE YOU
+    - SOLEI 4 LIFE
+    - VELVET NIGHTS
+    - '#1 FAN'
+  cost: 2200000
+  requiredStudioLevel: 1
+  incomeMultiplier: 1.03

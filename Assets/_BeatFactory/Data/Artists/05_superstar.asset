@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 529a60f252a2c6644b65adec3ad85e79, type: 3}
+  m_Name: 05_superstar
+  m_EditorClassIdentifier: Assembly-CSharp::BeatFactory.ArtistData
+  id: superstar
+  displayName: AURELIA NOVA
+  shortName: AU
+  color: {r: 0.95, g: 0.76, b: 0.31, a: 1}
+  avatar: {fileID: 21300000, guid: 5c6336e6f0d46ec42947cc45da2327a6, type: 3}
+  role: HIP-HOP
+  musicStyle: HIP-HOP
+  personality: "Charts, campaigns, sold-out shows. Expensive \u2014 and worth it."
+  genre: 7
+  beatStyle: Big pop-rap drums, gospel chords
+  popularity: 5
+  monthlyListeners: 48000000
+  visual:
+    skin: {r: 0.5529412, g: 0.3529412, b: 0.23137255, a: 1}
+    hair: {r: 0.7882353, g: 0.5568628, b: 0.2901961, a: 1}
+    hairTip: {r: 0.9490196, g: 0.75686276, b: 0.30588236, a: 1}
+    hairStyle: Braids
+    facialHair: none
+    accessories: thin chain, hoops
+    tattoos: none
+    outfit: "Puffer \xB7 Cargo \xB7 HighTop"
+    clothing: {r: 0.95686275, g: 0.94509804, b: 0.98039216, a: 1}
+    accent: {r: 0.9490196, g: 0.75686276, b: 0.30588236, a: 1}
+    palette:
+    - {r: 0.95, g: 0.76, b: 0.31, a: 1}
+    - {r: 0.9490196, g: 0.75686276, b: 0.30588236, a: 1}
+    - {r: 0.95686275, g: 0.94509804, b: 0.98039216, a: 1}
+    stageHeads:
+    - {fileID: 21300000, guid: 52c540ee49401f449a5bcd08989f2387, type: 3}
+    - {fileID: 21300000, guid: e9ff35ae0a690514d8098b9573ee1dd1, type: 3}
+    - {fileID: 21300000, guid: e4bbf7945e299a843815a729c0cb60f6, type: 3}
+    - {fileID: 21300000, guid: b23c72d71fb8c854b876c99d4532495e, type: 3}
+    - {fileID: 21300000, guid: 3cf87862ec0badf49875efa2a581954c, type: 3}
+    stageTorso: {fileID: 21300000, guid: 40256905fdb8b3e43af20958c7fd06f4, type: 3}
+    stageArm: {fileID: 21300000, guid: 6ce1362800b14854b98b2e858497a8e2, type: 3}
+    stageLeg: {fileID: 21300000, guid: e0ef98919ee057c4c890235874116f69, type: 3}
+    signs:
+    - AURELIA NOVA
+    - WE LOVE YOU
+    - AURELIA NOVA 4 LIFE
+    - GOLDEN ERA
+    - '#1 FAN'
+  cost: 21000000000
+  requiredStudioLevel: 7
+  incomeMultiplier: 1.05

@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 975235dc81623194cab458deda67de87, type: 3}
+  m_Name: BeatQualityConfig
+  m_EditorClassIdentifier: Assembly-CSharp::BeatFactory.BeatQualityConfig
+  tiers:
+  - quality: 0
+    label: NORMAL
+    chancePercent: 70
+    multiplier: 1
+    color: {r: 0.3, g: 1, b: 0.66, a: 1}
+  - quality: 1
+    label: GOOD
+    chancePercent: 20
+    multiplier: 2
+    color: {r: 0.24, g: 0.88, b: 1, a: 1}
+  - quality: 2
+    label: GREAT
+    chancePercent: 8
+    multiplier: 5
+    color: {r: 0.71, g: 0.36, b: 1, a: 1}
+  - quality: 3
+    label: HIT
+    chancePercent: 1.8
+    multiplier: 20
+    color: {r: 1, g: 0.54, b: 0.24, a: 1}
+  - quality: 4
+    label: VIRAL
+    chancePercent: 0.2
+    multiplier: 100
+    color: {r: 1, g: 0.24, b: 0.78, a: 1}
+  maxIndividualRolls: 32
+  specialBeatTitles:
+  - MIDNIGHT
+  - NEON RAIN
+  - LOST SIGNAL
+  - SKYLINE
+  - AFTERHOURS
+  - VELVET NIGHTS
+  - ORBIT
+  - DEEP END
+  - LOW BATTERY
+  - CITY LIGHTS
+  - SLOW MOTION
+  - NIGHT DRIVE
+  - SUGAR RUSH
+  - BLUE HOUR
+  - STATIC
+  - ZERO GRAVITY
+  - AFTERGLOW
+  - WILDFIRE
+  - ECHOES
+  - BASEMENT TAPES
+  - HEADPHONES ON
+  - 808 DREAMS
+  - PIXEL HEART
+  - LATE CHECKOUT
+  - RED LIGHT
+  - SATELLITE

@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 529a60f252a2c6644b65adec3ad85e79, type: 3}
+  m_Name: 14_lil_raze
+  m_EditorClassIdentifier: Assembly-CSharp::BeatFactory.ArtistData
+  id: lil_raze
+  displayName: Lil Raze
+  shortName: LI
+  color: {r: 1, g: 0.17, b: 0.24, a: 1}
+  avatar: {fileID: 21300000, guid: 6ff207cca787cb6468627bd3d7a74c8b, type: 3}
+  role: RAGE
+  musicStyle: RAGE
+  personality: Jumps off every speaker stack he can find.
+  genre: 0
+  beatStyle: Distorted bass, video-game synths
+  popularity: 4
+  monthlyListeners: 2200000
+  visual:
+    skin: {r: 0.94509804, g: 0.7882353, b: 0.6392157, a: 1}
+    hair: {r: 0.07058824, g: 0.05490196, b: 0.0627451, a: 1}
+    hairTip: {r: 1, g: 0.16470589, b: 0.23921569, a: 1}
+    hairStyle: DreadsTied
+    facialHair: none
+    accessories: cuban chain
+    tattoos: face dots
+    outfit: "Tee \xB7 Jogger \xB7 HighTop"
+    clothing: {r: 0.078431375, g: 0.078431375, b: 0.09411765, a: 1}
+    accent: {r: 1, g: 0.16470589, b: 0.23921569, a: 1}
+    palette:
+    - {r: 1, g: 0.17, b: 0.24, a: 1}
+    - {r: 1, g: 0.16470589, b: 0.23921569, a: 1}
+    - {r: 0.078431375, g: 0.078431375, b: 0.09411765, a: 1}
+    stageHeads:
+    - {fileID: 21300000, guid: 62d4ea46ed0604447a841ee5ca996ee0, type: 3}
+    - {fileID: 21300000, guid: dd2c7efda03e46d40acb1b1e73ccc2c8, type: 3}
+    - {fileID: 21300000, guid: 3da21c8949b3c8f4ab5bdf4b8002dd56, type: 3}
+    - {fileID: 21300000, guid: 27ca909062f21e84faea70556b8d5f9d, type: 3}
+    - {fileID: 21300000, guid: 57fe8c3cc299a13499d9a94647c621fa, type: 3}
+    stageTorso: {fileID: 21300000, guid: 334a3e5a19133554783803d413efa285, type: 3}
+    stageArm: {fileID: 21300000, guid: d9c1af8254b2c1c4d8981d1cfc1daf33, type: 3}
+    stageLeg: {fileID: 21300000, guid: ec5647a652e1ae84eb5c9af9e04b55e0, type: 3}
+    signs:
+    - LIL RAZE
+    - WE LOVE YOU
+    - LIL RAZE 4 LIFE
+    - CHAOS THEORY
+    - '#1 FAN'
+  cost: 9000000
+  requiredStudioLevel: 3
+  incomeMultiplier: 1.04

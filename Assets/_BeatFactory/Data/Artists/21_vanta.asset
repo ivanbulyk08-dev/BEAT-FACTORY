@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 529a60f252a2c6644b65adec3ad85e79, type: 3}
+  m_Name: 21_vanta
+  m_EditorClassIdentifier: Assembly-CSharp::BeatFactory.ArtistData
+  id: vanta
+  displayName: VANTA
+  shortName: VA
+  color: {r: 1, g: 0.17, b: 0.24, a: 1}
+  avatar: {fileID: 21300000, guid: 8823a045069c38245aa590d81555d17a, type: 3}
+  role: RAGE
+  musicStyle: RAGE
+  personality: Strobes on, lights off. Nobody has seen his face clearly.
+  genre: 0
+  beatStyle: Wall-of-noise synths, double-time hats
+  popularity: 5
+  monthlyListeners: 18000000
+  visual:
+    skin: {r: 0.24313726, g: 0.14901961, b: 0.09411765, a: 1}
+    hair: {r: 0.05490196, g: 0.039215688, b: 0.03529412, a: 1}
+    hairTip: {r: 1, g: 0.16470589, b: 0.23921569, a: 1}
+    hairStyle: DreadsHalfUp
+    facialHair: none
+    accessories: cuban chain, shades
+    tattoos: face dots, neck
+    outfit: "Puffer \xB7 Jogger \xB7 LowRetro"
+    clothing: {r: 0.05490196, g: 0.05490196, b: 0.07058824, a: 1}
+    accent: {r: 1, g: 0.16470589, b: 0.23921569, a: 1}
+    palette:
+    - {r: 1, g: 0.17, b: 0.24, a: 1}
+    - {r: 1, g: 0.16470589, b: 0.23921569, a: 1}
+    - {r: 0.05490196, g: 0.05490196, b: 0.07058824, a: 1}
+    stageHeads:
+    - {fileID: 21300000, guid: f22e302ab7d04bb4784637efc0f21282, type: 3}
+    - {fileID: 21300000, guid: 7f44df03eb06a7b4f9b3c039b02f18e5, type: 3}
+    - {fileID: 21300000, guid: e210c98951d56f242a49dfba90a7ad00, type: 3}
+    - {fileID: 21300000, guid: a1f7802af182eb9419d70a6375e4eafb, type: 3}
+    - {fileID: 21300000, guid: 31c42b194d10ecd4bbaac2601f7de05b, type: 3}
+    stageTorso: {fileID: 21300000, guid: e2bd599eba793aa4c8f56c2ed7164b29, type: 3}
+    stageArm: {fileID: 21300000, guid: d5c7c22299c2c8b45841c6ae5401d2af, type: 3}
+    stageLeg: {fileID: 21300000, guid: c80d3d1401b883645941ddb8baca1330, type: 3}
+    signs:
+    - VANTA
+    - WE LOVE YOU
+    - VANTA 4 LIFE
+    - BLOOD MOON
+    - '#1 FAN'
+  cost: 420000000
+  requiredStudioLevel: 5
+  incomeMultiplier: 1.05

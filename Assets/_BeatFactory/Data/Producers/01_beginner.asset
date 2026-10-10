@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efe2843c258a4c34ea7bdc14f1bb06ab, type: 3}
+  m_Name: 01_beginner
+  m_EditorClassIdentifier: Assembly-CSharp::BeatFactory.ProducerData
+  id: beginner
+  displayName: Beginner Producer
+  shortName: BP
+  color: {r: 0.23921569, g: 0.88235295, b: 1, a: 1}
+  icon: {fileID: 21300000, guid: 4de90fed5fbeb2c4bb7913f20023153f, type: 3}
+  hireCost: 1000
+  upgradeBaseCost: 600
+  costGrowth: 0
+  baseIncome: 60
+  cycleSeconds: 4
+  maxLevel: 0
+  requiredStudio: 0

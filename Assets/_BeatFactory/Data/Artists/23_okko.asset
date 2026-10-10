@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 529a60f252a2c6644b65adec3ad85e79, type: 3}
+  m_Name: 23_okko
+  m_EditorClassIdentifier: Assembly-CSharp::BeatFactory.ArtistData
+  id: okko
+  displayName: OKKO
+  shortName: OK
+  color: {r: 0.5, g: 0.66, b: 0.8, a: 1}
+  avatar: {fileID: 21300000, guid: 6d40eed73b2442649a889e6e1e2f7d66, type: 3}
+  role: DRILL
+  musicStyle: DRILL
+  personality: Runs his own label at twenty-two.
+  genre: 3
+  beatStyle: Dark piano drill, heavy slides
+  popularity: 5
+  monthlyListeners: 28000000
+  visual:
+    skin: {r: 0.41960785, g: 0.26666668, b: 0.1882353, a: 1}
+    hair: {r: 0.05882353, g: 0.043137256, b: 0.039215688, a: 1}
+    hairTip: {r: 0.16470589, g: 0.1254902, b: 0.10980392, a: 1}
+    hairStyle: Braids
+    facialHair: beard
+    accessories: cuban chain
+    tattoos: none
+    outfit: "Tracksuit \xB7 Wide \xB7 Minimal"
+    clothing: {r: 0.08627451, g: 0.08627451, b: 0.10980392, a: 1}
+    accent: {r: 0.49803922, g: 0.654902, b: 0.7882353, a: 1}
+    palette:
+    - {r: 0.5, g: 0.66, b: 0.8, a: 1}
+    - {r: 0.49803922, g: 0.654902, b: 0.7882353, a: 1}
+    - {r: 0.08627451, g: 0.08627451, b: 0.10980392, a: 1}
+    stageHeads:
+    - {fileID: 21300000, guid: cb8bb5e666ff2924199d827d10a84637, type: 3}
+    - {fileID: 21300000, guid: 38b6fe0253ea9d34fa71463e2f7b5059, type: 3}
+    - {fileID: 21300000, guid: 4ce2eef820db99c449a1ecee2fbb3f7f, type: 3}
+    - {fileID: 21300000, guid: a1779ddb600fa864faed61a1c3e0e5a1, type: 3}
+    - {fileID: 21300000, guid: 0f64776198f36454eb4baedd6e94b1f5, type: 3}
+    stageTorso: {fileID: 21300000, guid: 42d5c70ee3232e044907ec32867f7d9c, type: 3}
+    stageArm: {fileID: 21300000, guid: 156ae5ce3d127b746a8ac0dc88fcdd6f, type: 3}
+    stageLeg: {fileID: 21300000, guid: 7ed4af73b226ec04ab774d551e169c24, type: 3}
+    signs:
+    - OKKO
+    - WE LOVE YOU
+    - OKKO 4 LIFE
+    - BLOCK PARTY
+    - '#1 FAN'
+  cost: 3000000000
+  requiredStudioLevel: 6
+  incomeMultiplier: 1.05

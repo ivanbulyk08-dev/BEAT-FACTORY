@@ -1,0 +1,166 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 769176e70a2c15744aee131d9013c8db, type: 3}
+  m_Name: AvatarLibrary
+  m_EditorClassIdentifier: Assembly-CSharp::BeatFactory.AvatarLibrary
+  faces:
+  - {fileID: 21300000, guid: d0168a7a918cd0a4094239515295ef75, type: 3}
+  - {fileID: 21300000, guid: ba0ecdaeecb0ffd46939f61ab4332d97, type: 3}
+  - {fileID: 21300000, guid: ae21085498a28cc479dd3e924fec52d3, type: 3}
+  - {fileID: 21300000, guid: bf53453e49da52b41b3ccd42ba391a56, type: 3}
+  - {fileID: 21300000, guid: f6b9a61398f83c34da5eb990e77156cc, type: 3}
+  hairBack:
+  - {fileID: 21300000, guid: 033fd05d9b89b184a87d2e618c880b38, type: 3}
+  - {fileID: 21300000, guid: 136c4d56c54ec484cb3bb154df896bc3, type: 3}
+  - {fileID: 21300000, guid: d9d3118b1e2dfda4e8182890b3075bb6, type: 3}
+  - {fileID: 21300000, guid: aa18681c0483dab47ad4df3aa983bfa7, type: 3}
+  - {fileID: 21300000, guid: d902213bef582604fa6a41e517a290ed, type: 3}
+  - {fileID: 21300000, guid: 3bc5271b29904a8498377aabea76ee42, type: 3}
+  - {fileID: 21300000, guid: 1ea0e61687d8e124f9547d06860c3a57, type: 3}
+  hairFront:
+  - {fileID: 21300000, guid: 0b249d6443b823847af58d25656d65a4, type: 3}
+  - {fileID: 21300000, guid: bb0931129ca0d704a9ddf073faf11a47, type: 3}
+  - {fileID: 21300000, guid: 3f2476eb3a8d3444980c67f585effe44, type: 3}
+  - {fileID: 21300000, guid: d36c5a55fca4ab648b07f0f32292f1d6, type: 3}
+  - {fileID: 21300000, guid: 2de3db9dd157ec34b8e487e1a17f4204, type: 3}
+  - {fileID: 21300000, guid: 6907a7d5ed7b2fb4eaf68ff94a6f8350, type: 3}
+  - {fileID: 21300000, guid: 6147f183b72d9dc4183b429fc1a7ee3d, type: 3}
+  cap: {fileID: 21300000, guid: e5cdbb6d381a8d54a954e8efed12569f, type: 3}
+  beanie: {fileID: 21300000, guid: 3e35bc2ae08ecac4ca7179978b1aeb13, type: 3}
+  headphones: {fileID: 21300000, guid: 418c80c1403da3f4ba31787fb803db04, type: 3}
+  glassesRound: {fileID: 21300000, guid: b8438d9a7ef7dd24ca6bdf75171a2e78, type: 3}
+  sunglasses: {fileID: 21300000, guid: fc5aa18bc4bf81c489e02bca9270f897, type: 3}
+  earrings: {fileID: 21300000, guid: f485c3bfc8e1a674bb42dd67277f4aa6, type: 3}
+  tattooFace: {fileID: 21300000, guid: e469eac1707487d4dbf27208d0ff91d3, type: 3}
+  bodyBase: {fileID: 21300000, guid: 5c03befb0020e5b4d8aaf475ffc5d30c, type: 3}
+  tops:
+  - {fileID: 21300000, guid: fca6d18d1fe84a24ca70d6e845111394, type: 3}
+  - {fileID: 21300000, guid: 792f22b9beac0b54683e842b1b5ab03c, type: 3}
+  - {fileID: 21300000, guid: 75608625416f9c24884d4e05fb54e494, type: 3}
+  - {fileID: 21300000, guid: eecdcd6e23be97c4dabd0baea8584f35, type: 3}
+  - {fileID: 21300000, guid: c21fe053d18214c45b695179790c83d2, type: 3}
+  - {fileID: 21300000, guid: ff97c0198f7c0ef42b835f56154759ba, type: 3}
+  pantsFar:
+  - {fileID: 21300000, guid: 3ff07621b59b6454ab68f10b88d528c2, type: 3}
+  - {fileID: 21300000, guid: dc565398be12f6d4a86597f8884d6e83, type: 3}
+  - {fileID: 21300000, guid: 134abdc4e5426ff4680318975bb80cc1, type: 3}
+  - {fileID: 21300000, guid: 00d2c06578ba8f5429b8e8122d730e37, type: 3}
+  pantsNear:
+  - {fileID: 21300000, guid: 7027b5b26f171fb4c9ecdb01ca35d388, type: 3}
+  - {fileID: 21300000, guid: c0e240cfd1a40be469ce589a8fcdc3a9, type: 3}
+  - {fileID: 21300000, guid: 54029ded9090b7f4a955cc0fa34e04f3, type: 3}
+  - {fileID: 21300000, guid: c0dc2a7f84342f94281199e9551aefdc, type: 3}
+  pantsHem:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 21300000, guid: 3700ac91e0fafc947957d803c960dfc9, type: 3}
+  shoesFar:
+  - {fileID: 21300000, guid: 9f6094313797cc743b8d416114a23c45, type: 3}
+  - {fileID: 21300000, guid: f322751ccc454e341856a5241e11e93c, type: 3}
+  - {fileID: 21300000, guid: ee4adfac4eb144949889a21dde778705, type: 3}
+  - {fileID: 21300000, guid: ffdfd62c4c708854ea0cf098ac47aecd, type: 3}
+  shoesNear:
+  - {fileID: 21300000, guid: 61925c537d6cfda448c01f4705aa0184, type: 3}
+  - {fileID: 21300000, guid: 4470f0631cdef234a86d989c4418f2cc, type: 3}
+  - {fileID: 21300000, guid: 7f3b469089ecf5c499e77d4f16c25744, type: 3}
+  - {fileID: 21300000, guid: 0806a536971a45442aaa84aae6041346, type: 3}
+  chainThin: {fileID: 21300000, guid: 6575e152799e6ba49aa8745209293a76, type: 3}
+  chainCuban: {fileID: 21300000, guid: a70f648757bcf7043b164e46b7ae09d8, type: 3}
+  tattooNeck: {fileID: 21300000, guid: d18b5a58c3378044e8d3f5b47d0f22cb, type: 3}
+  sleeves:
+  - {fileID: 21300000, guid: b35310c4759c7a7498b925ec28f0e377, type: 3}
+  - {fileID: 21300000, guid: 3ea6cf62589310a4ea9d2be1f0fbe307, type: 3}
+  - {fileID: 21300000, guid: 1cba2b8ea76b8194f946f3064d3ba391, type: 3}
+  - {fileID: 21300000, guid: fbd9fefacc934fc448a9b997b2c5b059, type: 3}
+  - {fileID: 21300000, guid: 7ccc540b90812414ebcd0ff290bada9d, type: 3}
+  - {fileID: 21300000, guid: 75f905ce5102b244bb00134cea294b26, type: 3}
+  hand: {fileID: 21300000, guid: d77b6ee3f8d17674692469e21ca3cb3e, type: 3}
+  tattooArm: {fileID: 21300000, guid: 7921f98ff39f7e547b4b64d92b0e8d1c, type: 3}
+  tattooHand: {fileID: 21300000, guid: b18222bfc756ee149a1c19c1b1dd64a7, type: 3}
+  watchSmart: {fileID: 21300000, guid: af63740b108707545b736f7bbd741d29, type: 3}
+  watchGold: {fileID: 21300000, guid: 34bb7b99b0b3a2b478bfd5ad0e506102, type: 3}
+  rings: {fileID: 21300000, guid: 15adefebcea9c294b997760a0b2249a2, type: 3}
+  thumbKeys:
+  - Hair_0
+  - Hair_1
+  - Hair_2
+  - Hair_3
+  - Hair_4
+  - Hair_5
+  - Hair_6
+  - Top_0
+  - Top_1
+  - Top_2
+  - Top_3
+  - Top_4
+  - Top_5
+  - Pants_0
+  - Pants_1
+  - Pants_2
+  - Pants_3
+  - Sneakers_0
+  - Sneakers_1
+  - Sneakers_2
+  - Sneakers_3
+  - Headphones_1
+  - Headwear_1
+  - Headwear_2
+  - Glasses_1
+  - Glasses_2
+  - Chain_1
+  - Chain_2
+  - Earrings_1
+  - Watch_1
+  - Watch_2
+  - Rings_1
+  - TattooHand_1
+  - TattooArm_1
+  - TattooNeck_1
+  - TattooFace_1
+  thumbSprites:
+  - {fileID: 21300000, guid: 7baaac7aad647e94dab4956cc1a56760, type: 3}
+  - {fileID: 21300000, guid: ee27e35a076866d47b3e6e291b4b34a1, type: 3}
+  - {fileID: 21300000, guid: a1d0246b141cd3541928a39244c7c0a6, type: 3}
+  - {fileID: 21300000, guid: f9613ae8d9ab13e43865dfa326c672d8, type: 3}
+  - {fileID: 21300000, guid: 15dfea9dbb43a8746ac955b90fd84941, type: 3}
+  - {fileID: 21300000, guid: b943ad621368565499a42d809c19d51b, type: 3}
+  - {fileID: 21300000, guid: 76c8f7601bced944ba106bb243512e60, type: 3}
+  - {fileID: 21300000, guid: f5be0773c1594c5418a6e117dfbd2c07, type: 3}
+  - {fileID: 21300000, guid: 40f77d754fadb2e4b949817f6cc31144, type: 3}
+  - {fileID: 21300000, guid: 5ee4678dad1a0324f9529e062da820a0, type: 3}
+  - {fileID: 21300000, guid: 6193cea4db458f24399ff92efdeca36c, type: 3}
+  - {fileID: 21300000, guid: e0013c7a89c182740be4a455a8fbffea, type: 3}
+  - {fileID: 21300000, guid: ba9bd8bc10277bc4ebccb1b8a1e8f8eb, type: 3}
+  - {fileID: 21300000, guid: 3b2ec91b69ecfeb4e891dcdb19973e73, type: 3}
+  - {fileID: 21300000, guid: 7ed8453761b687743b564c88d66dc675, type: 3}
+  - {fileID: 21300000, guid: 9d370d6f6e007dc4db3140110d050bab, type: 3}
+  - {fileID: 21300000, guid: 47e3cac6d42382c42b5298644fd22c43, type: 3}
+  - {fileID: 21300000, guid: 2d848becbaf521d498e40837ec02dfff, type: 3}
+  - {fileID: 21300000, guid: 8692ca853cda26a4da3cf9ad87ca7079, type: 3}
+  - {fileID: 21300000, guid: b73706aca90f06e49ad5304ecbe95f0f, type: 3}
+  - {fileID: 21300000, guid: 8000a10d990d95b428b479042258af28, type: 3}
+  - {fileID: 21300000, guid: 60601da0417dc5a45b9212a781956a68, type: 3}
+  - {fileID: 21300000, guid: f43096ec496f69a4bbd7d5ceb7930d7b, type: 3}
+  - {fileID: 21300000, guid: 5d87b3429fdac95409f9ebe3b47cebf0, type: 3}
+  - {fileID: 21300000, guid: 4ce3cc81b76b4ad46bce9d35736291af, type: 3}
+  - {fileID: 21300000, guid: 143cc1b7819bcdc4e98e2cbee234bbc5, type: 3}
+  - {fileID: 21300000, guid: 385ead1ac135cf34798690fed6f65175, type: 3}
+  - {fileID: 21300000, guid: 6f40a3ed65a9d0141b0f594f68122ec1, type: 3}
+  - {fileID: 21300000, guid: 3fda1f3b6f5a2da4380dda2e692ade86, type: 3}
+  - {fileID: 21300000, guid: 449c49eaf63d7f34f98f1fa7618253bc, type: 3}
+  - {fileID: 21300000, guid: cbffa783b0844d347a7a909c4a8e9c40, type: 3}
+  - {fileID: 21300000, guid: cb11a188702ba3c408673141732ebc12, type: 3}
+  - {fileID: 21300000, guid: 34da38353c77a9e47bfbf651f30ffc7d, type: 3}
+  - {fileID: 21300000, guid: 00ef6b8234d6cab4bbbdf8fc7f001b54, type: 3}
+  - {fileID: 21300000, guid: 20137df20d9c32949b02a579fc449914, type: 3}
+  - {fileID: 21300000, guid: 5553e4cd35c90c74a94505195fb6d346, type: 3}

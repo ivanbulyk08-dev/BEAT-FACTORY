@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94bca8b3657d81b4db167b251a592c9c, type: 3}
+  m_Name: 02_small
+  m_EditorClassIdentifier: Assembly-CSharp::BeatFactory.StudioData
+  id: small
+  displayName: Bedroom Studio
+  upgradeCost: 5000000
+  speedMultiplier: 1.1
+  incomeMultiplier: 2
+  offlineHours: 3
+  viralChanceMultiplier: 1.1
+  tagline: A real desk, real monitors, LED vibes.
+  unlocks:
+  - Better monitors & MIDI keyboard
+  - LED lighting
+  panelColor: {r: 0.101960786, g: 0.08627451, b: 0.2, a: 1}
+  equalizerBars: 9

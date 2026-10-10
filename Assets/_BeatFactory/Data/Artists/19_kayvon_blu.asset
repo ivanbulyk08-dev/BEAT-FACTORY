@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 529a60f252a2c6644b65adec3ad85e79, type: 3}
+  m_Name: 19_kayvon_blu
+  m_EditorClassIdentifier: Assembly-CSharp::BeatFactory.ArtistData
+  id: kayvon_blu
+  displayName: Kayvon Blu
+  shortName: KA
+  color: {r: 1, g: 0.54, b: 0.85, a: 1}
+  avatar: {fileID: 21300000, guid: 44e68d2cdcffe1041ab311cb3c8b7e10, type: 3}
+  role: MELODIC RAP
+  musicStyle: MELODIC RAP
+  personality: Sings like he's on the phone at 3 AM.
+  genre: 4
+  beatStyle: Plucked synths, airy pads
+  popularity: 4
+  monthlyListeners: 9500000
+  visual:
+    skin: {r: 0.41960785, g: 0.26666668, b: 0.1882353, a: 1}
+    hair: {r: 0.078431375, g: 0.101960786, b: 0.18039216, a: 1}
+    hairTip: {r: 0.23921569, g: 0.48235294, b: 1, a: 1}
+    hairStyle: LongStraight
+    facialHair: none
+    accessories: thin chain, hoops
+    tattoos: none
+    outfit: "Hoodie \xB7 Wide \xB7 LowRetro"
+    clothing: {r: 0.49803922, g: 0.69803923, b: 1, a: 1}
+    accent: {r: 1, g: 1, b: 1, a: 1}
+    palette:
+    - {r: 1, g: 0.54, b: 0.85, a: 1}
+    - {r: 1, g: 1, b: 1, a: 1}
+    - {r: 0.49803922, g: 0.69803923, b: 1, a: 1}
+    stageHeads:
+    - {fileID: 21300000, guid: 17086abd95399e148b4f4555cf705d47, type: 3}
+    - {fileID: 21300000, guid: 9fd2c5e8775acbe4cad1d8a7f1ad70d9, type: 3}
+    - {fileID: 21300000, guid: d95df1b5fd3f271408efdc75f00fae2f, type: 3}
+    - {fileID: 21300000, guid: d86b833ac8a66b54a9215438e8beadb4, type: 3}
+    - {fileID: 21300000, guid: 4c5279a740e865a42a1d8609ca9ea6ae, type: 3}
+    stageTorso: {fileID: 21300000, guid: 6252621fc8cf54d4c8179c34beb5e316, type: 3}
+    stageArm: {fileID: 21300000, guid: 95cabf1ce0e5df0479643d77f4ac54d3, type: 3}
+    stageLeg: {fileID: 21300000, guid: 49c80cc3099b72741bc7b5ea25da5fdd, type: 3}
+    signs:
+    - KAYVON BLU
+    - WE LOVE YOU
+    - KAYVON BLU 4 LIFE
+    - STARLIGHT
+    - '#1 FAN'
+  cost: 120000000
+  requiredStudioLevel: 4
+  incomeMultiplier: 1.04

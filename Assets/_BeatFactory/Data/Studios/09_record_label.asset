@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94bca8b3657d81b4db167b251a592c9c, type: 3}
+  m_Name: 09_record_label
+  m_EditorClassIdentifier: Assembly-CSharp::BeatFactory.StudioData
+  id: record_label
+  displayName: Record Label Studio
+  upgradeCost: 2500000000000
+  speedMultiplier: 1.9
+  incomeMultiplier: 9
+  offlineHours: 12
+  viralChanceMultiplier: 2.6
+  tagline: Your own label HQ above the city.
+  unlocks:
+  - Executive floor
+  - Skyline view
+  panelColor: {r: 0.21960784, g: 0.13333334, b: 0.45490196, a: 1}
+  equalizerBars: 32

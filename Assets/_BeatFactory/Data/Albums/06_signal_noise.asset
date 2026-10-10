@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59879aeca42260642a67f3db29a8d097, type: 3}
+  m_Name: 06_signal_noise
+  m_EditorClassIdentifier: Assembly-CSharp::BeatFactory.AlbumData
+  id: signal_noise
+  title: SIGNAL // NOISE
+  kind: DELUXE ALBUM
+  tagline: The future, on repeat.
+  genre: 5
+  accent: {r: 0.3019608, g: 1, b: 0.65882355, a: 1}
+  cover: {fileID: 21300000, guid: 2841c8057f2ccb247b6ceaced33329f4, type: 3}
+  requiredBeats: 400000
+  requiredProducers: 6
+  requiredStudio: 8
+  requiredArtists: 4
+  rewardIncomeSeconds: 420
+  reputationMultiplier: 1.3

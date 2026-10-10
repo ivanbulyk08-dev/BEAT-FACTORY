@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94bca8b3657d81b4db167b251a592c9c, type: 3}
+  m_Name: 10_mega_complex
+  m_EditorClassIdentifier: Assembly-CSharp::BeatFactory.StudioData
+  id: mega_complex
+  displayName: Mega Music Complex
+  upgradeCost: 20000000000000
+  speedMultiplier: 2
+  incomeMultiplier: 12
+  offlineHours: 14
+  viralChanceMultiplier: 3
+  tagline: Stage, arena lights and a hundred speakers. The final boss.
+  unlocks:
+  - Arena stage
+  - Ultimate prestige room
+  panelColor: {r: 0.23529412, g: 0.14117648, b: 0.47843137, a: 1}
+  equalizerBars: 32

@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 529a60f252a2c6644b65adec3ad85e79, type: 3}
+  m_Name: 15_drayo_k
+  m_EditorClassIdentifier: Assembly-CSharp::BeatFactory.ArtistData
+  id: drayo_k
+  displayName: DRAYO K
+  shortName: DR
+  color: {r: 0.5, g: 0.66, b: 0.8, a: 1}
+  avatar: {fileID: 21300000, guid: cbc35d82f2f96bd439fb9993f3d2f7cc, type: 3}
+  role: DRILL
+  musicStyle: DRILL
+  personality: Short verses, cold stare, sold-out shows in four cities.
+  genre: 3
+  beatStyle: Gritty drill slides, off-beat snares
+  popularity: 4
+  monthlyListeners: 3100000
+  visual:
+    skin: {r: 0.2901961, g: 0.18039216, b: 0.12156863, a: 1}
+    hair: {r: 0.05882353, g: 0.043137256, b: 0.039215688, a: 1}
+    hairTip: {r: 0.16470589, g: 0.1254902, b: 0.10980392, a: 1}
+    hairStyle: Messy
+    facialHair: beard
+    accessories: thin chain, beanie
+    tattoos: none
+    outfit: "Puffer \xB7 Denim \xB7 Chunky"
+    clothing: {r: 0.05490196, g: 0.05490196, b: 0.07058824, a: 1}
+    accent: {r: 0.49803922, g: 0.654902, b: 0.7882353, a: 1}
+    palette:
+    - {r: 0.5, g: 0.66, b: 0.8, a: 1}
+    - {r: 0.49803922, g: 0.654902, b: 0.7882353, a: 1}
+    - {r: 0.05490196, g: 0.05490196, b: 0.07058824, a: 1}
+    stageHeads:
+    - {fileID: 21300000, guid: d88008c66e625154e8a0c45f83d8fd18, type: 3}
+    - {fileID: 21300000, guid: cb8f276ed82392a41afc9ac68063ab29, type: 3}
+    - {fileID: 21300000, guid: 8223d1b9e2568ba46bb5dc455516baaa, type: 3}
+    - {fileID: 21300000, guid: e3d1be2c049d0e64dbc5682b43b2abf4, type: 3}
+    - {fileID: 21300000, guid: d6ca48a959845ff43a05d4cdf4eb8b7c, type: 3}
+    stageTorso: {fileID: 21300000, guid: d2b0f010d294df14887369ce44038f79, type: 3}
+    stageArm: {fileID: 21300000, guid: 068938212a77e72438a2f039e99ae81a, type: 3}
+    stageLeg: {fileID: 21300000, guid: 66107245fc53f184ba206aa9401ed33a, type: 3}
+    signs:
+    - DRAYO K
+    - WE LOVE YOU
+    - DRAYO K 4 LIFE
+    - COLD STREETS
+    - '#1 FAN'
+  cost: 18000000
+  requiredStudioLevel: 3
+  incomeMultiplier: 1.04
