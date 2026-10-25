@@ -858,3 +858,25 @@ settings.privacy_policy = Privacy policy
 settings.privacy_options = Privacy settings
 boosts.instant_viral_wait = INSTANT VIRAL BEAT  ·  {time}
 ads.no_internet = <color=#FF8A3D><b>No internet connection</b></color> — ads need the internet. Your progress is safe.
+
+boost_offer.title = {mult} CASH
+boost_offer.button = {mult} CASH
+boost_offer.cta = ACTIVATE {mult} BOOST
+boost_offer.cta_free = ACTIVATE {mult} FREE
+boost_offer.ad_note = Watch one optional ad to activate
+boost_offer.free_note = Free boost ready — no ad needed
+boost_offer.opening_ad = Opening the ad…
+boost_offer.not_completed = Ad not finished — no boost this time. You can try again.
+boost_offer.active = BOOST ACTIVE
+boost_offer.active_note = Your producers are earning more right now
+common.per_min = {money}/min
+concert.skip_intro = SKIP INTRO
+nav.store = STORE
+store.coming_soon = COMING SOON
+store.coming_soon_desc = Exclusive items for your studio and artists will be sold here.
+store.buy = BUY
+store.wear = WEAR
+store.worn = WORN
+store.owned = Owned
+store.for_you = Clothes for your character
+store.tap_to_remove = Tap to take off

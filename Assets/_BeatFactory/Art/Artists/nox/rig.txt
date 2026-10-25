@@ -1,0 +1,56 @@
+# NØX, cut from Art/Reference/nox_parts_sheet.png by Tools > Beat Factory > Art > Build NØX From Character Sheet
+canvas 800 1050
+joint Feet 400 20
+joint Hips 400 565
+joint Neck 410 805
+joint ShoulderNear 352.5 825
+joint ElbowNear 352.5 670.3
+joint WristNear 354.5 524.1
+joint ShoulderFar 527.5 820
+joint ElbowFar 527.5 665.3
+joint WristFar 530.5 515.7
+joint HipNear 355 545
+joint AnkleNear 347.5 95
+joint HipFar 450 545
+joint AnkleFar 505 95
+offset nox_torso_base.png 265 532.5
+offset nox_leg_near.png 245 17.5
+offset nox_leg_far.png 390 17.5
+offset nox_head_idle.png 278 795
+offset nox_head_rap.png 314 797
+offset nox_head_smile.png 296 797
+offset nox_head_proud.png 318 795
+offset nox_head_blink.png 288 797
+offset nox_head_hype.png 270 797
+offset nox_upperarm_near.png 327 659.7
+offset nox_forearm_near.png 325.3 509.1
+offset nox_upperarm_far.png 502 653.4
+offset nox_forearm_far.png 496.9 502
+offset nox_hand_mic.png 291.6 419.2
+offset nox_hand_open.png 315.4 420.3
+offset nox_hand_point.png 289.9 411.7
+offset nox_hand_fist.png 300.1 440.3
+offset nox_hand_far.png 499.9 422.5
+offset nox_jacket_fur_purple_torso.png 275.3 440.1
+offset nox_jacket_fur_purple_upperarm_near.png 318.5 713.2
+offset nox_jacket_fur_purple_forearm_near.png 321.9 546.4
+offset nox_jacket_fur_purple_upperarm_far.png 495.2 708.2
+offset nox_jacket_fur_purple_forearm_far.png 490.1 544.4
+offset nox_pants_denim_ripped_waist.png 274 522.2
+offset nox_pants_denim_ripped_leg_near.png 286.6 23.4
+offset nox_pants_denim_ripped_leg_far.png 374.4 30.4
+offset nox_glasses_shades_black_head.png 343.6 841.8
+offset nox_glasses_shades_purple_head.png 348.4 841.8
+default hair baked
+default top baked
+default pants baked
+default shoes baked
+item hair_baked | Signature Locs | 0 | 0
+item top_baked | Black Tee | 0 | 0
+item pants_baked | Black Cargo + Chunky Sneakers | 0 | 0
+item shoes_baked | (with the pants) | 0 | 0
+item shoes_with_denim | (with the pants) | 0 | 0
+item jacket_fur_purple | Purple Fur Jacket | 3 | 30000000
+item pants_denim_ripped | Ripped Denim | 2 | 4000000
+item glasses_shades_black | Black Shades | 1 | 300000
+item glasses_shades_purple | Purple Shades | 4 | 1500000000

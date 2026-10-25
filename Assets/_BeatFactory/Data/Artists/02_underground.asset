@@ -48,6 +48,7 @@ MonoBehaviour:
     stageTorso: {fileID: 21300000, guid: 4c8dac6c9efccf04db416da447aba755, type: 3}
     stageArm: {fileID: 21300000, guid: b78c7202b3377a14ba718ca042054958, type: 3}
     stageLeg: {fileID: 21300000, guid: ef9f2dcf577e7854a8f0c9fbca3a11a2, type: 3}
+    rig: {fileID: 0}
     signs:
     - VELVET JUNO
     - WE LOVE YOU

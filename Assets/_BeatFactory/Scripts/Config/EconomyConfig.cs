@@ -16,9 +16,9 @@ namespace BeatFactory
 
         [Header("Manual Beats")]
         [Tooltip("Money earned by one press of MAKE BEAT before any multipliers.")]
-        [Min(0)] public double manualBeatBaseReward = 10;
+        [Min(0)] public double manualBeatBaseReward = 0.8;
         [Tooltip("Each MAKE BEAT also earns this share of the producers' base income per second (keeps tapping useful later).")]
-        [Min(0)] public double manualBeatProducerShare = 0.04;
+        [Min(0)] public double manualBeatProducerShare = 0.03;
 
         [Header("Upgrades")]
         [Tooltip("Upgrade cost = upgradeBaseCost * growth ^ (level - 1). Steep growth: every level is a goal.")]

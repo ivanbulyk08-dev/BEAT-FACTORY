@@ -17,10 +17,10 @@ MonoBehaviour:
   shortName: SS
   color: {r: 1, g: 0.23921569, b: 0.3529412, a: 1}
   icon: {fileID: 21300000, guid: 7d8514f6cbf4e0d488425599174f866a, type: 3}
-  hireCost: 50000000000
-  upgradeBaseCost: 30000000000
-  costGrowth: 0
-  baseIncome: 820000
+  hireCost: 140000000000
+  upgradeBaseCost: 35000000000
+  costGrowth: 2
+  baseIncome: 80000
   cycleSeconds: 20
   maxLevel: 0
   requiredStudio: 4

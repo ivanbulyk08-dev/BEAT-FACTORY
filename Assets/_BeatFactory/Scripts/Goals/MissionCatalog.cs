@@ -23,7 +23,7 @@ namespace BeatFactory
 
     /// <summary>
     /// The mission list (data only — no gameplay script knows about missions). Goals follow normal play:
-    /// each category goes from a first step to a long-term milestone; rewards grow with difficulty.
+    /// each category goes from a first step to a long-term milestone; rewards grow with difficulty. Early rewards are small (30–180 s of income) so the first minutes are not skipped.
     /// Chart missions (Top 100 / Top 10 / #1) are not included: the game has no chart system yet.
     /// </summary>
     public static class MissionCatalog
@@ -45,13 +45,13 @@ namespace BeatFactory
             var list = new List<MissionDefinition>
             {
                 // PRODUCTION
-                M("prod_beats_10", P, "FIRST TRACKS", "Make 10 beats", StatId.BeatsMade, 10, GoalReward.Money(60)),
-                M("prod_beats_50", P, "WARMING UP", "Make 50 beats", StatId.BeatsMade, 50, GoalReward.Money(120)),
-                M("prod_beats_100", P, "BEAT MACHINE", "Make 100 beats", StatId.BeatsMade, 100, GoalReward.Money(180)),
-                M("prod_beat_money_10k", P, "PAID IN BEATS", "Earn $10,000 from beats", StatId.BeatEarnings, 1e4, GoalReward.Money(120), Money),
-                M("prod_upgrades_5", P, "LEVEL UP THE TEAM", "Upgrade producers 5 times", StatId.ProducerUpgrades, 5, GoalReward.Money(120)),
+                M("prod_beats_10", P, "FIRST TRACKS", "Make 10 beats", StatId.BeatsMade, 10, GoalReward.Money(30)),
+                M("prod_beats_50", P, "WARMING UP", "Make 50 beats", StatId.BeatsMade, 50, GoalReward.Money(60)),
+                M("prod_beats_100", P, "BEAT MACHINE", "Make 100 beats", StatId.BeatsMade, 100, GoalReward.Money(90)),
+                M("prod_beat_money_10k", P, "PAID IN BEATS", "Earn $10,000 from beats", StatId.BeatEarnings, 1e4, GoalReward.Money(60), Money),
+                M("prod_upgrades_5", P, "LEVEL UP THE TEAM", "Upgrade producers 5 times", StatId.ProducerUpgrades, 5, GoalReward.Money(60)),
                 M("prod_viral_1", P, "GONE VIRAL", "Produce a VIRAL beat", StatId.ViralBeats, 1, GoalReward.Boost(BoostType.Viral, 180)),
-                M("prod_beats_1k", P, "THOUSAND HITS", "Make 1,000 beats", StatId.BeatsMade, 1e3, GoalReward.Money(600)),
+                M("prod_beats_1k", P, "THOUSAND HITS", "Make 1,000 beats", StatId.BeatsMade, 1e3, GoalReward.Money(180)),
                 M("prod_beat_money_1m", P, "MILLION-DOLLAR LOOPS", "Earn $1M from beats", StatId.BeatEarnings, 1e6, GoalReward.Money(300), Money),
                 M("prod_upgrades_100", P, "DREAM TEAM", "Upgrade producers 100 times", StatId.ProducerUpgrades, 100, GoalReward.Money(600)),
                 M("prod_viral_25", P, "VIRAL MACHINE", "Produce 25 VIRAL beats", StatId.ViralBeats, 25, GoalReward.Money(900)),

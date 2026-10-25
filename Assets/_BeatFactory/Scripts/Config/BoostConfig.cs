@@ -47,6 +47,10 @@ namespace BeatFactory
         [Min(0)] public float freeBoostCooldownMinutes = 20f;
         [Tooltip("A VIRAL beat gives a 2X MONEY boost for this many seconds (0 = off).")]
         [Min(0)] public float viralBeatMoneyBoostSeconds = 120f;
+        [Tooltip("Minutes before another VIRAL beat can give its 2X MONEY boost (busy studios make many VIRAL beats).")]
+        [Min(0)] public float viralBeatBoostCooldownMinutes = 10f;
+        [Tooltip("MONEY × SPEED × PRODUCER boosts together can't multiply producer income by more than this.")]
+        [Min(1)] public double maxCombinedProducerBoost = 4;
         [Tooltip("Stacking the same boost can't go beyond this many minutes.")]
         [Min(1)] public float maxStackMinutes = 60f;
 

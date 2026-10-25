@@ -48,6 +48,7 @@ MonoBehaviour:
     stageTorso: {fileID: 21300000, guid: 2861945c93950864b8268dcd7dbe7d44, type: 3}
     stageArm: {fileID: 21300000, guid: a4a4e58c033682c469f5cac5ee13a406, type: 3}
     stageLeg: {fileID: 21300000, guid: 6cfd06200d55b5b49800e6515989dc86, type: 3}
+    rig: {fileID: 11400000, guid: bed992dbe53eaa04196ec604f0bf9d2f, type: 2}
     signs:
     - "N\xD8X"
     - WE LOVE YOU

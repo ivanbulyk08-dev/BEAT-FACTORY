@@ -21,6 +21,10 @@ namespace BeatFactory
 
         RectTransform root, body, head, armNear, armFar, legNear, legFar, torso, mic;
         Image headImg;
+        // detailed artist (hand-made layered art + DRIP STUDIO outfit), drawn around the mic: back group · mic · near arm
+        RectTransform layerBack, layerFront;
+        LayeredPerformer layered;
+        bool listeningToWardrobe;
         ArtistVisualIdentity id;
         Vector2 home, target, pos;
         float scale = 1f, time, bpm = 120, stateTime, edgeY;
@@ -32,7 +36,10 @@ namespace BeatFactory
         public PerformState State => state;
         public Vector2 DesignPosition => pos;
         /// <summary>Head position in design units (for the close-up camera).</summary>
-        public Vector2 HeadDesign => pos + new Vector2(0, 300 * scale);
+        public Vector2 HeadDesign => pos + new Vector2(0, (layered != null ? LayeredHeadHeight : 300f) * scale);
+
+        /// <summary>Face height of the detailed rig in old-rig units (neck + half a head above the feet).</summary>
+        float LayeredHeadHeight => (layered.Rig.Joint(RigJoint.Neck).y - layered.Rig.Joint(RigJoint.Feet).y + 90f) * layerBack.localScale.x;
         public float Scale => scale;
         public bool AtEdge => state == PerformState.CrowdInteraction && Mathf.Abs(pos.y - edgeY) < 4f;
 
@@ -84,6 +91,62 @@ namespace BeatFactory
             micImg.sprite = micSprite;
             armNear = Part("ArmNear", root, new Vector2(56, 140), new Vector2(0.5f, 126f / 140f), new Vector2(-23, 216), out _);
             micImg.enabled = micSprite != null;
+            layerBack = LayerGroup("Detailed");
+            layerFront = LayerGroup("DetailedFront");
+            layerBack.SetSiblingIndex(mic.GetSiblingIndex());
+            layerFront.SetSiblingIndex(mic.GetSiblingIndex() + 1);
+        }
+
+        RectTransform LayerGroup(string name)
+        {
+            var g = UIKit.Rect(name, root);
+            g.anchorMin = g.anchorMax = new Vector2(0.5f, 0f);
+            g.pivot = new Vector2(0.5f, 0f);
+            g.sizeDelta = Vector2.zero;
+            g.anchoredPosition = Vector2.zero;
+            return g;
+        }
+
+        /// <summary>Uses the artist's detailed layered rig when there is one (otherwise the generated flat parts).</summary>
+        void SetupLayered(ArtistVisualIdentity identity)
+        {
+            layered = null;
+            UIKit.Clear(layerBack);
+            UIKit.Clear(layerFront);
+            if (identity != null && identity.HasDetailedRig)
+            {
+                var gm = GameManager.Instance;
+                var outfit = gm != null ? gm.Wardrobe.Resolve(identity.rig) : new ArtistWardrobe().Resolve(identity.rig);
+                layered = LayeredPerformer.Build(layerBack, layerFront, identity.rig, outfit);
+                // realistic proportions (smaller head than the generated chibi style): a bit taller so the face still reads
+                float k = NativeHeight / layered.CharacterHeight * 1.2f;
+                layerBack.localScale = layerFront.localScale = new Vector3(k, k, 1f);
+                if (gm != null && !listeningToWardrobe)
+                {
+                    gm.Wardrobe.Changed += OnOutfitChanged;
+                    listeningToWardrobe = true;
+                }
+            }
+            bool flat = layered == null;
+            // the detailed art draws the mic in the hand itself
+            var micImage = mic.GetComponent<Image>();
+            micImage.enabled = micImage.sprite != null && (flat || layered.Rig.NearHand(HandPose.Mic) == null);
+            legFar.gameObject.SetActive(flat);
+            armFar.gameObject.SetActive(flat);
+            body.gameObject.SetActive(flat);
+            legNear.gameObject.SetActive(flat);
+            armNear.gameObject.SetActive(flat);
+        }
+
+        void OnOutfitChanged(string artistId)
+        {
+            if (layered != null && layered.Rig.artistId == artistId && GameManager.Instance != null)
+                layered.Dress(GameManager.Instance.Wardrobe.Resolve(layered.Rig));
+        }
+
+        void OnDestroy()
+        {
+            if (listeningToWardrobe && GameManager.Instance != null) GameManager.Instance.Wardrobe.Changed -= OnOutfitChanged;
         }
 
         public void Setup(ArtistVisualIdentity identity, Vector2 stagePos, float heightDesign, float edge, float tempo)
@@ -96,12 +159,16 @@ namespace BeatFactory
             bool ok = identity != null && identity.HasPerformer;
             root.gameObject.SetActive(ok);
             if (!ok) return;
-            torso.GetComponent<Image>().sprite = identity.stageTorso;
+            SetupLayered(identity);
+            if (layered == null)
+            {
+                torso.GetComponent<Image>().sprite = identity.stageTorso;
             armNear.GetComponent<Image>().sprite = identity.stageArm;
             armFar.GetComponent<Image>().sprite = identity.stageArm;
             legNear.GetComponent<Image>().sprite = identity.stageLeg;
             legFar.GetComponent<Image>().sprite = identity.stageLeg;
-            headImg.sprite = identity.Head(ArtistVisualIdentity.Idle);
+                headImg.sprite = identity.Head(ArtistVisualIdentity.Idle);
+            }
             SetState(PerformState.Walk);
             pos = home + new Vector2(-260, 0); // walks in from the side
             target = home;
@@ -112,6 +179,7 @@ namespace BeatFactory
         {
             state = s;
             stateTime = 0;
+            if (pinned) { target = home; return; }
             switch (s)
             {
                 case PerformState.Walk: target = new Vector2(Random.Range(250f, 550f), home.y); break;
@@ -119,6 +187,28 @@ namespace BeatFactory
                 case PerformState.End: target = new Vector2(400, edgeY + 6); break;
                 default: if (pos.y < home.y - 1) target = new Vector2(pos.x, home.y); else target = pos; break;
             }
+        }
+
+        // camera-angle cuts: the artist is put on the spot of that picture and stays there (animations keep playing)
+        bool pinned;
+        Vector2 savedHome; float savedScale, savedEdge;
+
+        public void Pin(Vector2 at, float heightDesign)
+        {
+            if (!pinned) { savedHome = home; savedScale = scale; savedEdge = edgeY; }
+            pinned = true;
+            home = pos = target = at;
+            edgeY = at.y;
+            scale = heightDesign / NativeHeight;
+        }
+
+        public void Unpin()
+        {
+            if (!pinned) return;
+            pinned = false;
+            home = pos = target = savedHome;
+            scale = savedScale;
+            edgeY = savedEdge;
         }
 
         public void WalkTo(float x) { state = PerformState.Walk; stateTime = 0; target = new Vector2(x, home.y); }
@@ -200,6 +290,11 @@ namespace BeatFactory
             float s = scale * kx;
             float edgeScale = Mathf.Lerp(1f, 1.06f, Mathf.InverseLerp(home.y, edgeY, pos.y));
             root.localScale = new Vector3((facingRight ? -s : s) * edgeScale, s * edgeScale, 1f);
+            if (layered != null)
+            {
+                ApplyLayered(expr, beat, k);
+                return;
+            }
             body.anchoredPosition = new Vector2(0, bob);
             body.localEulerAngles = new Vector3(0, 0, lean);
             armNear.anchoredPosition = new Vector2(-23, 216 + bob);
@@ -221,6 +316,26 @@ namespace BeatFactory
             head.localEulerAngles = new Vector3(0, 0, Mathf.Sin(Mathf.PI * beat) * (state == PerformState.Rap ? 5f : 2.5f));
             var spr = id.Head(expr);
             if (spr != null && headImg.sprite != spr) headImg.sprite = spr;
+        }
+
+        /// <summary>The same performance on the detailed rig: elbows bend (mic to the mouth), shoes stay flat, mic in the palm.</summary>
+        void ApplyLayered(int expr, float beat, float k)
+        {
+            // the flat rig shortens the arm to bring the mic up; the detailed rig bends the elbow instead
+            float bend = Mathf.Clamp01((1f - nearLen) / 0.58f);
+            var pose = new LayeredPerformer.Pose
+            {
+                bob = bob * 2.9f, torso = lean, head = Mathf.Sin(Mathf.PI * beat) * (state == PerformState.Rap ? 5f : 2.5f),
+                upperNear = Mathf.Lerp(aNear, aNear * 0.45f, bend), foreNear = -115f * bend, handNear = 10f * bend,
+                upperFar = aFar, foreFar = aFar < -20f ? -25f : 12f, handFar = 0f,
+                legNear = lNear, legFar = lFar, expression = expr, nearHand = HandPose.Mic,
+            };
+            layered.Apply(pose);
+            float tMic = state == PerformState.Rap || state == PerformState.Walk ? 10f : state == PerformState.End ? 14f
+                : state == PerformState.Hype || state == PerformState.BigDrop ? 6f : 12f;
+            micTilt = Mathf.Lerp(micTilt, tMic, k);
+            mic.anchoredPosition = layered.NearHandGrip * layerBack.localScale.x;
+            mic.localEulerAngles = new Vector3(0, 0, micTilt);
         }
     }
 }

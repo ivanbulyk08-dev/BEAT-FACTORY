@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: EconomyConfig
   m_EditorClassIdentifier: Assembly-CSharp::BeatFactory.EconomyConfig
   startingMoney: 0
-  manualBeatBaseReward: 10
-  manualBeatProducerShare: 0.04
+  manualBeatBaseReward: 0.8
+  manualBeatProducerShare: 0.03
   upgradeCostGrowth: 1.5
   producerMilestoneEvery: 10
   producerMilestoneMultiplier: 2

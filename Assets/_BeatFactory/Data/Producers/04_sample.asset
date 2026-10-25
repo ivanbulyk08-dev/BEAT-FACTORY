@@ -17,10 +17,10 @@ MonoBehaviour:
   shortName: SP
   color: {r: 1, g: 0.5411765, b: 0.23921569, a: 1}
   icon: {fileID: 21300000, guid: 6464bba4af3b9ec49a1b6344de3a2a6f, type: 3}
-  hireCost: 4000000
-  upgradeBaseCost: 2400000
-  costGrowth: 0
-  baseIncome: 6400
+  hireCost: 8000000
+  upgradeBaseCost: 2000000
+  costGrowth: 1.9
+  baseIncome: 400
   cycleSeconds: 10
   maxLevel: 0
   requiredStudio: 1

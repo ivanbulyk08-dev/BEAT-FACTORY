@@ -48,6 +48,7 @@ MonoBehaviour:
     stageTorso: {fileID: 21300000, guid: 79e74b6a1b4f1d647841ba7f49837250, type: 3}
     stageArm: {fileID: 21300000, guid: b0282be02b27d4445b15ae07e0190ab2, type: 3}
     stageLeg: {fileID: 21300000, guid: 4773f94c6daa0bd4cb8dfa05384e9701, type: 3}
+    rig: {fileID: 0}
     signs:
     - KAIVN
     - WE LOVE YOU

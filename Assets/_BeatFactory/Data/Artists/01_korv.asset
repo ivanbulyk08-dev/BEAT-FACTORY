@@ -48,6 +48,7 @@ MonoBehaviour:
     stageTorso: {fileID: 21300000, guid: 4d5f24685d61b8146a6db5230d1be5e4, type: 3}
     stageArm: {fileID: 21300000, guid: 987e4998ca937b94ea29bdadde45e561, type: 3}
     stageLeg: {fileID: 21300000, guid: 7bd35ec70dbf8eb48a5d3b925345cfaf, type: 3}
+    rig: {fileID: 0}
     signs:
     - KORV
     - WE LOVE YOU

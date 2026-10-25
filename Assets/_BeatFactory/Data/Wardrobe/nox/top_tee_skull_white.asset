@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8143917569d108145b4009c81b82668d, type: 3}
+  m_Name: top_tee_skull_white
+  m_EditorClassIdentifier: Assembly-CSharp::BeatFactory.WardrobeItem
+  id: top_tee_skull_white
+  slot: 1
+  nameKey: wardrobe.nox.top_tee_skull_white
+  englishName: Skull Tee
+  thumbnail: {fileID: 21300000, guid: f1076e98aaddaa442ae1efa6bb687ff8, type: 3}
+  parts:
+  - part: 5
+    sprite: {fileID: 21300000, guid: f1076e98aaddaa442ae1efa6bb687ff8, type: 3}
+  - part: 9
+    sprite: {fileID: 21300000, guid: 9e35a53fc72db5642a9b1dcf62d99455, type: 3}
+  - part: 12
+    sprite: {fileID: 21300000, guid: 8ae128c96c570724090e52a5fb16944a, type: 3}
+  requiredStudioLevel: 1
+  price: 500000

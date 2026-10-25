@@ -48,6 +48,7 @@ MonoBehaviour:
     stageTorso: {fileID: 21300000, guid: 74ae0826b37e2e64cb01447c9b0b0196, type: 3}
     stageArm: {fileID: 21300000, guid: 383bc5f65aad82649b54734c256861bf, type: 3}
     stageLeg: {fileID: 21300000, guid: 046f6d31247e30741803754f08432fb2, type: 3}
+    rig: {fileID: 0}
     signs:
     - KID OBSIDIAN
     - WE LOVE YOU

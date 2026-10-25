@@ -24,8 +24,12 @@ namespace BeatFactory
         public static GoalReward Fame(double points) => new GoalReward { kind = RewardKind.Fame, amount = points };
 
         /// <summary>Money paid right now for N seconds of income (never less than a few manual beats).</summary>
+        /// <summary>All mission / challenge rewards (money, boost time, fans) are scaled by this. 0.5 = half.</summary>
+        public const double Scale = 0.5;
+
         public static double MoneyFor(GameManager gm, double seconds)
         {
+            seconds *= Scale;
             double income = gm.Producers.IncomePerSecond / Math.Max(1.0, gm.Boosts.ProducerIncomeFactor);
             double floor = gm.Beats.ManualBeatReward * Math.Max(3, seconds / 10);
             return Math.Max(floor, income * seconds);
@@ -39,9 +43,9 @@ namespace BeatFactory
                 case RewardKind.Boost:
                 {
                     var def = gm.Boosts.Config.Get(boost);
-                    return (def != null ? def.DisplayName : boost.ToString().ToUpperInvariant()) + " " + NumberFormatter.FormatDuration(amount);
+                    return (def != null ? def.DisplayName : boost.ToString().ToUpperInvariant()) + " " + NumberFormatter.FormatDuration(amount * Scale);
                 }
-                case RewardKind.Fans: return Loc.F("reward.fans", "value", "+" + NumberFormatter.Percent(amount));
+                case RewardKind.Fans: return Loc.F("reward.fans", "value", "+" + NumberFormatter.Percent(amount * Scale));
                 default: return Loc.F("reward.fame", "value", "+" + NumberFormatter.Group(amount));
             }
         }
@@ -67,13 +71,13 @@ namespace BeatFactory
                     gm.Economy.AddMoney(MoneyFor(gm, amount));
                     break;
                 case RewardKind.Boost:
-                    gm.Boosts.Activate(boost, (float)amount);
+                    gm.Boosts.Activate(boost, (float)(amount * Scale));
                     break;
                 case RewardKind.Fans:
                     foreach (var a in gm.Concerts.SignedArtists())
                     {
                         var c = gm.Concerts.Career(a);
-                        double gain = Math.Round(c.fans * amount / 100.0);
+                        double gain = Math.Round(c.fans * amount * Scale / 100.0);
                         c.fans += gain;
                         c.totalFansGained += gain;
                     }

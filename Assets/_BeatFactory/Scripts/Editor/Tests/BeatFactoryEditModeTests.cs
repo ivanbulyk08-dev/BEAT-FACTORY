@@ -1,4 +1,5 @@
 using System;
+using BeatFactory.EditorTools.Art;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -69,8 +70,10 @@ namespace BeatFactory.EditorTools.Tests
             var l = CreateLoop();
             var first = l.producers.Producers[0];
             int taps = 0;
-            while (!l.producers.CanBuy(first, 1) && taps < 1000) { l.beats.MakeManualBeat(); taps++; }
-            Assert.Less(taps, 200, "The first producer should be reachable within the first minute.");
+            while (!l.producers.CanBuy(first, 1) && taps < 5000) { l.beats.MakeManualBeat(); taps++; }
+            // balance v4: the first hire is a milestone of the first minutes (≈3-7 min of tapping), not of the first seconds
+            Assert.Greater(taps, 300, "The first producer should not be affordable within the first minute.");
+            Assert.Less(taps, 1600, "The first producer should be reachable within a few minutes of tapping.");
             Assert.IsTrue(l.producers.TryBuyLevels(first, 1));
             Assert.Greater(l.producers.IncomePerSecond, 0);
         }
@@ -201,6 +204,147 @@ namespace BeatFactory.EditorTools.Tests
             finally { UnityEngine.Object.DestroyImmediate(go); }
         }
 
+        // ------------------------------------------------------------------ economy balance
+
+        [Test]
+        public void Boosts_StackedBoosts_AreCapped()
+        {
+            var cfg = AssetDatabase.LoadAssetAtPath<BoostConfig>(Data + "Config/BoostConfig.asset");
+            var boosts = new BoostManager(cfg);
+            boosts.Activate(BoostType.Producer);
+            Assert.AreEqual(cfg.Get(BoostType.Producer).multiplier, boosts.ProducerIncomeFactor, 1e-9, "One boost alone is not capped.");
+            Assert.AreEqual(1.0, boosts.CapFactor, 1e-9);
+            boosts.Activate(BoostType.Money);
+            boosts.Activate(BoostType.Speed);
+            Assert.AreEqual(cfg.maxCombinedProducerBoost, boosts.ProducerIncomeFactor, 1e-9);
+            double raw = cfg.Get(BoostType.Money).multiplier * cfg.Get(BoostType.Speed).multiplier * cfg.Get(BoostType.Producer).multiplier;
+            Assert.AreEqual(raw * boosts.CapFactor, cfg.maxCombinedProducerBoost, 1e-9, "Stacked boosts must pay exactly the cap.");
+        }
+
+        [Test]
+        public void Economy_ActivePlayer_HitsEarlyPacingTargets()
+        {
+            var r = EconomySimulator.Run(EconomySimulator.Active);
+            TestContext.WriteLine(r.Describe());
+            Assert.That(r.firstPurchaseAt / 60, Is.InRange(0.3, 1.5), "first meaningful upgrade");
+            Assert.That(r.firstHireAt / 60, Is.InRange(3, 7), "first producer hire");
+            Assert.That(r.PlayMinutesTo(1e3), Is.InRange(2, 5), "first $1K");
+            Assert.That(r.PlayMinutesTo(1e4), Is.InRange(8, 15), "first $10K");
+            Assert.That(r.PlayMinutesTo(1e5), Is.InRange(20, 40), "first $100K");
+            Assert.That(r.PlayMinutesTo(1e6), Is.InRange(45, 90), "first $1M");
+            Assert.Greater(r.StudioPlayHours(1), 1.5, "the Bedroom Studio must not be bought within the first session");
+            Assert.Greater(r.StudioPlayHours(3), 4, "the Professional Studio is a multi-session milestone");
+            Assert.Less(r.StudioPlayHours(9), 80, "a player who never watches ads can still finish every studio");
+        }
+
+        [Test]
+        public void Economy_RewardedAds_HelpButDoNotTrivialize()
+        {
+            var noAds = EconomySimulator.Run(EconomySimulator.Optimized);
+            var ads = EconomySimulator.Run(EconomySimulator.AdFrequent);
+            TestContext.WriteLine(noAds.Describe());
+            TestContext.WriteLine(ads.Describe());
+            Assert.Less(ads.PlayMinutesTo(1e6), noAds.PlayMinutesTo(1e6), "ads should speed things up");
+            Assert.Greater(ads.PlayMinutesTo(1e6), noAds.PlayMinutesTo(1e6) / 3, "even constant ads must not skip the early game");
+            Assert.Greater(ads.StudioPlayHours(9), noAds.StudioPlayHours(9) / 3, "even constant ads must not skip the late game");
+        }
+
+        // ------------------------------------------------------------------ detailed artists (DRIP STUDIO)
+
+        static ArtistRig NoxRig()
+        {
+            var rig = AssetDatabase.LoadAssetAtPath<ArtistRig>(ArtistRigImporter.RigAssetPath("nox"));
+            if (rig == null) Assert.Ignore("No imported NØX rig yet (Tools > Beat Factory > Art > Import Artist Rig).");
+            return rig;
+        }
+
+        [Test]
+        public void Wardrobe_SaveRoundTrip_AndOldSavesUseDefaults()
+        {
+            var rig = NoxRig();
+            var w = new ArtistWardrobe();
+            foreach (WardrobeSlot s in Enum.GetValues(typeof(WardrobeSlot)))
+                Assert.AreEqual(rig.Default(s), w.Worn(rig, s), "an old save (no outfit) wears the default " + s);
+
+            var other = rig.ItemsFor(WardrobeSlot.Jacket).First(i => i != rig.Default(WardrobeSlot.Jacket));
+            Assert.IsTrue(w.Wear(rig, WardrobeSlot.Jacket, other));
+            Assert.IsTrue(w.Wear(rig, WardrobeSlot.Chain, null), "optional slots can be emptied");
+            Assert.IsFalse(w.Wear(rig, WardrobeSlot.Pants, null), "pants can't be taken off");
+            Assert.IsFalse(w.Wear(rig, WardrobeSlot.Shoes, other), "an item only fits its own slot");
+
+            var json = JsonUtility.ToJson(new SaveData { artistOutfits = w.GetSaveData() });
+            var loaded = new ArtistWardrobe();
+            loaded.LoadState(JsonUtility.FromJson<SaveData>(json).artistOutfits);
+            Assert.AreEqual(other, loaded.Worn(rig, WardrobeSlot.Jacket));
+            Assert.IsNull(loaded.Worn(rig, WardrobeSlot.Chain));
+
+            // unknown ids (removed items) fall back to the default instead of breaking the save
+            loaded.LoadState(new List<ArtistOutfitSave> { new ArtistOutfitSave { artistId = "nox", items = new List<string> { "Jacket:does_not_exist", "garbage" } } });
+            Assert.AreEqual(rig.Default(WardrobeSlot.Jacket), loaded.Worn(rig, WardrobeSlot.Jacket));
+
+            // STORE purchases survive a save round trip; old saves without the field load as "nothing bought"
+            Assert.IsTrue(w.Grant("store_test_item"));
+            Assert.IsFalse(w.Grant("store_test_item"), "buying twice is refused");
+            var bought = new ArtistWardrobe();
+            bought.LoadOwned(JsonUtility.FromJson<SaveData>(JsonUtility.ToJson(new SaveData { storeOwned = w.GetOwned() })).storeOwned);
+            Assert.IsTrue(bought.Owns("store_test_item"));
+            bought.LoadOwned(null);
+            Assert.IsFalse(bought.Owns("store_test_item"));
+        }
+
+        [Test]
+        public void ArtistRig_Nox_IsComplete()
+        {
+            var rig = NoxRig();
+            foreach (var part in ArtistRig.RequiredBody) Assert.NotNull(rig.Body(part), "body part " + part);
+            Assert.AreEqual(5, rig.heads.Length);
+            foreach (var h in rig.heads) Assert.NotNull(h, "expression heads");
+            Assert.NotNull(rig.NearHand(HandPose.Mic), "near hand holding the mic");
+            foreach (var item in rig.wardrobe)
+                foreach (var part in ArtistRig.RequiredParts(item.slot))
+                    Assert.NotNull(item.Get(part), item.id + " needs " + part);
+            foreach (WardrobeSlot s in Enum.GetValues(typeof(WardrobeSlot)))
+                if (!ArtistRig.OptionalSlot(s)) Assert.NotNull(rig.Default(s), "default " + s);
+            var artist = DefaultGameData.LoadArtists().First(a => a.id == "nox");
+            Assert.AreEqual(rig, artist.visual.rig, "NØX uses the detailed rig");
+        }
+
+        [Test]
+        public void LayeredPerformer_BuildsWithEveryOutfitCombination()
+        {
+            var rig = NoxRig();
+            var go = new GameObject("RigTest", typeof(RectTransform));
+            try
+            {
+                var back = UIKit.Rect("Back", go.transform);
+                var front = UIKit.Rect("Front", go.transform);
+                var slots = new[] { WardrobeSlot.Hair, WardrobeSlot.Top, WardrobeSlot.Jacket, WardrobeSlot.Pants, WardrobeSlot.Shoes };
+                var options = slots.Select(s => rig.ItemsFor(s).Cast<WardrobeItem>().Concat(ArtistRig.OptionalSlot(s) ? new WardrobeItem[] { null } : new WardrobeItem[0]).ToArray()).ToArray();
+                int combos = 0;
+                void Rec(int i, Dictionary<WardrobeSlot, WardrobeItem> outfit)
+                {
+                    if (i == slots.Length)
+                    {
+                        for (int c = back.childCount - 1; c >= 0; c--) UnityEngine.Object.DestroyImmediate(back.GetChild(c).gameObject);
+                        for (int c = front.childCount - 1; c >= 0; c--) UnityEngine.Object.DestroyImmediate(front.GetChild(c).gameObject);
+                        var lp = LayeredPerformer.Build(back, front, rig, new Dictionary<WardrobeSlot, WardrobeItem>(outfit));
+                        lp.Apply(new LayeredPerformer.Pose { upperNear = -150, foreNear = -100, upperFar = 160, legNear = 10, legFar = -10, expression = combos % 5 });
+                        Assert.IsFalse(float.IsNaN(lp.NearHandGrip.x));
+                        combos++;
+                        return;
+                    }
+                    foreach (var item in options[i])
+                    {
+                        outfit[slots[i]] = item;
+                        Rec(i + 1, outfit);
+                    }
+                }
+                Rec(0, new Dictionary<WardrobeSlot, WardrobeItem>());
+                Assert.Greater(combos, 1);
+            }
+            finally { UnityEngine.Object.DestroyImmediate(go); }
+        }
+
         // ------------------------------------------------------------------ localization
 
         static Dictionary<string, string> Table(string code)
@@ -303,6 +447,49 @@ namespace BeatFactory.EditorTools.Tests
             if (f.fallbackFontAssetTable != null)
                 foreach (var fb in f.fallbackFontAssetTable) if (Covers(fb, c, depth + 1)) return true;
             return false;
+        }
+
+        // ------------------------------------------------------------------ main character
+
+        [Test]
+        public void MainCharacter_PicksOnlyValidPosesAndNeverRepeats()
+        {
+            var lib = AssetDatabase.LoadAssetAtPath<CharacterPoseLibrary>(MainCharacterPoseArt.LibraryPath);
+            Assert.IsNotNull(lib, "pose library missing");
+            var host = new GameObject("anchors");
+            try
+            {
+                var bed = host.AddComponent<RectTransform>().gameObject.AddComponent<StudioCharacterAnchor>();
+                bed.supportedPoses = new[] { CharacterPose.StandBack, CharacterPose.SitChair }; // SitChair has no art
+                var floor = new GameObject("floor", typeof(RectTransform)).AddComponent<StudioCharacterAnchor>();
+                floor.transform.SetParent(host.transform);
+                floor.supportedPoses = new[] { CharacterPose.StandIdle, CharacterPose.SitRelaxed, CharacterPose.Crouch };
+                var anchors = new List<StudioCharacterAnchor> { bed, floor };
+                var sel = new CharacterActivitySelector();
+                var rng = new System.Random(7);
+                var current = default(CharacterActivitySelector.Choice);
+                var seen = new HashSet<CharacterActivity>();
+                for (int i = 0; i < 400; i++)
+                {
+                    var next = sel.Pick(lib, anchors, current, rng);
+                    Assert.IsTrue(next.IsValid);
+                    Assert.IsNotNull(next.pose.sprite, "picked a pose without art");
+                    Assert.IsTrue(next.anchor.Supports(next.pose.pose), "pose not supported by its anchor");
+                    Assert.IsFalse(current.IsValid && next.pose == current.pose && next.anchor == current.anchor, "repeated the same pose and spot");
+                    seen.Add(next.pose.activity);
+                    current = next;
+                }
+                Assert.IsTrue(seen.Contains(CharacterActivity.Sitting) && seen.Contains(CharacterActivity.Standing) && seen.Contains(CharacterActivity.Special));
+
+                // a weight of zero removes the activity
+                sel.standing = 0f;
+                for (int i = 0; i < 200; i++)
+                {
+                    current = sel.Pick(lib, anchors, current, rng);
+                    Assert.AreNotEqual(CharacterActivity.Standing, current.pose.activity);
+                }
+            }
+            finally { UnityEngine.Object.DestroyImmediate(host); }
         }
     }
 }

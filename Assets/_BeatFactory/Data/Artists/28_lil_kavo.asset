@@ -48,6 +48,7 @@ MonoBehaviour:
     stageTorso: {fileID: 21300000, guid: 8d45bfb17ab609d4090a245d5526dc18, type: 3}
     stageArm: {fileID: 21300000, guid: cffd29dd608c8eb40909c2b4c3e6b0c2, type: 3}
     stageLeg: {fileID: 21300000, guid: fe87bed511875bb41962773a1bcd6fd4, type: 3}
+    rig: {fileID: 0}
     signs:
     - LIL KAVO
     - WE LOVE YOU

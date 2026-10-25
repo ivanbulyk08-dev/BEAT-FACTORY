@@ -48,6 +48,7 @@ MonoBehaviour:
     stageTorso: {fileID: 21300000, guid: 952a3cc3651f706468f348def362d924, type: 3}
     stageArm: {fileID: 21300000, guid: c8cf25b3fed15974d85c039ba47ff5b6, type: 3}
     stageLeg: {fileID: 21300000, guid: de9f762780868b04c805197ac7d5355a, type: 3}
+    rig: {fileID: 0}
     signs:
     - HEXXA
     - WE LOVE YOU

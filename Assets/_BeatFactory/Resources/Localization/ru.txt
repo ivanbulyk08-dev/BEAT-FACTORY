@@ -921,3 +921,26 @@ settings.privacy_policy = Политика конфиденциальности
 settings.privacy_options = Настройки приватности
 boosts.instant_viral_wait = МГНОВЕННЫЙ ВИРУСНЫЙ БИТ  ·  {time}
 ads.no_internet = <color=#FF8A3D><b>Нет подключения к интернету</b></color> — для рекламы нужен интернет. Ваш прогресс в безопасности.
+
+
+boost_offer.title = {mult} ДОХОД
+boost_offer.button = {mult} ДОХОД
+boost_offer.cta = ВКЛЮЧИТЬ БУСТ {mult}
+boost_offer.cta_free = БУСТ {mult} БЕСПЛАТНО
+boost_offer.ad_note = Посмотрите одну необязательную рекламу, чтобы включить
+boost_offer.free_note = Бесплатный буст готов — без рекламы
+boost_offer.opening_ad = Открываем рекламу…
+boost_offer.not_completed = Реклама не досмотрена — буст не выдан. Можно попробовать ещё раз.
+boost_offer.active = БУСТ АКТИВЕН
+boost_offer.active_note = Ваши продюсеры сейчас зарабатывают больше
+common.per_min = {money}/мин
+concert.skip_intro = ПРОПУСТИТЬ
+nav.store = МАГАЗИН
+store.coming_soon = СКОРО
+store.coming_soon_desc = Здесь будут продаваться эксклюзивные вещи для вашей студии и артистов.
+store.buy = КУПИТЬ
+store.wear = НАДЕТЬ
+store.worn = НАДЕТО
+store.owned = Куплено
+store.for_you = Одежда для твоего персонажа
+store.tap_to_remove = Нажми, чтобы снять

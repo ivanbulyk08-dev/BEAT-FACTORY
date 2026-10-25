@@ -1,4 +1,6 @@
-# Beat Factory — Economy Balance v3 (10 rooms)
+# Beat Factory — Economy Balance v4 (10 rooms)
+
+v4 (11.10.2026) slows the early and late game down: see ECONOMY_REBALANCE_REPORT.md for the causes, old vs new values and the simulation results.
 
 ## Rooms (studio levels)
 | # | Room | Price | Income | Speed | Offline | HIT/VIRAL | Unlocks |
@@ -17,21 +19,26 @@
 Why not ×100 for the last room? The income bonuses multiply with each other: genres, 32 artists, albums, fame and the producer tiers. With the suggested ×2…×100 rooms, the simulator finished all 10 rooms in about 1 hour. With these values each room still gives a big jump, and prices still grow faster than income (rooms cost ×5–8 more each step).
 
 ## Money scale
-Money values are ×10 from v2.
-- Manual beat: $10 + 4% of producer income/s.
-- Producers: hire costs $1K / $15K / $200K / $4M / $80M / $2B / $50B. Each one earns about ×4–5 more than the previous one. Upgrades cost ×1.5 per level, and every 10 levels the producer earns ×2.
-- Genres: ×1.3 → ×3.
+- Manual beat: $0.80 + 3% of producer income/s. Money under $100 is shown with one decimal ("$0.8").
+- Producers (hire / first upgrade / upgrade cost growth / income per second at level 1):
+  - Beginner $1.5K / $400 / ×1.6 / $0.35 · Melody $12K / $3K / ×1.6 / $2 · Drum $100K / $25K / ×1.7 / $10
+  - Sample $8M / $2M / ×1.9 / $40 (Bedroom) · Sound $250M / $60M / ×2.0 / $183 (Small Pro)
+  - Hitmaker $5B / $1.25B / ×2.0 / $850 (Pro) · Superstar $140B / $35B / ×2.0 / $4K (Modern)
+  - Income grows linearly with the level and doubles every 10 levels; the cost growth makes every producer saturate, so the next producer becomes the goal.
+- Genres: Hip-Hop $250 (the first upgrade, ×1.3), then ×1.5 → ×3 as before.
 - Artists: ×1.03 → ×1.06 each, about ×4 in total. Their prices are a share of their room's price.
-- Albums: reputation up to ×2.8 in total.
-- Streams platforms: $250K / $20M / $2B.
+- Albums: reputation up to ×2.8 in total; release reward = 120–420 s of income.
+- Stream platforms: $250K / $20M / $2B.
+- Missions: money rewards are seconds of income; the first ones are small (30–180 s).
+- Boosts: MONEY × SPEED × PRODUCER together pay producers at most ×4 (BoostConfig.maxCombinedProducerBoost). A VIRAL beat's 2X MONEY can trigger once per 10 minutes.
 - Prestige: available after $10B earned in a run; fame = √(earnings / $100M).
 
 ## Simulated players (Tools > Beat Factory > Simulate Economy)
-Times are hours:minutes until the room is bought.
-- **Active** (plays 3 h, then 20 min every hour; some ads): L2 0:17 · L3 0:27 · L4 0:37 · L5 0:58 · L6 1:40 · L7 2:29 · L8 5:09 · L9 10:13 · L10 18:00
-- **Optimized** (long sessions, boosts almost always on): L2 0:09 · L5 0:33 · L7 1:25 · L9 4:10 · L10 8:08
-- **Casual** (10 minutes every 3 hours): L2 3:00 · L5 6:00 · L7 12:00 · L10 ~36:00
-- **Offline** (5 minutes every 8 hours): L2 16:00 · L5 32:00 · L10 ~80:00
+Times are play time (calendar time in brackets). The report is written to %TEMP%/bf_economy_report.txt.
+- **Active** (no ads): $1K 2:47 · first producer 4:19 · $10K 8:59 · $100K 34:29 · $1M 1:20 · L2 3:00 [6h] · L4 5:30 [1 day] · L6 11:00 [2.3 days] · L8 22:00 [5 days] · L10 49:00 [12 days]
+- **Optimized** (no ads): $1M 1:14 · L2 3:20 · L4 6:27 · L10 59:00 [7 days]
+- **Casual** (10 min every 3 h): $1M after 40 min of play [12h] · L2 [1.1 days] · L10 [20 days]
+- **Ad-supported**: occasional ads $1M 1:00, L10 44:00 [5 days]; ads kept on all the time $1M 0:33, L10 34:00 [4 days]
 
 ## Concerts & tours (code: `Scripts/Concerts`)
 Career loop: sign → music (viral beats, albums, studio upgrades, social buzz) → popularity + fans → concerts → bigger venues → tours.

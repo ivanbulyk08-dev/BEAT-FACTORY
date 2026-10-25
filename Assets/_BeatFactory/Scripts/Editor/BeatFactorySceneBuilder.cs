@@ -186,6 +186,8 @@ namespace BeatFactory.EditorTools
             var background = UIFactory.Image("Background", canvasGo.transform, Theme.Background);
             UIFactory.Stretch(background.rectTransform);
             background.raycastTarget = false;
+            // Studio level 1: the painted basement fills the screen behind the UI (live laptop, lamp and neon on top)
+            var studioBackdrop = CreateBasementBackdrop(canvasGo.transform);
 
             var safeArea = UIFactory.Rect("SafeArea", canvasGo.transform);
             UIFactory.Stretch(safeArea);
@@ -219,6 +221,7 @@ namespace BeatFactory.EditorTools
             var artistsScreen = CreateArtistsScreen(content, shopRowPrefab);
             var prestigeScreen = CreatePrestigeScreen(content, out var prestigeUi);
             var settingsScreen = CreateSettingsScreen(content, out var settingsUi);
+            var storeScreen = CreateStoreScreen(content);
 
             var navigator = CreateBottomNav(safeArea, new[]
             {
@@ -227,9 +230,11 @@ namespace BeatFactory.EditorTools
                 new NavTabDef("MUSIC", "icon_music", musicScreen.gameObject, NavBadgeSource.Music),
                 new NavTabDef("CAREER", "icon_artist", artistsScreen.gameObject, NavBadgeSource.Artists),
                 new NavTabDef("PRESTIGE", "icon_prestige", prestigeScreen.gameObject, NavBadgeSource.Prestige),
+                new NavTabDef("STORE", "icon_store", storeScreen.gameObject, NavBadgeSource.None),
                 new NavTabDef("SETTINGS", "icon_settings", settingsScreen.gameObject, NavBadgeSource.None),
             });
 
+            if (studioBackdrop != null) UIFactory.SetRef(navigator, "homeBackground", studioBackdrop.gameObject);
             // Tutorial step "unlock genres" points at the MUSIC tab.
             UIFactory.SetRef(tutorial, "genreTarget", navigator.transform.Find("Tabs/Tab_MUSIC"));
             UIFactory.SetRef(streamCounter, "navigator", navigator);
@@ -268,6 +273,9 @@ namespace BeatFactory.EditorTools
             var back = navigator.gameObject.AddComponent<BackButtonRouter>();
             UIFactory.SetRef(back, "navigator", navigator);
             UIFactory.SetRef(back, "fakeAd", fakeAd);
+
+            // For now the main screen shows only the studio and MAKE BEAT (the rest is hidden, not removed).
+            CreateStudioFocus(canvasGo, safeArea, home, tutorial);
 
             // Design system pass: consistent surfaces and typography everywhere.
             UIStyle.ApplySurfaces(canvasGo, UIFactory.RoundedSprite);
@@ -737,9 +745,26 @@ namespace BeatFactory.EditorTools
             rt.anchoredPosition = pos;
         }
 
+        /// <summary>
+        /// Bars live inside the safe area; this fill continues them past it to the very top / bottom of the screen
+        /// (behind the notch, status bar and home indicator), so they always reach the screen edges.
+        /// </summary>
+        static void ExtendBar(RectTransform bar, bool down, Color color)
+        {
+            var fill = UIFactory.Image(down ? "BottomFill" : "TopFill", bar, color);
+            fill.raycastTarget = false;
+            var f = fill.rectTransform;
+            f.anchorMin = new Vector2(0, down ? 0 : 1);
+            f.anchorMax = new Vector2(1, down ? 0 : 1);
+            f.offsetMin = new Vector2(-200, down ? -400 : 0);
+            f.offsetMax = new Vector2(200, down ? 0 : 400);
+            f.SetAsFirstSibling();
+        }
+
         static Image CreateTopBar(RectTransform parent, out StreamCounterHUD streamCounter)
         {
-            var bar = UIFactory.Image("TopBar", parent, Theme.Panel);
+            // slightly see-through so the studio art (e.g. the basement lamp) still glows behind the HUD
+            var bar = UIFactory.Image("TopBar", parent, new Color(Theme.Panel.r, Theme.Panel.g, Theme.Panel.b, 0.8f));
             UIStyle.GradientBar(bar);
             var rt = bar.rectTransform;
             rt.anchorMin = new Vector2(0, 1);
@@ -747,6 +772,7 @@ namespace BeatFactory.EditorTools
             rt.pivot = new Vector2(0.5f, 1);
             rt.sizeDelta = new Vector2(0, Theme.TopBarHeight);
             rt.anchoredPosition = Vector2.zero;
+            ExtendBar(rt, down: false, new Color(Theme.Panel.r, Theme.Panel.g, Theme.Panel.b, 0.8f));
 
             var accent = UIFactory.Image("AccentLine", rt, Theme.AccentMoney);
             accent.rectTransform.anchorMin = new Vector2(0, 0);

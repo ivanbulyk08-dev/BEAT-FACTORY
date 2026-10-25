@@ -48,6 +48,7 @@ MonoBehaviour:
     stageTorso: {fileID: 21300000, guid: 334a3e5a19133554783803d413efa285, type: 3}
     stageArm: {fileID: 21300000, guid: d9c1af8254b2c1c4d8981d1cfc1daf33, type: 3}
     stageLeg: {fileID: 21300000, guid: ec5647a652e1ae84eb5c9af9e04b55e0, type: 3}
+    rig: {fileID: 0}
     signs:
     - LIL RAZE
     - WE LOVE YOU

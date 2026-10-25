@@ -35,6 +35,7 @@ namespace BeatFactory.EditorTools.Art
                 Make(CrowdPath(t), overwrite, () => Crowd(t));
             }
             Make(BeamPath, overwrite, FxBeam);
+            GenerateStadiumAerial(overwrite);
         }
 
         static SdfPainter FxBeam()

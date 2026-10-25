@@ -43,4 +43,6 @@ MonoBehaviour:
     color: {r: 1, g: 0.24, b: 0.78, a: 1}
   freeBoostCooldownMinutes: 20
   viralBeatMoneyBoostSeconds: 120
+  viralBeatBoostCooldownMinutes: 10
+  maxCombinedProducerBoost: 4
   maxStackMinutes: 60

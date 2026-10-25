@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8143917569d108145b4009c81b82668d, type: 3}
+  m_Name: top_tee_cross_black
+  m_EditorClassIdentifier: Assembly-CSharp::BeatFactory.WardrobeItem
+  id: top_tee_cross_black
+  slot: 1
+  nameKey: wardrobe.nox.top_tee_cross_black
+  englishName: Cross Tee
+  thumbnail: {fileID: 21300000, guid: 480fd7216df19804eb436722361ab27b, type: 3}
+  parts:
+  - part: 5
+    sprite: {fileID: 21300000, guid: 480fd7216df19804eb436722361ab27b, type: 3}
+  - part: 9
+    sprite: {fileID: 21300000, guid: 8ad082e594b9c454885510ba0419d906, type: 3}
+  - part: 12
+    sprite: {fileID: 21300000, guid: 8c5082642d8a01d4e9da798ced83621d, type: 3}
+  requiredStudioLevel: 0
+  price: 0

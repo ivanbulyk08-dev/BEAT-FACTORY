@@ -822,3 +822,26 @@ settings.privacy_policy = 隐私政策
 settings.privacy_options = 隐私设置
 boosts.instant_viral_wait = 立即获得爆款节拍  ·  {time}
 ads.no_internet = <color=#FF8A3D><b>没有网络连接</b></color>——广告需要联网。你的进度很安全。
+
+
+boost_offer.title = {mult} 收益
+boost_offer.button = {mult} 收益
+boost_offer.cta = 激活 {mult} 加速
+boost_offer.cta_free = 免费激活 {mult}
+boost_offer.ad_note = 观看一则可选广告即可激活
+boost_offer.free_note = 免费加速已就绪——无需广告
+boost_offer.opening_ad = 正在打开广告…
+boost_offer.not_completed = 广告未看完——本次没有加速。可以再试一次。
+boost_offer.active = 加速中
+boost_offer.active_note = 你的制作人正在赚更多钱
+common.per_min = {money}/分钟
+concert.skip_intro = 跳过开场
+nav.store = 商店
+store.coming_soon = 即将推出
+store.coming_soon_desc = 这里将出售为你的工作室和艺人准备的专属物品。
+store.buy = 购买
+store.wear = 穿上
+store.worn = 已穿
+store.owned = 已拥有
+store.for_you = 你的角色的服装
+store.tap_to_remove = 点击脱下

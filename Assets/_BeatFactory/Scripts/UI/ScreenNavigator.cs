@@ -25,6 +25,8 @@ namespace BeatFactory
         [SerializeField] Color normalColor = new Color(0.54f, 0.52f, 0.69f);
         [SerializeField] RectTransform selectionIndicator;
         [SerializeField] float fadeDuration = 0.15f;
+        [Tooltip("The painted studio room: shown only on the first tab (HOME), turned off on the others.")]
+        [SerializeField] GameObject homeBackground;
 
         public int Current { get; private set; } = -1;
         public event Action<int> ScreenChanged;
@@ -62,6 +64,8 @@ namespace BeatFactory
                 foreach (var g in tabs[i].tintedGraphics)
                     if (g != null) g.color = selected ? selectedColor : normalColor;
             }
+
+            if (homeBackground != null && homeBackground.activeSelf != (index == 0)) homeBackground.SetActive(index == 0);
 
             if (selectionIndicator != null)
             {

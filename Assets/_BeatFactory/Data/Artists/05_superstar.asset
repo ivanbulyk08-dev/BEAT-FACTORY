@@ -48,6 +48,7 @@ MonoBehaviour:
     stageTorso: {fileID: 21300000, guid: 40256905fdb8b3e43af20958c7fd06f4, type: 3}
     stageArm: {fileID: 21300000, guid: 6ce1362800b14854b98b2e858497a8e2, type: 3}
     stageLeg: {fileID: 21300000, guid: e0ef98919ee057c4c890235874116f69, type: 3}
+    rig: {fileID: 0}
     signs:
     - AURELIA NOVA
     - WE LOVE YOU

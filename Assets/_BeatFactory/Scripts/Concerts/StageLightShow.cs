@@ -75,6 +75,8 @@ namespace BeatFactory
         }
 
         public RectTransform PanelsLayer => panels;
+        /// <summary>Painted venue positions (stage, truss, side panels); default = the generated venues.</summary>
+        public VenueLayout Layout { get; set; }
         public RectTransform BackLayer => back;
         public RectTransform FrontLayer => front;
         public RectTransform HazeFrontLayer => hazeFront;
@@ -204,8 +206,8 @@ namespace BeatFactory
             float fame = Mathf.Clamp01(popularity / 100f);
             float[] trussTop = { 1150, 1180, 1130, 1210, 1150 };
             float[] stageTop = { 560, 560, 560, 560, 560 };
-            trussY = trussTop[tier];
-            stageY = stageTop[tier];
+            trussY = Layout.IsSet ? Layout.trussY : trussTop[tier];
+            stageY = Layout.IsSet ? Layout.edgeY + 20f : stageTop[tier];
 
             // venue scale: club 2–4 movers, a couple of lasers; stadium: everything
             int[] moverBase = { 3, 5, 7, 10, 14 };
@@ -216,6 +218,13 @@ namespace BeatFactory
             activeHeads = Mathf.Clamp(Mathf.RoundToInt((moverBase[tier] + fame * 2) * Mathf.Lerp(0.6f, 1f, q)), 2, heads.Count);
             maxLasers = Mathf.Clamp(Mathf.RoundToInt((laserBase[tier] * (0.75f + 0.5f * fame)) * q), tier == 0 ? 1 : 2, lasers.Count);
             int ups = Mathf.Clamp(Mathf.RoundToInt(upBase[tier] * Mathf.Lerp(0.5f, 1f, q)), 0, uplights.Count);
+            if (Layout.IsSet)
+            {
+                // painted venues already show their own rigs and beams: fewer live lights, no extra fixtures
+                activeHeads = Mathf.Max(2, Mathf.RoundToInt(activeHeads * 0.45f));
+                maxLasers = Mathf.Max(1, Mathf.RoundToInt(maxLasers * 0.55f));
+                ups = Mathf.RoundToInt(ups * 0.4f);
+            }
             int hz = Mathf.Clamp(Mathf.RoundToInt(hazeBase[tier] * Mathf.Lerp(0.5f, 1f, q)), 1, haze.Count);
             maxSparks = Mathf.RoundToInt(sparkBase[tier] * q);
             flamesAllowed = tier >= (int)VenueTier.Arena;
@@ -226,7 +235,7 @@ namespace BeatFactory
             {
                 var h = heads[i];
                 bool on = i < activeHeads;
-                h.beamImg.gameObject.SetActive(on); h.fixtureImg.gameObject.SetActive(on); h.halo.gameObject.SetActive(on);
+                h.beamImg.gameObject.SetActive(on); h.fixtureImg.gameObject.SetActive(on && !Layout.IsSet); h.halo.gameObject.SetActive(on && !Layout.IsSet);
                 if (!on) continue;
                 h.pos = new Vector2(Mathf.Lerp(80, 720, activeHeads == 1 ? 0.5f : i / (activeHeads - 1f)), trussY - 8);
                 h.phase = (float)rnd.NextDouble() * 6.28f;
@@ -283,7 +292,7 @@ namespace BeatFactory
             backlight.rectTransform.sizeDelta = new Vector2(420, 520);
 
             // LED side panels (hall and bigger)
-            Vector4[] panelSlots = tier switch
+            Vector4[] panelSlots = Layout.IsSet ? (Layout.panels ?? new Vector4[0]) : tier switch
             {
                 0 => new Vector4[0],
                 1 => new[] { new Vector4(70, 640, 90, 250), new Vector4(730, 640, 90, 250) },

@@ -12,6 +12,8 @@ namespace BeatFactory
     {
         [SerializeField] Button boostsButton;
         [SerializeField] GameObject freeDot;
+        [Tooltip("Label of the BOOSTS button: shows the featured boost (for example ×3 CASH) from BoostConfig.")]
+        [SerializeField] TMP_Text boostsLabel;
         [SerializeField] BoostsPopupUI popup;
         [Tooltip("One chip per boost type, in BoostType order (Money, Speed, Producer, Viral).")]
         [SerializeField] GameObject[] chips;
@@ -60,6 +62,12 @@ namespace BeatFactory
                 var def = boosts.Config.Get(type);
                 chipTexts[i].text = def.ChipText + "  " + NumberFormatter.FormatClock(boosts.RemainingSeconds(type));
                 chipImages[i].color = def.color;
+            }
+
+            if (boostsLabel != null)
+            {
+                var featured = boosts.Config.Get(BoostOfferCard.Featured(GameManager.Instance));
+                if (featured != null) boostsLabel.text = Loc.F("boost_offer.button", "mult", NumberFormatter.FormatMultiplier(featured.multiplier));
             }
 
             bool free = boosts.FreeBoostReady;

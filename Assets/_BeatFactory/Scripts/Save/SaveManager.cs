@@ -122,6 +122,8 @@ namespace BeatFactory
             if (data.artistCareers == null) data.artistCareers = new System.Collections.Generic.List<ArtistCareer>();
             if (data.activeTours == null) data.activeTours = new System.Collections.Generic.List<ActiveTour>();
             if (data.achievements == null) data.achievements = new System.Collections.Generic.List<string>();
+            if (data.artistOutfits == null) data.artistOutfits = new System.Collections.Generic.List<ArtistOutfitSave>();
+            if (data.storeOwned == null) data.storeOwned = new System.Collections.Generic.List<string>();
             if (data.goals == null) data.goals = new GoalsSave();
             if (data.chemistry == null) data.chemistry = new ChemistrySave();
             if (data.genresUnlocked < 1) data.genresUnlocked = 1;
@@ -173,6 +175,8 @@ namespace BeatFactory
                 artistCareers = gm.Concerts.GetSaveData(),
                 activeTours = gm.Tours.GetSaveData(),
                 achievements = gm.Achievements.GetIds(),
+                artistOutfits = gm.Wardrobe.GetSaveData(),
+                storeOwned = gm.Wardrobe.GetOwned(),
                 goals = CaptureGoals(gm),
                 chemistry = gm.Chemistry.GetSaveData(),
 
@@ -218,6 +222,8 @@ namespace BeatFactory
             gm.Artists.LoadState(data.signedArtists);
             gm.Albums.LoadState(data.releasedAlbums);
             gm.Achievements.LoadState(data.achievements);
+            gm.Wardrobe.LoadState(data.artistOutfits);
+            gm.Wardrobe.LoadOwned(data.storeOwned);
             gm.Concerts.LoadState(data.artistCareers);
             gm.Tours.LoadState(data.activeTours);
             gm.Stats.LoadState(data.goals?.stats);

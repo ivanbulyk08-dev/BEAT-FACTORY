@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad3bcfbcff53d0746bb62814226164a6, type: 3}
+  m_Name: outfit_jacket_moto_black
+  m_EditorClassIdentifier: Assembly-CSharp::BeatFactory.CharacterOutfitItem
+  id: outfit_jacket_moto_black
+  slot: 1
+  englishName: Moto Leather Jacket
+  thumbnail: {fileID: 21300000, guid: a44059c1a86ad2544b0109858bbccd7c, type: 3}
+  price: 200000000
+  fullFigure: 0
+  poses:
+  - pose: 0
+    sprite: {fileID: 21300000, guid: 804e391fa4ce8f746ab92d48735d060e, type: 3}
+  - pose: 1
+    sprite: {fileID: 21300000, guid: d675bb040f345ef42916ede58e0b6107, type: 3}
+  - pose: 2
+    sprite: {fileID: 21300000, guid: 0b9f8ed4aedd9764cbd64846938f447b, type: 3}
+  - pose: 8
+    sprite: {fileID: 21300000, guid: cef2f18be83e3144d977134f489a388d, type: 3}
+  - pose: 9
+    sprite: {fileID: 21300000, guid: df37be4b0056ad04c9bc08b66a751125, type: 3}
+  - pose: 3
+    sprite: {fileID: 21300000, guid: cbca866f8382b0a48a7acbce5942e45b, type: 3}
+  - pose: 5
+    sprite: {fileID: 21300000, guid: 4848ce14518abe14aa3041a556b7bb1e, type: 3}
+  - pose: 10
+    sprite: {fileID: 21300000, guid: b56dcf3112ac8f44193509d45f80cb79, type: 3}

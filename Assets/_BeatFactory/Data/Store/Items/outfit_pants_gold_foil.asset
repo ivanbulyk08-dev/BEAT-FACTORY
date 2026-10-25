@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad3bcfbcff53d0746bb62814226164a6, type: 3}
+  m_Name: outfit_pants_gold_foil
+  m_EditorClassIdentifier: Assembly-CSharp::BeatFactory.CharacterOutfitItem
+  id: outfit_pants_gold_foil
+  slot: 3
+  englishName: Gold Foil Flares
+  thumbnail: {fileID: 21300000, guid: 09175fb675aabd44b862a80315d991db, type: 3}
+  price: 10000000000
+  fullFigure: 1
+  poses:
+  - pose: 0
+    sprite: {fileID: 21300000, guid: 74107b090b4f69044af764a712f5670b, type: 3}
+  - pose: 1
+    sprite: {fileID: 21300000, guid: d93f233e6d735d64f8df2e95e64bd332, type: 3}
+  - pose: 2
+    sprite: {fileID: 21300000, guid: 5cfe9d2dc5d4cd0409c5ec9b1c49f893, type: 3}
+  - pose: 3
+    sprite: {fileID: 21300000, guid: 181d11d9128651340939f168a5a32b9b, type: 3}
+  - pose: 5
+    sprite: {fileID: 21300000, guid: ab47ed175e27da04b8b0c30e666b075a, type: 3}
+  - pose: 8
+    sprite: {fileID: 21300000, guid: 9086eeafa176a1d46a5f0212bf8c1782, type: 3}
+  - pose: 9
+    sprite: {fileID: 21300000, guid: 0dee821f3020f6a4d9b98fd7747f5673, type: 3}
+  - pose: 10
+    sprite: {fileID: 21300000, guid: fba1ea3c552da0347991eb24d56ab814, type: 3}

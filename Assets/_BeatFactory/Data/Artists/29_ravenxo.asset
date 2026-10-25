@@ -48,6 +48,7 @@ MonoBehaviour:
     stageTorso: {fileID: 21300000, guid: 09dd33d0d9ea7aa40b80477720c1593c, type: 3}
     stageArm: {fileID: 21300000, guid: 9f8ad8b126ab351488454a020820f5b4, type: 3}
     stageLeg: {fileID: 21300000, guid: 523ff07c15ba875479b3830720ff7f37, type: 3}
+    rig: {fileID: 0}
     signs:
     - RAVENXO
     - WE LOVE YOU

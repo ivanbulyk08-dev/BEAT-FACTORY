@@ -48,6 +48,7 @@ MonoBehaviour:
     stageTorso: {fileID: 21300000, guid: edc0b1f0784b3bc489edf71817bb0f8d, type: 3}
     stageArm: {fileID: 21300000, guid: 0d82c402e58546b489261041397f8ba7, type: 3}
     stageLeg: {fileID: 21300000, guid: 18dd5f137bc66074f8553441215a3a86, type: 3}
+    rig: {fileID: 0}
     signs:
     - ZYVEN
     - WE LOVE YOU

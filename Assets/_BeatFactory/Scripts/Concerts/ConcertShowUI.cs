@@ -17,6 +17,8 @@ namespace BeatFactory
         [SerializeField] Sprite[] crowdSprites;
         [Tooltip("LED screen per venue: x, y, width, height in venue art pixels (800×1400).")]
         [SerializeField] Vector4[] screenRects;
+        [SerializeField] VenueLayout[] venueLayouts;
+        [SerializeField] Sprite[] fanSprites;
         [SerializeField] Sprite beamSprite;
         [SerializeField] Sprite glowSprite;
         [Tooltip("Crowd atlas (tinted fan parts).")]
@@ -27,6 +29,8 @@ namespace BeatFactory
         [SerializeField] Sprite laserGlowSprite;
         [SerializeField] Sprite flameSprite;
         [SerializeField] Sprite sparkSprite;
+        [Tooltip("Pre-rendered stadium seen from a drone (stadium intro).")]
+        [SerializeField] Sprite stadiumAerialSprite;
 
         ConcertAudio concertAudio;
 
@@ -36,6 +40,7 @@ namespace BeatFactory
         RectTransform root;
         CanvasGroup group;
         ConcertStageView stage;
+        StadiumFlyover flyover;
         TextMeshProUGUI liveText, title, subtitle, counter, counterLabel, calloutTitle, calloutText, vibe;
         Image counterBar, callout;
         RectTransform calloutRt;
@@ -57,7 +62,7 @@ namespace BeatFactory
         public ConcertStageView CreateStage(RectTransform parent) =>
             ConcertStageView.Create(parent, venueSprites, crowdSprites, screenRects, beamSprite, glowSprite,
                 skin.confetti != null ? skin.confetti : skin.rounded, crowdAtlas, micSprite, skin,
-                laserCoreSprite, laserGlowSprite, flameSprite, sparkSprite);
+                laserCoreSprite, laserGlowSprite, flameSprite, sparkSprite, venueLayouts, fanSprites);
 
         void Awake()
         {
@@ -84,6 +89,7 @@ namespace BeatFactory
             var stageHolder = UIKit.Rect("StageHolder", root);
             UIKit.Stretch(stageHolder);
             stage = CreateStage(stageHolder);
+            if (stadiumAerialSprite != null) flyover = StadiumFlyover.Create(root, skin, stadiumAerialSprite, glowSprite, beamSprite);
 
             // top: LIVE chip + title
             var shade = UIKit.Image("TopShade", root, new Color(0, 0, 0, 0.55f), s.barGradient);
@@ -139,6 +145,7 @@ namespace BeatFactory
             current = r;
             UIKit.Skin = skin;
             StopAllCoroutines();
+            if (flyover != null) flyover.gameObject.SetActive(false);
             root.gameObject.SetActive(true);
             root.SetAsLastSibling();
             transform.SetAsLastSibling();
@@ -167,6 +174,13 @@ namespace BeatFactory
             counterBar.color = r.venue.color;
             counterLabel.text = Loc.T("concert.attendance");
 
+            // stadium: the drone intro flies in while the soundtrack renders; it lands on the stage and the music starts
+            bool intro = r.venue.tier == VenueTier.Stadium && flyover != null;
+            if (intro)
+            {
+                float bpm = r.artist != null ? ArtistConcertMusic.For(r.artist).bpm : look.bpm;
+                StartCoroutine(flyover.Play(r.artist, r.venue.Name + "\n" + r.city.ToUpperInvariant(), look.palette, bpm, stage.RevealFromIntro));
+            }
             // fade in → concert intro → music starts
             for (float t = 0; t < 1f; t += Time.unscaledDeltaTime / 0.4f)
             {
@@ -174,6 +188,7 @@ namespace BeatFactory
                 yield return null;
             }
             group.alpha = 1f;
+            if (intro) while (!flyover.Revealed) yield return null;
             yield return concertAudio.Begin();
             if (concertAudio.Profile != null) vibe.text = vibeText + "  ·  " + Loc.Upper(concertAudio.Profile.FlavorText);
 

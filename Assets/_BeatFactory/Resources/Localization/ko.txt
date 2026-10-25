@@ -822,3 +822,26 @@ settings.privacy_policy = 개인정보 처리방침
 settings.privacy_options = 개인정보 설정
 boosts.instant_viral_wait = 즉시 바이럴 비트  ·  {time}
 ads.no_internet = <color=#FF8A3D><b>인터넷에 연결되어 있지 않아요</b></color> — 광고를 보려면 인터넷이 필요해요. 진행 상황은 안전해요.
+
+
+boost_offer.title = {mult} 수익
+boost_offer.button = {mult} 수익
+boost_offer.cta = {mult} 부스트 활성화
+boost_offer.cta_free = {mult} 무료 활성화
+boost_offer.ad_note = 선택형 광고 1개를 보면 활성화돼요
+boost_offer.free_note = 무료 부스트 준비 완료 — 광고 없음
+boost_offer.opening_ad = 광고를 여는 중…
+boost_offer.not_completed = 광고를 끝까지 보지 않아 부스트가 지급되지 않았어요. 다시 시도할 수 있어요.
+boost_offer.active = 부스트 활성
+boost_offer.active_note = 지금 프로듀서들이 더 많이 벌고 있어요
+common.per_min = {money}/분
+concert.skip_intro = 인트로 건너뛰기
+nav.store = 상점
+store.coming_soon = 곧 출시
+store.coming_soon_desc = 스튜디오와 아티스트를 위한 독점 아이템이 이곳에서 판매됩니다.
+store.buy = 구매
+store.wear = 착용
+store.worn = 착용 중
+store.owned = 보유
+store.for_you = 내 캐릭터 의상
+store.tap_to_remove = 눌러서 벗기

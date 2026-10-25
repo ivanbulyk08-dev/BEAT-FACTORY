@@ -48,6 +48,7 @@ MonoBehaviour:
     stageTorso: {fileID: 21300000, guid: b85135594015aea48babd794efabe8ef, type: 3}
     stageArm: {fileID: 21300000, guid: ef286839f05a7594fab817e719e46ce9, type: 3}
     stageLeg: {fileID: 21300000, guid: 5f367ff3d27d9bd429105a744c52e1f6, type: 3}
+    rig: {fileID: 0}
     signs:
     - PRISM ODDITY
     - WE LOVE YOU

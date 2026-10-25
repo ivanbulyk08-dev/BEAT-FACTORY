@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8143917569d108145b4009c81b82668d, type: 3}
+  m_Name: jacket_puffer_purple
+  m_EditorClassIdentifier: Assembly-CSharp::BeatFactory.WardrobeItem
+  id: jacket_puffer_purple
+  slot: 2
+  nameKey: wardrobe.nox.jacket_puffer_purple
+  englishName: Purple Puffer
+  thumbnail: {fileID: 21300000, guid: 55fef03118b54fb4ab075ddb22d6efd2, type: 3}
+  parts:
+  - part: 5
+    sprite: {fileID: 21300000, guid: 55fef03118b54fb4ab075ddb22d6efd2, type: 3}
+  - part: 9
+    sprite: {fileID: 21300000, guid: d1c83eb27f1bbef4a9c53aab096b8e9a, type: 3}
+  - part: 12
+    sprite: {fileID: 21300000, guid: 1a36d11c5a1ac304a89f3fe73a149204, type: 3}
+  - part: 10
+    sprite: {fileID: 21300000, guid: e3da1ca9bd96ccd4aa662f0a083b8d94, type: 3}
+  - part: 13
+    sprite: {fileID: 21300000, guid: 6a55d19d3b91fb246ba0661f79dda066, type: 3}
+  - part: 7
+    sprite: {fileID: 21300000, guid: fd704bf99591324408b084a5a4c86bbf, type: 3}
+  requiredStudioLevel: 3
+  price: 30000000

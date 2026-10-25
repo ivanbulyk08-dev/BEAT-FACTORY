@@ -102,6 +102,8 @@ namespace BeatFactory
         public MissionManager Missions { get; private set; }
         public ChallengeManager Challenges { get; private set; }
         public ArtistChemistryManager Chemistry { get; private set; }
+        /// <summary>DRIP STUDIO outfits of detailed artists.</summary>
+        public ArtistWardrobe Wardrobe { get; private set; } = new ArtistWardrobe();
 
         void Awake()
         {
@@ -165,6 +167,7 @@ namespace BeatFactory
             Missions = new MissionManager(this, Stats);
             Challenges = new ChallengeManager(this, Stats, new DeviceTime());
             Chemistry = new ArtistChemistryManager(this);
+            Wardrobe.Changed += _ => RequestSave();
 
             RegisterMultipliers();
             RegisterCareerHooks();
@@ -421,6 +424,8 @@ namespace BeatFactory
             Income.Register("Boost", () => Boosts.IncomeMultiplier);
             Speed.Register("Boost", () => Boosts.SpeedMultiplier);
             ProducerIncome.Register("Boost", () => Boosts.ProducerIncomeMultiplier);
+            // stacked boosts (money × speed × producer) never pay producers more than BoostConfig.maxCombinedProducerBoost
+            ProducerIncome.Register("BoostCap", () => Boosts.CapFactor);
             // HIT/VIRAL chance = VIRAL BOOST × the studio's gear bonus
             Studios.CurrentChanged += _ =>
             {
@@ -438,10 +443,14 @@ namespace BeatFactory
             // A VIRAL beat rewards a short 2X MONEY boost.
             Beats.BeatsCreated += result =>
             {
-                if (result.Quality == BeatQuality.Viral && result.Source != BeatSource.Offline && boostConfig.viralBeatMoneyBoostSeconds > 0)
-                    Boosts.Activate(BoostType.Money, boostConfig.viralBeatMoneyBoostSeconds);
+                if (result.Quality != BeatQuality.Viral || result.Source == BeatSource.Offline || boostConfig.viralBeatMoneyBoostSeconds <= 0) return;
+                if (Time.realtimeSinceStartup < nextViralMoneyBoostTime) return; // busy studios make many VIRAL beats
+                nextViralMoneyBoostTime = Time.realtimeSinceStartup + boostConfig.viralBeatBoostCooldownMinutes * 60f;
+                Boosts.Activate(BoostType.Money, boostConfig.viralBeatMoneyBoostSeconds);
             };
         }
+
+        float nextViralMoneyBoostTime;
 
         void Update()
         {

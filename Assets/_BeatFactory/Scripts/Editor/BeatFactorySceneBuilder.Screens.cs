@@ -390,6 +390,7 @@ namespace BeatFactory.EditorTools
             rt.pivot = new Vector2(0.5f, 0);
             rt.sizeDelta = new Vector2(0, Theme.BottomNavHeight);
             rt.anchoredPosition = Vector2.zero;
+            ExtendBar(rt, down: true, new Color(Theme.Panel.r * 0.72f, Theme.Panel.g * 0.72f, Theme.Panel.b * 0.72f, 1f));
 
             var line = UIFactory.Image("TopLine", rt, new Color(1, 1, 1, 0.06f));
             line.rectTransform.anchorMin = new Vector2(0, 1);

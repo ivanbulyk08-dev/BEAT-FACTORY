@@ -23,6 +23,7 @@ namespace BeatFactory.EditorTools
 
         public static TMP_FontAsset Display, Heading, Body;
         public static Sprite PanelSprite, ButtonSprite, BarGradientSprite, SoftGlowSprite, RingSprite, RadialSprite;
+        public static Sprite BoltSprite, ShineSprite, PremiumButtonSprite;
 
         /// <summary>Round spotlight: alpha falls off smoothly from the center.</summary>
         static SdfPainter DrawRadial()
@@ -50,6 +51,9 @@ namespace BeatFactory.EditorTools
             SoftGlowSprite = EnsureSprite("ui_soft_glow.png", DrawSoftGlow, new Vector4(60, 60, 60, 60));
             RingSprite = EnsureSprite("ui_ring.png", DrawRing, Vector4.zero);
             RadialSprite = EnsureSprite("ui_radial.png", DrawRadial, Vector4.zero);
+            BoltSprite = EnsureSprite("ui_bolt.png", DrawBolt, Vector4.zero);
+            ShineSprite = EnsureSprite("ui_shine.png", DrawShine, Vector4.zero);
+            PremiumButtonSprite = EnsureSprite("ui_button_premium.png", DrawPremiumButton, Vector4.zero);
         }
 
         static TMP_FontAsset EnsureFont(string ttf, string assetName)
@@ -134,6 +138,44 @@ namespace BeatFactory.EditorTools
                 float a = Mathf.Clamp01(1f - (core(q) + 2) / 40f);
                 return new Color(1, 1, 1, a * a);
             });
+            return p;
+        }
+
+        /// <summary>Lightning bolt (white, tinted by Image.color).</summary>
+        static SdfPainter DrawBolt()
+        {
+            var p = new SdfPainter(128, 128);
+            p.Fill(Polygon(new Vector2(70, 124), new Vector2(102, 124), new Vector2(78, 78), new Vector2(102, 78),
+                new Vector2(42, 4), new Vector2(58, 62), new Vector2(30, 62)), Color.white);
+            return p;
+        }
+
+        /// <summary>Soft vertical light band for shimmer sweeps.</summary>
+        static SdfPainter DrawShine()
+        {
+            var p = new SdfPainter(64, 128);
+            p.Fill(RRect(-4, -4, 72, 136), q =>
+            {
+                float k = (q.x - 32f) / 13f;
+                return new Color(1, 1, 1, Mathf.Exp(-k * k));
+            });
+            return p;
+        }
+
+        /// <summary>Wide CTA (820×140 px, drawn at full size): electric blue → violet, glossy top, darker lip.</summary>
+        static SdfPainter DrawPremiumButton()
+        {
+            var p = new SdfPainter(820, 140);
+            var blue = Hex("2E7BFF");
+            var violet = Hex("8A3DFF");
+            p.Fill(RRect(0, 0, 820, 140, 62), Hex("3B1C8C"));
+            p.Fill(RRect(0, 7, 820, 133, 62), q =>
+            {
+                var c = Color.Lerp(blue, violet, Mathf.Clamp01(q.x / 820f));
+                return Color.Lerp(c * 0.82f, c, Mathf.InverseLerp(7, 140, q.y)) + new Color(0, 0, 0, 1);
+            });
+            p.Fill(Subtract(RRect(4, 11, 812, 125, 58), RRect(6, 9, 808, 124, 57)), new Color(1, 1, 1, 0.55f));
+            p.Fill(RRect(30, 92, 760, 34, 17), new Color(1, 1, 1, 0.10f));
             return p;
         }
 

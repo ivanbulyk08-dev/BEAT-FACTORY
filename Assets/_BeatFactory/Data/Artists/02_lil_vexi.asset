@@ -48,6 +48,7 @@ MonoBehaviour:
     stageTorso: {fileID: 21300000, guid: db5bc2f674680d44ca924e13dab82cb6, type: 3}
     stageArm: {fileID: 21300000, guid: 99aa838c37899bc4ca6d12f0a3711276, type: 3}
     stageLeg: {fileID: 21300000, guid: a8f3dd73615b3234eb7229b57701f3ba, type: 3}
+    rig: {fileID: 0}
     signs:
     - LIL VEXI
     - WE LOVE YOU

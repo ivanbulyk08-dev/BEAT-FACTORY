@@ -32,12 +32,16 @@ namespace BeatFactory
         public Sprite stageTorso;
         public Sprite stageArm;
         public Sprite stageLeg;
+        [Header("Detailed artist (optional)")]
+        [Tooltip("Hand-made layered art + DRIP STUDIO wardrobe. When set, the stage performer uses it instead of the parts above.")]
+        public ArtistRig rig;
 
         [Header("Fans")]
         [Tooltip("What fans write on their signs.")]
         public string[] signs = new string[0];
 
-        public bool HasPerformer => stageTorso != null && stageArm != null && stageLeg != null && stageHeads != null && stageHeads.Length > 0;
+        public bool HasDetailedRig => rig != null && rig.heads != null && rig.heads.Length > 0 && rig.Body(RigPart.Torso) != null;
+        public bool HasPerformer => HasDetailedRig || stageTorso != null && stageArm != null && stageLeg != null && stageHeads != null && stageHeads.Length > 0;
 
         public Sprite Head(int expression) =>
             stageHeads == null || stageHeads.Length == 0 ? null : stageHeads[Mathf.Clamp(expression, 0, stageHeads.Length - 1)];

@@ -78,7 +78,12 @@ namespace BeatFactory
         {
             if (incomeText == null) return;
             double perSecond = producers.IncomePerSecond;
-            incomeText.text = perSecond > 0 ? "+" + Loc.F("common.per_s", "money", NumberFormatter.FormatMoney(perSecond)) : "";
+            string text = perSecond > 0 ? "+" + Loc.F("common.per_s", "money", NumberFormatter.FormatMoney(perSecond)) : "";
+            // running boosts: show what they do to producer income right next to it
+            double boost = GameManager.Instance != null ? GameManager.Instance.Boosts.ProducerIncomeFactor : 1;
+            if (perSecond > 0 && boost > 1.001) text += "  <color=#FFC94D>" + NumberFormatter.FormatMultiplier(boost) + "</color>";
+            incomeText.richText = true;
+            incomeText.text = text;
         }
 
         void OnMoneyChanged(double money)

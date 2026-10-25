@@ -48,6 +48,7 @@ MonoBehaviour:
     stageTorso: {fileID: 21300000, guid: 81491967435f4f24b936b59510e5ddb4, type: 3}
     stageArm: {fileID: 21300000, guid: 0ddba7a849f9fd84a9f334acc175b1c7, type: 3}
     stageLeg: {fileID: 21300000, guid: 77393b1ac323c2e43a190fc30e130897, type: 3}
+    rig: {fileID: 0}
     signs:
     - OBLVN
     - WE LOVE YOU

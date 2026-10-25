@@ -17,10 +17,10 @@ MonoBehaviour:
   shortName: SD
   color: {r: 0.7137255, g: 0.36078432, b: 1, a: 1}
   icon: {fileID: 21300000, guid: 508a103bd7c3ff94b8f0e37b5b3f567b, type: 3}
-  hireCost: 80000000
-  upgradeBaseCost: 48000000
-  costGrowth: 0
-  baseIncome: 30700
+  hireCost: 250000000
+  upgradeBaseCost: 60000000
+  costGrowth: 2
+  baseIncome: 2200
   cycleSeconds: 12
   maxLevel: 0
   requiredStudio: 2

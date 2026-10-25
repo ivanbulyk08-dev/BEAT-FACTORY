@@ -54,7 +54,29 @@ namespace BeatFactory
         public float ViralChanceMultiplier => (float)MultiplierOf(BoostType.Viral);
 
         /// <summary>How much boosts currently inflate producer income (offline earnings divide this out).</summary>
-        public double ProducerIncomeFactor => IncomeMultiplier * SpeedMultiplier * ProducerIncomeMultiplier;
+        /// <summary>Everything boosts do to producer income together (money × speed × producer), capped.</summary>
+        public double ProducerIncomeFactor => Math.Min(RawProducerFactor, config.maxCombinedProducerBoost);
+
+        double RawProducerFactor => IncomeMultiplier * SpeedMultiplier * ProducerIncomeMultiplier;
+
+        /// <summary>ProducerIncomeFactor if <paramref name="type"/> were active too (for "income now → with boost" previews).</summary>
+        public double PreviewProducerFactor(BoostType type)
+        {
+            if (type == BoostType.Viral || IsActive(type)) return ProducerIncomeFactor;
+            var def = config.Get(type);
+            double m = def != null ? def.multiplier : 1.0;
+            return Math.Min(RawProducerFactor * m, config.maxCombinedProducerBoost);
+        }
+
+        /// <summary>Scales producer income down when stacked boosts go past the cap (1 = under the cap).</summary>
+        public double CapFactor
+        {
+            get
+            {
+                double raw = RawProducerFactor;
+                return raw > config.maxCombinedProducerBoost ? config.maxCombinedProducerBoost / raw : 1.0;
+            }
+        }
 
         // ------------------------------------------------------------------ activation
 

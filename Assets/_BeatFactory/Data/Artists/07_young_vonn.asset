@@ -48,6 +48,7 @@ MonoBehaviour:
     stageTorso: {fileID: 21300000, guid: 140c7c66bb580a44cade08be4d31447c, type: 3}
     stageArm: {fileID: 21300000, guid: 1dc867d4176eb9841adee59f4d19915f, type: 3}
     stageLeg: {fileID: 21300000, guid: 2831a69b4df4e5845ae146f9eed33ec4, type: 3}
+    rig: {fileID: 0}
     signs:
     - YOUNG VONN
     - WE LOVE YOU

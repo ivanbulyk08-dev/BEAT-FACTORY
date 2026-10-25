@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad3bcfbcff53d0746bb62814226164a6, type: 3}
+  m_Name: outfit_pants_graffiti_denim
+  m_EditorClassIdentifier: Assembly-CSharp::BeatFactory.CharacterOutfitItem
+  id: outfit_pants_graffiti_denim
+  slot: 3
+  englishName: Graffiti Denim
+  thumbnail: {fileID: 21300000, guid: 8cc9af41520bdf44babe133822a953ad, type: 3}
+  price: 60000000
+  fullFigure: 0
+  poses:
+  - pose: 0
+    sprite: {fileID: 21300000, guid: 96f0a714ba405064ebaf1f1ade4e5e1b, type: 3}
+  - pose: 1
+    sprite: {fileID: 21300000, guid: faa70f2d8927c1f4095239206efd123c, type: 3}
+  - pose: 2
+    sprite: {fileID: 21300000, guid: 6566665f287228643a634a0b8546544f, type: 3}
+  - pose: 8
+    sprite: {fileID: 21300000, guid: 23998304462bb344dbc9fe3a0412a2bd, type: 3}
+  - pose: 9
+    sprite: {fileID: 21300000, guid: fc7e98f8881375b418169496807fcec9, type: 3}
+  - pose: 3
+    sprite: {fileID: 21300000, guid: 32394684d9864264e8d314792a0df1a5, type: 3}
+  - pose: 5
+    sprite: {fileID: 21300000, guid: eeaf9f7fc3a818046aaf85b3a1ddcdde, type: 3}
+  - pose: 10
+    sprite: {fileID: 21300000, guid: 48c7404c85b3eab4f82b82e1f420c54c, type: 3}

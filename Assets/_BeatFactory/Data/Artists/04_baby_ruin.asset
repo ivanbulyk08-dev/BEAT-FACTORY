@@ -48,6 +48,7 @@ MonoBehaviour:
     stageTorso: {fileID: 21300000, guid: f7d772cb74fa9b44f954b3350cd20ef1, type: 3}
     stageArm: {fileID: 21300000, guid: d69ba22f08db7ee42b536e15090fc74c, type: 3}
     stageLeg: {fileID: 21300000, guid: 5b12753c244b8f34496bc220ecdf1ab1, type: 3}
+    rig: {fileID: 0}
     signs:
     - BABY RUIN
     - WE LOVE YOU

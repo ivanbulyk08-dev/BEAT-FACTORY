@@ -757,6 +757,8 @@ namespace BeatFactory.EditorTools
             v.stageTorso = LoadSprite(ArtGenerator.PerformerPath(a.id, "torso"));
             v.stageArm = LoadSprite(ArtGenerator.PerformerPath(a.id, "arm"));
             v.stageLeg = LoadSprite(ArtGenerator.PerformerPath(a.id, "leg"));
+            // detailed layered art (DRIP STUDIO), if this artist has been imported
+            v.rig = AssetDatabase.LoadAssetAtPath<ArtistRig>(ArtistRigImporter.RigAssetPath(a.id));
             string n = a.displayName.ToUpperInvariant();
             string phrase = Tours.TitleName(a, TourKind.Mini, null);
             v.signs = new[] { n, "WE LOVE YOU", n + " 4 LIFE", phrase, "#1 FAN" };

@@ -15,22 +15,23 @@ namespace BeatFactory.EditorTools
         struct ProducerDef
         {
             public string id, name, letters, color;
-            public double hire, upgrade, income;
+            public double hire, upgrade, growth, income;
             public float cycle;
             public int studio;
         }
 
-        // Balance v2 (see ECONOMY_BALANCE.md): each producer earns ~6-8x more per second than the previous one
-        // but costs 13-40x more, so every new producer is a saving goal. Upgrades: upgrade * 1.5^(level-1).
+        // Balance v4 (see ECONOMY_BALANCE.md): hiring pays back in minutes early and hours late; upgrades cost
+        // upgrade * growth^(level-1) with growth 1.6 → 2.0, so every producer saturates and the next one becomes the goal.
+        // Each producer earns ~5x more per second than the previous one but costs 8-80x more.
         static readonly ProducerDef[] Producers =
         {
-            new ProducerDef { id = "beginner",  name = "Beginner Producer",  letters = "BP", color = "3DE1FF", hire = 1_000,          upgrade = 600,            income = 60,      cycle = 4,  studio = 0 },
-            new ProducerDef { id = "melody",    name = "Melody Maker",       letters = "MM", color = "4DFFA8", hire = 15_000,         upgrade = 9_000,          income = 360,     cycle = 6,  studio = 0 },
-            new ProducerDef { id = "drum",      name = "Drum Producer",      letters = "DP", color = "FFD23D", hire = 200_000,        upgrade = 120_000,        income = 1_920,   cycle = 8,  studio = 0 },
-            new ProducerDef { id = "sample",    name = "Sample Producer",    letters = "SP", color = "FF8A3D", hire = 4_000_000,      upgrade = 2_400_000,      income = 6_400,   cycle = 10, studio = 1 },
-            new ProducerDef { id = "sound",     name = "Sound Designer",     letters = "SD", color = "B65CFF", hire = 80_000_000,     upgrade = 48_000_000,     income = 30_700,  cycle = 12, studio = 2 },
-            new ProducerDef { id = "hitmaker",  name = "Hitmaker",           letters = "HM", color = "FF3DC8", hire = 2_000_000_000,  upgrade = 1_200_000_000,  income = 154_000, cycle = 15, studio = 3 },
-            new ProducerDef { id = "superstar", name = "Superstar Producer", letters = "SS", color = "FF3D5A", hire = 50_000_000_000, upgrade = 30_000_000_000, income = 820_000, cycle = 20, studio = 4 },
+            new ProducerDef { id = "beginner",  name = "Beginner Producer",  letters = "BP", color = "3DE1FF", hire = 1_500,           upgrade = 400,            growth = 1.6, income = 1.4,    cycle = 4,  studio = 0 },
+            new ProducerDef { id = "melody",    name = "Melody Maker",       letters = "MM", color = "4DFFA8", hire = 12_000,          upgrade = 3_000,          growth = 1.6, income = 12,     cycle = 6,  studio = 0 },
+            new ProducerDef { id = "drum",      name = "Drum Producer",      letters = "DP", color = "FFD23D", hire = 100_000,         upgrade = 25_000,         growth = 1.7, income = 80,     cycle = 8,  studio = 0 },
+            new ProducerDef { id = "sample",    name = "Sample Producer",    letters = "SP", color = "FF8A3D", hire = 8_000_000,       upgrade = 2_000_000,      growth = 1.9, income = 400,    cycle = 10, studio = 1 },
+            new ProducerDef { id = "sound",     name = "Sound Designer",     letters = "SD", color = "B65CFF", hire = 250_000_000,     upgrade = 60_000_000,     growth = 2.0, income = 2_200,  cycle = 12, studio = 2 },
+            new ProducerDef { id = "hitmaker",  name = "Hitmaker",           letters = "HM", color = "FF3DC8", hire = 5_000_000_000,   upgrade = 1_250_000_000,  growth = 2.0, income = 12_750, cycle = 15, studio = 3 },
+            new ProducerDef { id = "superstar", name = "Superstar Producer", letters = "SS", color = "FF3D5A", hire = 140_000_000_000, upgrade = 35_000_000_000, growth = 2.0, income = 80_000, cycle = 20, studio = 4 },
         };
 
         /// <summary>
@@ -64,7 +65,7 @@ namespace BeatFactory.EditorTools
                 producers[i].upgradeBaseCost = p.upgrade;
                 producers[i].baseIncome = p.income;
                 producers[i].cycleSeconds = p.cycle;
-                producers[i].costGrowth = 0;
+                producers[i].costGrowth = p.growth;
                 producers[i].requiredStudio = p.studio;
                 EditorUtility.SetDirty(producers[i]);
             }
@@ -491,7 +492,7 @@ namespace BeatFactory.EditorTools
         static readonly GenreDef[] Genres =
         {
             new GenreDef { id = "lofi",         name = "Lo-Fi",        cost = 0,                           multiplier = 1,   studio = 0, accent = "3DE1FF", background = "0D0B1A" },
-            new GenreDef { id = "hiphop",       name = "Hip-Hop",      cost = 50_000,                      multiplier = 1.3, studio = 0, accent = "FFD23D", background = "120E12" },
+            new GenreDef { id = "hiphop",       name = "Hip-Hop",      cost = 250,                         multiplier = 1.3, studio = 0, accent = "FFD23D", background = "120E12" },
             new GenreDef { id = "trap",         name = "Trap",         cost = 2_000_000,                   multiplier = 1.5, studio = 1, accent = "FF3D5A", background = "140A10" },
             new GenreDef { id = "rage",         name = "Rage",         cost = 40_000_000,                  multiplier = 1.75, studio = 2, accent = "FF5A2D", background = "160A08" },
             new GenreDef { id = "hyperpop",     name = "Hyperpop",     cost = 1_500_000_000,               multiplier = 2,   studio = 4, accent = "FF3DC8", background = "160A18" },
@@ -554,6 +555,7 @@ namespace BeatFactory.EditorTools
                 ColorUtility.TryParseHtmlString("#" + d.color, out asset.color);
                 asset.hireCost = d.hire;
                 asset.upgradeBaseCost = d.upgrade;
+                asset.costGrowth = d.growth;
                 asset.baseIncome = d.income;
                 asset.cycleSeconds = d.cycle;
                 AssetDatabase.CreateAsset(asset, path);

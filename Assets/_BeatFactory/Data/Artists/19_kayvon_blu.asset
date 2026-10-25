@@ -48,6 +48,7 @@ MonoBehaviour:
     stageTorso: {fileID: 21300000, guid: 6252621fc8cf54d4c8179c34beb5e316, type: 3}
     stageArm: {fileID: 21300000, guid: 95cabf1ce0e5df0479643d77f4ac54d3, type: 3}
     stageLeg: {fileID: 21300000, guid: 49c80cc3099b72741bc7b5ea25da5fdd, type: 3}
+    rig: {fileID: 0}
     signs:
     - KAYVON BLU
     - WE LOVE YOU

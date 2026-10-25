@@ -6,8 +6,7 @@ using UnityEngine.UI;
 namespace BeatFactory
 {
     /// <summary>
-    /// BOOSTS popup: lists all boosts, their timers, and lets the player take the free boost.
-    /// (Rewarded-ad buttons are added in Phase 17.)
+    /// BOOSTS popup: the featured boost card on top, then every boost with its timer, free/ad buttons and INSTANT VIRAL.
     /// </summary>
     public class BoostsPopupUI : MonoBehaviour
     {
@@ -18,6 +17,8 @@ namespace BeatFactory
         [SerializeField] Button closeButton;
         [Tooltip("INSTANT VIRAL BEAT (rewarded ad).")]
         [SerializeField] Button instantViralButton;
+        [Tooltip("Featured boost card at the top (CTA, live income preview, active state).")]
+        [SerializeField] BoostOfferCard offerCard;
         [SerializeField] Color activeColor = new Color(0.3f, 1f, 0.66f);
         [SerializeField] Color dimColor = new Color(0.54f, 0.52f, 0.69f);
         [SerializeField] float refreshInterval = 0.5f;
@@ -78,6 +79,7 @@ namespace BeatFactory
             if (boosts == null) boosts = GameManager.Instance.Boosts;
             if (!built) Build();
             Refresh();
+            if (offerCard != null) offerCard.Refresh();
             window.Show();
             enabled = true;
         }

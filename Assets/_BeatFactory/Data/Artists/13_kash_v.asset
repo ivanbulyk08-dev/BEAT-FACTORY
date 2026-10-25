@@ -48,6 +48,7 @@ MonoBehaviour:
     stageTorso: {fileID: 21300000, guid: 508b1a27869a1f14690572e375ff620b, type: 3}
     stageArm: {fileID: 21300000, guid: 1a7d5207cc00f134a93ae6ca2973a844, type: 3}
     stageLeg: {fileID: 21300000, guid: 05660f57b2348ad43acafd36e84b4da0, type: 3}
+    rig: {fileID: 0}
     signs:
     - KASH V
     - WE LOVE YOU

@@ -48,6 +48,7 @@ MonoBehaviour:
     stageTorso: {fileID: 21300000, guid: 17dd543cf33395b4fb0d046efb493991, type: 3}
     stageArm: {fileID: 21300000, guid: 8d275aecf40f8c946b17c4887d631f80, type: 3}
     stageLeg: {fileID: 21300000, guid: 16ff2898cb8caec4c92c031c0a54f8eb, type: 3}
+    rig: {fileID: 0}
     signs:
     - K4IRO
     - WE LOVE YOU

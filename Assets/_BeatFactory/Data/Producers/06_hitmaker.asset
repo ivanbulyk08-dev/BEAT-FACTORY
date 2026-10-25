@@ -17,10 +17,10 @@ MonoBehaviour:
   shortName: HM
   color: {r: 1, g: 0.23921569, b: 0.78431374, a: 1}
   icon: {fileID: 21300000, guid: 74b0afa8e6135914c9eb6281ace7d331, type: 3}
-  hireCost: 2000000000
-  upgradeBaseCost: 1200000000
-  costGrowth: 0
-  baseIncome: 154000
+  hireCost: 5000000000
+  upgradeBaseCost: 1250000000
+  costGrowth: 2
+  baseIncome: 12750
   cycleSeconds: 15
   maxLevel: 0
   requiredStudio: 3

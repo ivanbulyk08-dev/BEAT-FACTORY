@@ -50,7 +50,11 @@ namespace BeatFactory
         public static string Decimal(double value, string format = "0.#") => value.ToString(format, Loc.Numbers);
 
         public static string FormatMoney(double value) =>
-            value < 0 ? "-" + Money(Format(-value)) : Money(Format(value));
+            value < 0 ? "-" + Money(MoneyAmount(-value)) : Money(MoneyAmount(value));
+
+        /// <summary>Small amounts keep one decimal ("$0.8", "$12.5") so early beats never show as "$0"; rounded down.</summary>
+        static string MoneyAmount(double value) =>
+            value < 100 && !double.IsNaN(value) ? (Math.Floor(value * 10) / 10).ToString("0.#", Loc.Numbers) : Format(value);
 
         /// <summary>Puts the currency sign where the language expects it ("$5K" / "5K $").</summary>
         public static string Money(string amount) => Loc.T("num.money").Replace("{0}", amount);

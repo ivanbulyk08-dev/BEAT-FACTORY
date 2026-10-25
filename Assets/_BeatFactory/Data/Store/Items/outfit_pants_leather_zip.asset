@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad3bcfbcff53d0746bb62814226164a6, type: 3}
+  m_Name: outfit_pants_leather_zip
+  m_EditorClassIdentifier: Assembly-CSharp::BeatFactory.CharacterOutfitItem
+  id: outfit_pants_leather_zip
+  slot: 3
+  englishName: Zip Leather Pants
+  thumbnail: {fileID: 21300000, guid: 5bee41e2741dc844bae2a438b7bc5693, type: 3}
+  price: 40000000
+  fullFigure: 1
+  poses:
+  - pose: 0
+    sprite: {fileID: 21300000, guid: 464275442c4931045bfa7f919c435b9a, type: 3}
+  - pose: 1
+    sprite: {fileID: 21300000, guid: ef7a9fe35653eae47b599e6841be75cd, type: 3}
+  - pose: 2
+    sprite: {fileID: 21300000, guid: 85c1f90bd531cf144b3a91e38f797031, type: 3}
+  - pose: 3
+    sprite: {fileID: 21300000, guid: 10ee658cdd1e2a84ca323ca5b55f855d, type: 3}
+  - pose: 5
+    sprite: {fileID: 21300000, guid: 7291e8a0bfa083a49bc7638516969f2c, type: 3}
+  - pose: 8
+    sprite: {fileID: 21300000, guid: d50843a20c6cbd648af3706a20982801, type: 3}
+  - pose: 9
+    sprite: {fileID: 21300000, guid: a9568c9ab5d149f43a63cf1fb0c23c5e, type: 3}
+  - pose: 10
+    sprite: {fileID: 21300000, guid: cc7bf26b733046943936d1ecc2a140b1, type: 3}

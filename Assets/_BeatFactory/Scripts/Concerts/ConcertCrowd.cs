@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 namespace BeatFactory
 {
-    public enum FanState : byte { Idle, HandsUp, Jump, Dance, Sing, Phone, Clap, Hype, Point, Reach }
+    public enum FanState : byte { Idle, HandsUp, Jump, Dance, Sing, Phone, Clap, Hype, Point, Reach, Headbang, Mosh }
 
     /// <summary>
     /// A living concert crowd. Every fan is a different person: skin tone, hair style and color, clothes, height, cap or
@@ -30,6 +30,7 @@ namespace BeatFactory
             public float waveAt;
             public FanState waveState;
             public int sign;
+            public sbyte pit;         // moshpit index while moshing, -1 otherwise
         }
 
         static readonly Color[] Skins =
@@ -214,6 +215,7 @@ namespace BeatFactory
             farEnd = list.Count;
             list.AddRange(near);
             fans = list.ToArray();
+            pits.Clear();
 
             // photographers' camera flashes in the pit
             camFlashCount = popularity >= 50 ? (popularity >= 80 ? 10 : 5) : 0;
@@ -238,7 +240,7 @@ namespace BeatFactory
                 cloth = Clothes[rnd.Next(Clothes.Length)],
                 hairC = Hairs[rnd.Next(Hairs.Length)],
                 phase = R(0, 1), speed = R(0.7f, 1.4f), excite = R(0.15f, 1f), height = R(0.92f, 1.1f),
-                phone = rnd.NextDouble() < 0.18, sign = -1, waveAt = -1,
+                phone = rnd.NextDouble() < 0.18, sign = -1, waveAt = -1, pit = -1,
             };
             double h = rnd.NextDouble();
             f.hair = (byte)(h < 0.1 ? 10 : h < 0.16 ? 11 : h < 0.28 ? 12 : rnd.Next(CrowdAtlas.HairCount));
@@ -269,6 +271,46 @@ namespace BeatFactory
         }
 
         float waveDuration = 1.8f;
+
+        // ---- moshpits: a few circles of fans in the middle of the crowd run around and bounce (bigger venues, big moments)
+        struct Pit { public Vector2 center; public float radius, until; }
+        readonly List<Pit> pits = new List<Pit>();
+
+        /// <summary>Opens <paramref name="count"/> moshpits in the middle of the crowd for a few seconds.</summary>
+        public void Moshpit(int count, float seconds)
+        {
+            pits.Clear();
+            for (int k = 0; k < count && k < 4; k++)
+            {
+                var pit = new Pit
+                {
+                    center = new Vector2(count == 1 ? R(320, 480) : Mathf.Lerp(230, 570, k / (float)Mathf.Max(1, count - 1)) + R(-30, 30), yMax * R(0.3f, 0.55f)),
+                    radius = R(48, 72),
+                    until = time + seconds,
+                };
+                pits.Add(pit);
+                for (int i = frontEnd; i < fans.Length; i++)
+                {
+                    if (fans[i].staff || fans[i].pit >= 0) continue;
+                    if ((fans[i].pos - pit.center).sqrMagnitude > pit.radius * pit.radius) continue;
+                    fans[i].state = FanState.Mosh;
+                    fans[i].pit = (sbyte)k;
+                    fans[i].stateUntil = pit.until + R(0f, 0.6f);
+                    fans[i].waveAt = -1;
+                }
+            }
+        }
+
+        /// <summary>Moshing fans run around their pit's center (circle pit), everyone at their own pace.</summary>
+        Vector2 MoshOffset(ref Fan f)
+        {
+            if (f.state != FanState.Mosh || f.pit < 0 || f.pit >= pits.Count) return Vector2.zero;
+            var rel = f.pos - pits[f.pit].center;
+            float a = time * (1.3f + 0.5f * f.speed) + f.phase * 6.28f;
+            float push = 1f + 0.12f * Mathf.Sin(time * 7f + f.phase * 20f);
+            var turned = new Vector2(rel.x * Mathf.Cos(a) - rel.y * Mathf.Sin(a) * 0.6f, rel.x * Mathf.Sin(a) * 0.35f + rel.y * Mathf.Cos(a));
+            return turned * push - rel;
+        }
 
         /// <summary>The artist points at a side: fans there go wild.</summary>
         public void PointAt(float x)
@@ -313,12 +355,14 @@ namespace BeatFactory
                 if (r < 0.58) return FanState.Clap;
                 if (r < 0.7) return FanState.Sing;
                 if (r < 0.8) return f.phone ? FanState.Phone : FanState.HandsUp;
-                if (r < 0.92) return FanState.Jump;
+                if (r < 0.9) return FanState.Jump;
+                if (r < 0.95) return FanState.Headbang;
                 return FanState.Point;
             }
-            if (r < 0.36) return FanState.Jump;
-            if (r < 0.6) return FanState.Hype;
-            if (r < 0.84) return FanState.HandsUp;
+            if (r < 0.32) return FanState.Jump;
+            if (r < 0.54) return FanState.Hype;
+            if (r < 0.76) return FanState.HandsUp;
+            if (r < 0.84) return FanState.Headbang;
             if (r < 0.94) return f.phone ? FanState.Phone : FanState.Jump;
             return FanState.Dance;
         }
@@ -345,6 +389,7 @@ namespace BeatFactory
                 }
                 else if (time >= f.stateUntil)
                 {
+                    f.pit = -1;
                     f.state = Choose(ref f);
                     f.stateUntil = time + R(1.4f, 3.6f) / f.speed;
                 }
@@ -411,6 +456,8 @@ namespace BeatFactory
                 case FanState.Hype: jump = 16f * hop; aL = 150 + 28 * Mathf.Sin(Mathf.PI * beat * 2f); aR = 150 + 28 * Mathf.Sin(Mathf.PI * beat * 2f + 1f); break;
                 case FanState.Point: jump = 2f * hop; aL = 10; aR = f.pos.x < ArtistX ? 125 : 145; break;
                 case FanState.Reach: jump = 4f * hop; aL = 150 + 8 * Mathf.Sin(t * 3); aR = 150 + 8 * Mathf.Sin(t * 3 + 2); break;
+                case FanState.Headbang: { float nod = Mathf.Abs(Mathf.Sin(Mathf.PI * (beat + f.phase))); jump = -3.5f * nod; sway = 1.5f * Mathf.Sin(t); aL = 28 + 20 * nod; aR = 34 + 20 * nod; break; }
+                case FanState.Mosh: jump = 9f * hop; sway = 4f * Mathf.Sin(t * 3f); aL = 70 + 50 * Mathf.Sin(t * 4f); aR = 75 + 50 * Mathf.Sin(t * 4f + 2f); break;
             }
             jump *= 0.55f + 0.6f * Intensity;
         }
@@ -422,6 +469,7 @@ namespace BeatFactory
             float bright = light * Mathf.Lerp(1f, 0.75f, depth);
             Pose(ref f, beat, out float jump, out float sway, out float aL, out float aR);
             float s = f.s;
+            var at = f.pos + MoshOffset(ref f);
 
             if (!f.detailed)
             {
@@ -430,17 +478,17 @@ namespace BeatFactory
                 int col = up ? CrowdAtlas.FarHandsCol : (f.body % 3 == 0 ? CrowdAtlas.FarWideCol : CrowdAtlas.FarCol);
                 var c = Tint(Color.Lerp(f.cloth, f.hairC, 0.3f), bright * 0.85f, fog);
                 float size = 64 * s * f.height;
-                layer.Quad(new Vector2(f.pos.x - size * 0.5f + sway * s, f.pos.y + jump * s), new Vector2(size, size), CrowdAtlas.UV(col, CrowdAtlas.PropRow), c, f.flip);
+                layer.Quad(new Vector2(at.x - size * 0.5f + sway * s, at.y + jump * s), new Vector2(size, size), CrowdAtlas.UV(col, CrowdAtlas.PropRow), c, f.flip);
                 if (f.phone && (f.state == FanState.Phone || phoneFlash > 0f))
                 {
                     float a = (f.state == FanState.Phone ? 0.5f : phoneFlash * 0.6f);
-                    layer.Quad(new Vector2(f.pos.x - 7 * s, f.pos.y + (54 + jump) * s), new Vector2(14 * s, 14 * s), CrowdAtlas.UV(CrowdAtlas.GlowCol, CrowdAtlas.PropRow), new Color(0.9f, 0.95f, 1f, a));
+                    layer.Quad(new Vector2(at.x - 7 * s, at.y + (54 + jump) * s), new Vector2(14 * s, 14 * s), CrowdAtlas.UV(CrowdAtlas.GlowCol, CrowdAtlas.PropRow), new Color(0.9f, 0.95f, 1f, a));
                 }
                 return;
             }
 
             float h = f.height;
-            var basePos = new Vector2(f.pos.x + sway * s, f.pos.y + jump * s);
+            var basePos = new Vector2(at.x + sway * s, at.y + jump * s);
             var bodyC = Tint(f.cloth, bright, fog);
             var skinC = Tint(f.skin, bright, fog);
             var hairC = Tint(f.hairC, bright, fog);

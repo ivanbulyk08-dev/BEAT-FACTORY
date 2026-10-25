@@ -39,6 +39,10 @@ namespace BeatFactory
         public List<ArtistCareer> artistCareers = new List<ArtistCareer>();
         public List<ActiveTour> activeTours = new List<ActiveTour>();
         public List<string> achievements = new List<string>();
+        /// <summary>DRIP STUDIO outfits of detailed artists (item ids). Missing = default outfit.</summary>
+        public List<ArtistOutfitSave> artistOutfits = new List<ArtistOutfitSave>();
+        /// <summary>STORE items bought (wardrobe item ids).</summary>
+        public List<string> storeOwned = new List<string>();
         // Goals & chemistry (kept after prestige)
         public GoalsSave goals = new GoalsSave();
         public ChemistrySave chemistry = new ChemistrySave();

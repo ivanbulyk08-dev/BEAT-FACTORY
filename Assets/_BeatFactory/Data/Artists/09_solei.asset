@@ -48,6 +48,7 @@ MonoBehaviour:
     stageTorso: {fileID: 21300000, guid: dff4fcd57e1487b47bc9701929354337, type: 3}
     stageArm: {fileID: 21300000, guid: 1c3412d952d973943ade5ff78e1571dc, type: 3}
     stageLeg: {fileID: 21300000, guid: f271e45ef201d7b4b9fe2af4d54a00e8, type: 3}
+    rig: {fileID: 0}
     signs:
     - SOLEI
     - WE LOVE YOU

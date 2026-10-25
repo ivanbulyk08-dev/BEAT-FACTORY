@@ -1,0 +1,2 @@
+Cut from Art/Reference/nox_parts_sheet.png (low resolution: upscaled 1.7-3.6x).
+Replace with production PNGs (same names) for full quality, then run Import Artist Rig.

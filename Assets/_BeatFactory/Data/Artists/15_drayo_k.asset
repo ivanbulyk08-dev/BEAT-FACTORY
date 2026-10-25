@@ -48,6 +48,7 @@ MonoBehaviour:
     stageTorso: {fileID: 21300000, guid: d2b0f010d294df14887369ce44038f79, type: 3}
     stageArm: {fileID: 21300000, guid: 068938212a77e72438a2f039e99ae81a, type: 3}
     stageLeg: {fileID: 21300000, guid: 66107245fc53f184ba206aa9401ed33a, type: 3}
+    rig: {fileID: 0}
     signs:
     - DRAYO K
     - WE LOVE YOU

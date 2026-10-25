@@ -48,6 +48,7 @@ MonoBehaviour:
     stageTorso: {fileID: 21300000, guid: f6bcde2cdcc56c346b73ceef098977fe, type: 3}
     stageArm: {fileID: 21300000, guid: 690887ac70354a64bb89b23d62e1c780, type: 3}
     stageLeg: {fileID: 21300000, guid: 3e27011964bf36742bd682f7cadd8be8, type: 3}
+    rig: {fileID: 0}
     signs:
     - VEXXO
     - WE LOVE YOU
